@@ -1,5 +1,5 @@
-import Loginlayout from "./Login";
+import Authlayout from "./Auth";
 
 export {
-    Loginlayout
+    Authlayout
 }

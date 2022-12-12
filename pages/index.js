@@ -1,11 +1,11 @@
 import HeadTag from '../components/Head'
-import { Loginlayout } from '../Layout'
+import { Authlayout } from '../Layout'
 
 const Login = () => {
   return (
       <>
           <HeadTag />
-          <Loginlayout />
+          <Authlayout />
       </>
   )
 }
