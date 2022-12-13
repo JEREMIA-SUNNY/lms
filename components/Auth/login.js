@@ -7,12 +7,9 @@ const LoginForm = () => {
             <div className="w-full flex justify-center">
                 <div className="relative">
                     <Image
-                        // layout="fill"
-                        // objectFit="cover"
                         width={120}
                         height={120}
-                        // quality={100}
-                        src={'/demoimage/login.png'}
+                        src={'/logo/login-logo.png'}
                         alt="Sample image"
                     />
                 </div>
@@ -20,11 +17,11 @@ const LoginForm = () => {
             <div className="p-6 space-y-2 sm:p-8">
                 <form className="space-y-4 md:space-y-6">
                     <div>
-                        <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
                         <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="" />
                     </div>
                     <div>
-                        <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                        <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
                         <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
                     </div>
                     <div className="flex justify-center">
