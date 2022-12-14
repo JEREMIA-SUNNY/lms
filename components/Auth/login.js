@@ -25,7 +25,11 @@ const LoginForm = () => {
                         <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
                     </div>
                     <div className="flex justify-center">
-                        <button type="submit" className="w-[70%] text-white bg-[#27135F] hover:bg-[#27135F] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded text-sm px-5 py-2.5 text-center dark:bg-[#27135F] dark:hover:bg-[#27135F] dark:focus:ring-primary-800">Login</button>
+                        <Link href='/app/home' className="w-[70%] text-white bg-[#27135F] hover:bg-[#27135F] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded text-sm px-5 py-2.5 text-center dark:bg-[#27135F] dark:hover:bg-[#27135F] dark:focus:ring-primary-800">
+                           Login
+                        </Link>
+                        {/* <button type="submit" className="w-[70%] text-white bg-[#27135F] hover:bg-[#27135F] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded text-sm px-5 py-2.5 text-center dark:bg-[#27135F] dark:hover:bg-[#27135F] dark:focus:ring-primary-800">Login</button> */}
+
                     </div>
                     <div className="flex justify-between">
                         <Link href="/forgot-password" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</Link>

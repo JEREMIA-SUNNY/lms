@@ -5,7 +5,6 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter()
-  console.log(pathname)
   return <AppContext.Provider
     value={{
       state: {},
