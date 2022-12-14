@@ -6,7 +6,7 @@ const Course = () => {
         <Link className="w-full" href={`/course/detail/1`}>
             <div className="shadow bg-white p-6 rounded-lg">
                 <Image
-                    className="h-40 rounded w-full object-cover object-center mb-6"
+                    className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 h-40 rounded w-full object-cover object-center mb-6"
                     height={200}
                     width={200}
                     quality={100}
