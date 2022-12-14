@@ -6,7 +6,7 @@ import Transaction from "./transaction";
 
 const HomeLayout = () => {
     return (
-        <section className="mt-4 h-[82vh] w-full grid grid-rows-2 grid-flow-col gap-4">
+        <section className="my-4 h-[82vh] w-full grid grid-rows-2 grid-flow-col gap-5">
             <Card className='p-4 lg:w-1/2'><Notification /></Card>
             <Card className='p-4 lg:w-1/2'><Pending /></Card>
             <Card className='p-4 lg:w-1/2'><Recent /></Card>

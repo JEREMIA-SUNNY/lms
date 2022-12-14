@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Course = () => {
     return (
-        <Link className="xl:w-1/4 md:w-1/2 p-4" href={`/course/detail/1`}>
+        <Link className="w-full" href={`/course/detail/1`}>
             <div className="shadow bg-white p-6 rounded-lg">
                 <Image
                     className="h-40 rounded w-full object-cover object-center mb-6"
