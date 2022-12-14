@@ -12,8 +12,8 @@ const Navbar = () => {
         <div className="flex justify-start">
             <Link href='/app/home' className="relative flex items-center">
                 <Image
-                    width={70}
-                    height={70}
+                    width={90}
+                    height={90}
                     src={'/logo/login-logo.png'}
                     alt="Sample image"
                 />
