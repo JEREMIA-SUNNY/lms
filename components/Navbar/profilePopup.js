@@ -7,14 +7,14 @@ import { Fragment } from 'react'
 const ProfilePopup = () => {
 
     return (
-        <Menu as="div" className="absolute right-4  origin-top-right inline-block text-left">
+        <Menu as="div" className="absolute right-8 origin-top-right inline-block text-left">
             <div>
-                <Menu.Button className="relative bg-white rounded-full inline-flex text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                <Menu.Button className="relative bg-white rounded-full shadow inline-flex text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                     <Image
                         width={40}
                         height={40}
                         src={'/demoimage/Profile.png'}
-                        alt="Sample image"
+                        alt="user image"
                     />
                 </Menu.Button>
             </div>

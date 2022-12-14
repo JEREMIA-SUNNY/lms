@@ -2,7 +2,7 @@
 
 const Card = ({ children }) => {
     return (
-        <div className="shadow-lg hover:shadow-2xl bg-white rounded p-2">
+        <div className="shadow bg-white rounded-lg p-2">
             {children}
         </div>
     )
