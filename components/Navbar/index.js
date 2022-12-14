@@ -18,12 +18,12 @@ const Navbar = () => {
                     alt="Sample image"
                 />
             </Link>
-            <nav className="w-full flex items-center justify-between bg-[#27135F] px-5">
+            <nav className="w-full flex items-center justify-between bg-[#419a00] px-5">
                 <ul className="w-[80%] flex justify-between">
                     {MenuList?.map((item) => {
                         return (
                             <li key={item?.id}>
-                                <Link href={item?.link} className={`${pathname === item.link ? 'underline text-white font-bold' : 'text-gray-300 font-normal'} py-2 pl-3 pr-4 md:p-0`} aria-current="page">{item?.title}</Link>
+                                <Link href={item?.link} className={`${pathname === item.link ? 'underline text-white font-bold' : 'text-gray-100 font-normal'} py-2 pl-3 pr-4 md:p-0`} aria-current="page">{item?.title}</Link>
                             </li>
                         )
                     })}
