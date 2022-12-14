@@ -1,4 +1,4 @@
-import LearningLayout from "../../../Layout/home";
+import { LearningLayout } from "../../../Layout";
 
 const Learning = () => {
     return (
