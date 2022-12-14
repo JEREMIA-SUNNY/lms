@@ -9,7 +9,7 @@ const Navbar = () => {
     const { pathname } = useRouter()
 
     return (
-        <div className="flex justify-start">
+        <div className="fixed w-full z-50 flex justify-start">
             <Link href='/app/home' className="relative flex items-center">
                 <Image
                     width={90}
