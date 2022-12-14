@@ -7,8 +7,8 @@ const LoginForm = () => {
             <div className="w-full flex justify-center">
                 <div className="relative">
                     <Image
-                        width={120}
-                        height={120}
+                        width={150}
+                        height={150}
                         src={'/logo/login-logo.png'}
                         alt="Sample image"
                     />
