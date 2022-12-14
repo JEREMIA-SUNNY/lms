@@ -1,3 +1,4 @@
+import AppLayout from '../AppLayout'
 import AppContext from '../context/AppContext'
 import '../styles/globals.css'
 
@@ -8,7 +9,9 @@ function MyApp({ Component, pageProps }) {
       state: {},
     }}
   >
-    <Component {...pageProps} />
+    <AppLayout>
+      <Component {...pageProps} />
+    </AppLayout>
   </AppContext.Provider>
 }
 

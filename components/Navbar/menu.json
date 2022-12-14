@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Home",
+        "link": "/app/home",
+        "submenu": []
+    },
+    {
+        "id": 2,
+        "title": "Project Management",
+        "link": "/app/project-management",
+        "submenu": []
+    },
+    {
+        "id": 3,
+        "title": "Talent Management",
+        "link": "/app/talent-management",
+        "submenu": []
+    },
+    {
+        "id": 4,
+        "title": "Reports",
+        "link": "/app/reports",
+        "submenu": []
+    },
+    {
+        "id": 5,
+        "title": "Analytics",
+        "link": "/app/analytics",
+        "submenu": []
+    },
+    {
+        "id": 6,
+        "title": "Admin",
+        "link": "/app/admin",
+        "submenu": []
+    }
+]
