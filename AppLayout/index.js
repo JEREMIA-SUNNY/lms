@@ -4,8 +4,10 @@ const AppLayout = ({ children }) => {
     return (
         <div>
             <Navbar />
-            <div className="container px-5 py-24 mx-auto">
-                {children}
+            <div style={{paddingTop:'5rem'}} className="container mx-auto">
+                <main>
+                    {children}
+                </main>
             </div>
         </div>
     )

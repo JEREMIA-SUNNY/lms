@@ -6,5 +6,4 @@ export {
     Authlayout,
     HomeLayout,
     LearningLayout
-
 }
