@@ -1,17 +1,20 @@
+import { useRouter } from 'next/router'
 import AppLayout from '../AppLayout'
 import AppContext from '../context/AppContext'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-
+  const { pathname } = useRouter()
+  console.log(pathname)
   return <AppContext.Provider
     value={{
       state: {},
     }}
   >
-    <AppLayout>
+
+    {(pathname === '/' || pathname === '/login') ? <Component {...pageProps} /> : <AppLayout>
       <Component {...pageProps} />
-    </AppLayout>
+    </AppLayout>}
   </AppContext.Provider>
 }
 
