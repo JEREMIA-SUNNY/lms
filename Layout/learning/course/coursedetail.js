@@ -25,6 +25,7 @@ const CourseDetailLayout = () => {
             </div>
             <section className="my-4 w-full bg-white p-4 shadow rounded-md border border-[#419a00]">
                 <DetailHeader id={query?.id} />
+                
                 {/* Course #{query?.id} */}
             </section>
         </>
