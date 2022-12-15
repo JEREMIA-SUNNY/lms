@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Course = () => {
+const Course = ({ id }) => {
     return (
-        <Link className="w-full" href={`/course/detail/1`}>
+        <Link className="w-full" href={`/app/learning/course/detail/${id}`}>
             <div className="shadow bg-white p-6 rounded-lg">
                 <Image
                     className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 h-40 rounded w-full object-cover object-center mb-6"
