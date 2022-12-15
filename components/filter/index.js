@@ -19,7 +19,7 @@ const filterMenu = [
 
 const Filter = () => {
     return (
-        <div className="mt-4 flex justify-end">
+        <div className="flex justify-end">
             <Menu as="div" className="inline-block text-left">
                 <div>
                     <Menu.Button className="inline-flex w-full justify-center py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">

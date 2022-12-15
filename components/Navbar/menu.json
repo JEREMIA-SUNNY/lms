@@ -26,7 +26,7 @@
     {
         "id": 6,
         "title": "Learning",
-        "link": "/app/learning",
+        "link": "/app/learning/courses",
         "submenu": []
     },
     {

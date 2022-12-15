@@ -1,11 +1,15 @@
 import Authlayout from "./Auth";
-import  HomeLayout from './home'
-import LearningLayout from "./learning";
-import CourseDetailLayout from './learning/coursedetail'
+import HomeLayout from './home'
+import CoursesLayout from "./learning/course";
+import CourseDetailLayout from './learning/course/coursedetail'
+import TraningLayout from "./learning/tranings";
+import TraningDetailLayout from './learning/tranings/traningsdetail'
 
 export {
     Authlayout,
     HomeLayout,
-    LearningLayout,
-    CourseDetailLayout
+    CoursesLayout,
+    CourseDetailLayout,
+    TraningLayout,
+    TraningDetailLayout
 }
