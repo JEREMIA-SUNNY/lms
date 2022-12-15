@@ -24,7 +24,7 @@ const Navbar = () => {
                         {MenuList?.map((item) => {
                             return (
                                 <li key={item?.id}>
-                                    {pathname === item.link ? <span className="font-bold text-[#419a00]">{'['} {item?.title} {']'}</span>
+                                    {(pathname === item.link || pathname.includes(item?.title.toLowerCase())) ? <span className="font-bold text-[#419a00]">{'['} {item?.title} {']'}</span>
                                         : <Link href={item?.link} className='font-normal text-gray-900 py-2 pl-3 pr-4 md:p-0' aria-current="page">{item?.title}</Link>
                                     }
                                 </li>
