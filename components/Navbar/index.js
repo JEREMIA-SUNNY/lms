@@ -25,7 +25,7 @@ const Navbar = () => {
                             return (
                                 <li key={item?.id}>
                                     {pathname === item.link ? <span className="font-bold text-[#419a00]">{'['} {item?.title} {']'}</span>
-                                        : <Link href={item?.link} className='font-normal text-[#419a00] py-2 pl-3 pr-4 md:p-0' aria-current="page">{item?.title}</Link>
+                                        : <Link href={item?.link} className='font-normal text-gray-900 py-2 pl-3 pr-4 md:p-0' aria-current="page">{item?.title}</Link>
                                     }
                                 </li>
                             )
