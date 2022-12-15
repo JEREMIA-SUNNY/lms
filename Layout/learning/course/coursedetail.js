@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import GoBackButton from '../../../components/goBackBtn'
+import DetailHeader from '../component/detailHeader'
 
 const CourseDetailLayout = () => {
     const route = useRouter()
@@ -22,8 +23,9 @@ const CourseDetailLayout = () => {
                     </button>
                 </div>
             </div>
-            <section className="my-4 w-full grid grid-cols-4 gap-5">
-                Course #{query?.id}
+            <section className="my-4 w-full bg-white p-4 shadow rounded-md border border-[#419a00]">
+                <DetailHeader id={query?.id} />
+                {/* Course #{query?.id} */}
             </section>
         </>
     )
