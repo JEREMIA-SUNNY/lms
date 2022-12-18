@@ -1,19 +1,13 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
+import CustomLink from "../../../components/custom/Link";
 import Filter from "../../../components/filter";
 
 const ModuleHeader = () => {
-    const route = useRouter()
-    const { pathname } = route
+
     return (
         <div className="mt-4 flex items-center justify-between">
             <div className="flex items-center justify-start">
-                <Link href='/app/learning/courses' className={`${pathname === '/app/learning/courses' ? 'bg-[#419a00] text-white' : 'border border-[#419a00] text-[#419a00]'} h-10 mr-2 px-6 flex items-center rounded-md`}>
-                    Courses
-                </Link>
-                <Link href='/app/learning/tranings' className={`${pathname === '/app/learning/tranings' ? 'bg-[#419a00] text-white' : 'border border-[#419a00] text-[#419a00]'} h-10 mr-2 px-6 flex items-center rounded-md`}>
-                    Tranings
-                </Link>
+                <CustomLink href={'/app/learning/courses'} title={'Courses'} />
+                <CustomLink href={'/app/learning/tranings'} title={'Tranings'} />
             </div>
             <div className="flex items-center justify-end">
                 <button className="border-0 inline-flex items-center justify-center text-gray-500 mr-2">
