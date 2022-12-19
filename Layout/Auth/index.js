@@ -5,7 +5,7 @@ const Loginlayout = () => {
         <>
             <section className={`h-screen bg-[url('/demoimage/loginSide.png')] bg-no-repeat bg-cover bg-center`}>
                 <div className="h-full flex justify-center items-center">
-                    <div className="backdrop-blur-sm bg-white/20 rounded-md shadow-md bg-white">
+                    <div className="backdrop-blur-lg bg-white/20 rounded-md shadow-md bg-white">
                         <LoginForm />
                     </div>
                 </div>
