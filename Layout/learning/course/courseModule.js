@@ -1,10 +1,10 @@
 import VideoStatus from "./videoStatus";
+import StartAssesment from './startAssessment'
 
 const modules = [
-    { status: 'biginner' },
-    { status: 'master' },
-    { status: 'intermediate' },
-    { status: 'biginner' }
+    { status: 'Biginner' },
+    { status: 'Master' },
+    { status: 'Intermediate' },
 ]
 
 const CourseModule = ({ id }) => {
@@ -35,6 +35,7 @@ const CourseModule = ({ id }) => {
                             </svg>
                             New project
                         </a> */}
+                        <StartAssesment />
                     </div>
                 </div>
             </details>
