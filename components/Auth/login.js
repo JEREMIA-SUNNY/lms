@@ -3,18 +3,16 @@ import Link from "next/link";
 
 const LoginForm = () => {
     return (
-        <div className="w-full">
-            <div className="w-full flex justify-center">
-                <div className="relative">
-                    <Image
-                        width={150}
-                        height={150}
-                        src={'/logo/login-logo.png'}
-                        alt="Sample image"
-                    />
-                </div>
+        <div className="flex justify-between items-center">
+            <div className="w-[330px] relative flex justify-center items-center">
+                <Image
+                    width={200}
+                    height={200}
+                    src={'/logo/login-logo.png'}
+                    alt="Sample image"
+                />
             </div>
-            <div className="p-6 space-y-2 sm:p-8">
+            <div className="w-[330px] p-6 space-y-2 sm:p-8">
                 <form className="space-y-4 md:space-y-6">
                     <div>
                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
@@ -26,10 +24,8 @@ const LoginForm = () => {
                     </div>
                     <div className="flex justify-center">
                         <Link href='/app/home' className="w-[70%] text-white bg-[#419a00] hover:bg-[#419a00] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-[#419a00] dark:hover:bg-[#419a00] dark:focus:ring-primary-800">
-                           Login
+                            Login
                         </Link>
-                        {/* <button type="submit" className="w-[70%] text-white bg-[#419a00] hover:bg-[#419a00] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-[#419a00] dark:hover:bg-[#419a00] dark:focus:ring-primary-800">Login</button> */}
-
                     </div>
                     <div className="flex justify-between">
                         <Link href="/forgot-password" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</Link>
