@@ -2,7 +2,6 @@ import AutoComplete from "../../../components/AutoComplete";
 import CustomLink from "../../../components/custom/Link";
 import Filter from "../../../components/filter";
 import AddCourse from "../component/addcourseOrModal";
-import SearchForm from "./search";
 
 const ModuleHeader = ({ title }) => {
 
@@ -13,7 +12,6 @@ const ModuleHeader = ({ title }) => {
                 <CustomLink href={'/app/learning/trainings'} title={'Trainings'} />
             </div>
             <AutoComplete />
-            {/* <SearchForm /> */}
             <div className="flex items-center justify-end">
                 <AddCourse title={title} />
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#419a00] mr-2">

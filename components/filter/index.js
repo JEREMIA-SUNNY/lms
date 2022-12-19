@@ -44,20 +44,22 @@ const Filter = () => {
 
                     <Menu.Items className="w-full px-5 z-10 absolute right-0 mt-2 w-full origin-top-right ring-opacity-5 focus:outline-none">
                         <div className='rounded-lg bg-white shadow-lg px-1 py-1'>
-                            <div className='my-2 w-full flex justify-start items-center'>
-                                <p className='mx-2 text-gray-600 font-bold'>Filters: </p>
-                                {activeFilter?.map((item, i) => {
-                                    return (
-                                        <button key={i} type="button" className="mr-2 flex justify-start items-center py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-lg focus:ring-4 focus:outline-none focus:ring-green-300">
-                                            <span>{item}</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </button>
-                                    )
-                                })}
-                            </div>
-                            <hr/>
+                            {activeFilter?.length ? <>
+                                <div className='my-2 w-full flex justify-start items-center'>
+                                    <p className='mx-2 text-gray-600 font-bold'>Filters: </p>
+                                    {activeFilter?.map((item, i) => {
+                                        return (
+                                            <button key={i} type="button" className="mr-2 flex justify-start items-center py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-lg focus:ring-4 focus:outline-none focus:ring-green-300">
+                                                <span>{item}</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </button>
+                                        )
+                                    })}
+                                </div>
+                                <hr />
+                            </> : ''}
                             <div className="w-full grid grid-cols-4 gap-2">
                                 {filterMenu?.map(item => {
                                     return (
@@ -68,27 +70,15 @@ const Filter = () => {
                                         >
                                             {item}
                                         </button>
-                                        // <Menu.Item key={item}>
-                                        //     {({ active }) => (
-                                        //         <button
-                                        //             className={`${active ? 'text-[#419a00]' : 'text-gray-900'
-                                        //                 } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                                        //         >
-                                        //             {item}
-                                        //         </button>
-                                        //     )}
-                                        // </Menu.Item>
                                     )
                                 })}
                             </div>
                             <div className='flex justify-end'>
+                                <button onClick={() => { setActiveFilter([]) }} type="button" className="mr-2 py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-md focus:ring-1 focus:outline-none focus:ring-green-600">
+                                    <span>Clear</span>
+                                </button>
                                 <Menu.Item>
-                                    <button type="button" className="mr-2 py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-lg focus:ring-4 focus:outline-none focus:ring-green-300">
-                                        <span>Close</span>
-                                    </button>
-                                </Menu.Item>
-                                <Menu.Item>
-                                    <button type="button" className="mr-2 py-2 px-3 text-xs font-bold text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-4 focus:outline-none focus:ring-green-300">
+                                    <button type="button" className="mr-2 py-2 px-3 text-xs font-bold text-white bg-[#419a00] border border-[#419a00] rounded-md focus:ring-1 focus:outline-none focus:ring-green-300">
                                         <span>Apply</span>
                                     </button>
                                 </Menu.Item>
