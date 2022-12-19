@@ -22,8 +22,8 @@ const Course = ({ id }) => {
 
                     </button>
                 </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font my-4">Lorem ipsum</h2>
-                <p className="leading-relaxed text-base">
+                <h2 className="text-lg text-gray-900 font-medium title-font my-2">Lorem ipsum</h2>
+                <p className="text-gray-500 leading-5 text-base">
                     In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without
                 </p>
             </div>
