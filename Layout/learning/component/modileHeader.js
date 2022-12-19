@@ -1,15 +1,17 @@
 import CustomLink from "../../../components/custom/Link";
 import Filter from "../../../components/filter";
 import AddCourse from "../component/addcourseOrModal";
+import SearchForm from "./search";
 
 const ModuleHeader = ({ title }) => {
 
     return (
-        <div className="mt-4 flex items-center justify-between">
+        <div className="mt-4 w-full grid grid-cols-3 gap-5">
             <div className="flex items-center justify-start">
                 <CustomLink href={'/app/learning/courses'} title={'Courses'} />
                 <CustomLink href={'/app/learning/trainings'} title={'Trainings'} />
             </div>
+            <SearchForm />
             <div className="flex items-center justify-end">
                 <AddCourse title={title} />
                 <button className="border-0 inline-flex items-center justify-center text-gray-500 mr-2">
