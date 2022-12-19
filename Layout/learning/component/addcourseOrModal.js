@@ -2,7 +2,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 
-const AddCourse = () => {
+const AddCourseOrTraining = ({ title }) => {
     let [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
@@ -44,6 +44,12 @@ const AddCourse = () => {
                                 leaveTo="opacity-0 scale-95"
                             >
                                 <Dialog.Panel className="w-[94%] transform overflow-hidden rounded-md bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        Add {title}
+                                    </Dialog.Title>
                                     <div className="mt-2 w-full h-[80vh] flex items-center">
                                         {/* <ReactPlayer width={'100%'} height={'100%'} url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /> */}
                                     </div>
@@ -58,4 +64,4 @@ const AddCourse = () => {
     )
 }
 
-export default AddCourse;
+export default AddCourseOrTraining;

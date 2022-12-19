@@ -1,6 +1,6 @@
 
 
-const TraningModule = ({ id }) => {
+const TrainingModule = ({ id }) => {
     return (
         <div className="mt-4">
             <details className="w-full bg-white p-4 shadow bg-[#F5F5F5] rounded  group mx-auto overflow-hidden open:!max-h-[400px] transition-[max-height] duration-500 overflow-hidden">
@@ -29,4 +29,4 @@ const TraningModule = ({ id }) => {
     )
 }
 
-export default TraningModule;
+export default TrainingModule;
