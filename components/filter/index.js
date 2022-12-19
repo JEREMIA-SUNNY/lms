@@ -1,6 +1,6 @@
 
 import { Menu, Transition } from '@headlessui/react';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 const filterMenu = [
     'Filter 1',
@@ -18,6 +18,12 @@ const filterMenu = [
 ]
 
 const Filter = () => {
+    const [activeFilter, setActiveFilter] = useState([])
+
+    const addToFilter = (item) => {
+        setActiveFilter([...activeFilter, item])
+    }
+
     return (
         <div className="flex justify-end">
             <Menu as="div" className="inline-block text-left">
@@ -35,26 +41,65 @@ const Filter = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                 >
-                    <Menu.Items className="px-5 z-10 absolute right-0 mt-2 w-full origin-top-right ring-opacity-5 focus:outline-none">
-                        <div className="rounded-lg bg-white shadow-lg px-1 py-1 w-full grid grid-cols-4 gap-2">
-                            {filterMenu?.map(item => {
-                                return (
-                                    <Menu.Item key={item}>
-                                        {({ active }) => (
-                                            <button
-                                                className={`${active ? 'text-[#419a00]' : 'text-gray-900'
-                                                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                                            >
-                                                {item}
-                                            </button>
-                                        )}
-                                    </Menu.Item>
-                                )
-                            })}
+
+                    <Menu.Items className="w-full px-5 z-10 absolute right-0 mt-2 w-full origin-top-right ring-opacity-5 focus:outline-none">
+                        <div className='rounded-lg bg-white shadow-lg px-1 py-1'>
+                            <div className='my-2 w-full flex justify-start items-center'>
+                                <p className='mx-2 text-gray-600 font-bold'>Filters: </p>
+                                {activeFilter?.map((item, i) => {
+                                    return (
+                                        <button key={i} type="button" className="mr-2 flex justify-start items-center py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-lg focus:ring-4 focus:outline-none focus:ring-green-300">
+                                            <span>{item}</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+                                    )
+                                })}
+                            </div>
+                            <hr/>
+                            <div className="w-full grid grid-cols-4 gap-2">
+                                {filterMenu?.map(item => {
+                                    return (
+                                        <button
+                                            onClick={() => { addToFilter(item) }}
+                                            key={item}
+                                            className={`text-gray-90 group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                        >
+                                            {item}
+                                        </button>
+                                        // <Menu.Item key={item}>
+                                        //     {({ active }) => (
+                                        //         <button
+                                        //             className={`${active ? 'text-[#419a00]' : 'text-gray-900'
+                                        //                 } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                        //         >
+                                        //             {item}
+                                        //         </button>
+                                        //     )}
+                                        // </Menu.Item>
+                                    )
+                                })}
+                            </div>
+                            <div className='flex justify-end'>
+                                <Menu.Item>
+                                    <button type="button" className="mr-2 py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-lg focus:ring-4 focus:outline-none focus:ring-green-300">
+                                        <span>Close</span>
+                                    </button>
+                                </Menu.Item>
+                                <Menu.Item>
+                                    <button type="button" className="mr-2 py-2 px-3 text-xs font-bold text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-4 focus:outline-none focus:ring-green-300">
+                                        <span>Apply</span>
+                                    </button>
+                                </Menu.Item>
+
+                            </div>
                         </div>
                     </Menu.Items>
+                    {/* </div> */}
                 </Transition>
             </Menu>
+
         </div>
     )
 }

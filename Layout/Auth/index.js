@@ -1,24 +1,12 @@
-import Image from "next/image";
 import LoginForm from "../../components/Auth/login";
 
 const Loginlayout = () => {
     return (
         <>
-            <section className="h-screen">
-                <div className="h-full">
-                    <div className="h-full md:flex">
-                        <div className="h-[18rem] mb-2 md:h-full md:w-[70%] relative">
-                            <Image
-                                layout="fill"
-                                objectFit="cover"
-                                quality={100}
-                                src={'/demoimage/loginSide.png'}
-                                alt="Sample image"
-                            />
-                        </div>
-                        <div className="md:w-[30%] flex justify-center items-center">
-                            <LoginForm />
-                        </div>
+            <section className={`h-screen bg-[url('/demoimage/loginSide.png')] bg-no-repeat bg-cover bg-center`}>
+                <div className="h-full flex justify-center items-center">
+                    <div className="backdrop-blur-sm bg-white/20 rounded-md shadow-md bg-white">
+                        <LoginForm />
                     </div>
                 </div>
             </section>
