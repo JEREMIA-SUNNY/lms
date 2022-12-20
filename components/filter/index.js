@@ -1,20 +1,20 @@
 
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
+import SelectInput from '../SelectInput'
 
 const filterMenu = [
     'Filter 1',
     'Filter 2',
     'Filter 3',
-    'Filter 4',
-    'Filter 5',
-    'Filter 6',
-    'Filter 7',
-    'Filter 8',
-    'Filter 9',
-    'Filter 10',
-    'Filter 11',
-    'Filter 12',
+    'Filter 4'
+]
+
+const dropdowns = [
+    { name: 'Filter1', title: 'Filter 1' },
+    { name: 'Filter2', title: 'Filter 2' },
+    { name: 'Filter3', title: 'Filter 3' },
+    { name: 'Filter4', title: 'Filter 4' }
 ]
 
 const Filter = () => {
@@ -42,8 +42,8 @@ const Filter = () => {
                     leaveTo="transform opacity-0 scale-95"
                 >
 
-                    <Menu.Items className="w-full px-5 z-10 absolute right-0 mt-2 w-full origin-top-right ring-opacity-5 focus:outline-none">
-                        <div className='rounded-lg bg-white shadow-lg px-1 py-1'>
+                    <Menu.Items className="w-full px-5 z-10 absolute right-0 mt-2 origin-top-right ring-opacity-5 focus:outline-none">
+                        <div className='rounded-lg bg-white shadow-lg px-1 py-1 h-[300px]'>
                             {activeFilter?.length ? <>
                                 <div className='my-2 w-full flex justify-start items-center'>
                                     <p className='mx-2 text-gray-600 font-bold'>Filters: </p>
@@ -72,8 +72,17 @@ const Filter = () => {
                                         </button>
                                     )
                                 })}
+                                {
+                                    [1, 2, 3, 4, 5, 6, 7, 8]?.map((item) => {
+                                        return (
+                                            <div className='px-2' key={item}>
+                                                <SelectInput id={`${item}-id`} dropdowns={dropdowns} name={'demofilter'} />
+                                            </div>
+                                        )
+                                    })
+                                }
                             </div>
-                            <div className='flex justify-end'>
+                            <div className='flex justify-end mt-2'>
                                 <button onClick={() => { setActiveFilter([]) }} type="button" className="mr-2 py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-md focus:ring-1 focus:outline-none focus:ring-green-600">
                                     <span>Clear</span>
                                 </button>
@@ -82,7 +91,6 @@ const Filter = () => {
                                         <span>Apply</span>
                                     </button>
                                 </Menu.Item>
-
                             </div>
                         </div>
                     </Menu.Items>
