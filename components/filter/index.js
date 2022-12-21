@@ -66,7 +66,7 @@ const Filter = () => {
                                         <button
                                             onClick={() => { addToFilter(item) }}
                                             key={item}
-                                            className={`text-gray-90 group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                            className={`text-gray-90 group flex w-full items-center rounded-lg px-2 py-2 text-sm`}
                                         >
                                             {item}
                                         </button>
@@ -83,11 +83,11 @@ const Filter = () => {
                                 }
                             </div>
                             <div className='flex justify-end mt-2'>
-                                <button onClick={() => { setActiveFilter([]) }} type="button" className="mr-2 py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-md focus:ring-1 focus:outline-none focus:ring-green-600">
+                                <button onClick={() => { setActiveFilter([]) }} type="button" className="mr-2 py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-600">
                                     <span>Clear</span>
                                 </button>
                                 <Menu.Item>
-                                    <button type="button" className="mr-2 py-2 px-3 text-xs font-bold text-white bg-[#419a00] border border-[#419a00] rounded-md focus:ring-1 focus:outline-none focus:ring-green-300">
+                                    <button type="button" className="mr-2 py-2 px-3 text-xs font-bold text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-300">
                                         <span>Apply</span>
                                     </button>
                                 </Menu.Item>

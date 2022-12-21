@@ -6,7 +6,7 @@ const Course = ({ id }) => {
         <Link className="w-full" href={`/app/learning/courses/detail/${id}`}>
             <div className="shadow bg-white p-4 rounded-lg">
                 <Image
-                    className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 h-40 rounded-md w-full object-cover object-center"
+                    className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 h-40 rounded-lg w-full object-cover object-center"
                     height={200}
                     width={200}
                     quality={100}

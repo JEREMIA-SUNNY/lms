@@ -1,7 +1,7 @@
 
 const DetailHeader = ({id }) => {
     return (
-        <div className="rounded-md shadow bg-[#F5F5F5] p-4">
+        <div className="rounded-lg shadow bg-[#F5F5F5] p-4">
             <table className="table-auto w-full">
                 <thead>
                     <tr>

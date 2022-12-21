@@ -15,7 +15,7 @@ const Modal = ({ TitleIcon, title, ui }) => {
 
     return (
         <>
-            <button onClick={openModal}>
+            <button className='w-full' onClick={openModal}>
                 {TitleIcon}
             </button>
             <Transition appear show={isOpen} as={Fragment}>
@@ -43,7 +43,7 @@ const Modal = ({ TitleIcon, title, ui }) => {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-[1160px] transform overflow-hidden rounded-md bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="w-[1160px] transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
                                     <>
                                         <div className='flex justify-between items-center'>
                                             <h3 className="mb-4 text-lg font-medium leading-6 text-gray-900">
