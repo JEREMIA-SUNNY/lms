@@ -44,7 +44,7 @@ const Filter = () => {
 
                     <Menu.Items className="w-full px-5 z-10 absolute right-0 mt-2 origin-top-right ring-opacity-5 focus:outline-none">
                         <div className='rounded-lg bg-white shadow-lg px-1 py-1 h-[300px]'>
-                            {activeFilter?.length ? <>
+                            <>
                                 <div className='my-2 w-full flex justify-start items-center'>
                                     <p className='mx-2 text-gray-600 font-bold'>Filters: </p>
                                     {activeFilter?.map((item, i) => {
@@ -58,39 +58,30 @@ const Filter = () => {
                                         )
                                     })}
                                 </div>
-                                <hr />
-                            </> : ''}
-                            <div className="w-full grid grid-cols-4 gap-2">
-                                {filterMenu?.map(item => {
-                                    return (
-                                        <button
-                                            onClick={() => { addToFilter(item) }}
-                                            key={item}
-                                            className={`text-gray-90 group flex w-full items-center rounded-lg px-2 py-2 text-sm`}
-                                        >
-                                            {item}
-                                        </button>
-                                    )
-                                })}
-                                {
-                                    [1, 2, 3, 4, 5, 6, 7, 8]?.map((item) => {
-                                        return (
-                                            <div className='px-2' key={item}>
-                                                <SelectInput id={`${item}-id`} dropdowns={dropdowns} name={'demofilter'} />
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
-                            <div className='flex justify-end mt-2'>
-                                <button onClick={() => { setActiveFilter([]) }} type="button" className="mr-2 py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-600">
-                                    <span>Clear</span>
-                                </button>
-                                <Menu.Item>
-                                    <button type="button" className="mr-2 py-2 px-3 text-xs font-bold text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-300">
-                                        <span>Apply</span>
+                                <hr className='mb-2' />
+                            </>
+                            <div className="w-full flex">
+                                <div className="w-[84%] grid grid-cols-4 gap-2">
+                                    {
+                                        [1, 2, 3, 4, 5, 6, 7, 8, 9]?.map((item) => {
+                                            return (
+                                                <div className='px-2' key={item}>
+                                                    <SelectInput id={`${item}-id`} dropdowns={dropdowns} name={'Demo filter'} />
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                                <div className='w-[16%]'>
+                                    <button onClick={() => { setActiveFilter([]) }} type="button" className="w-full mr-2 py-2 px-3 text-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-600">
+                                        <span>Clear</span>
                                     </button>
-                                </Menu.Item>
+                                    <Menu.Item>
+                                        <button type="button" className="mt-2 w-full mr-2 py-2 px-3 text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-300">
+                                            <span>Apply</span>
+                                        </button>
+                                    </Menu.Item>
+                                </div>
                             </div>
                         </div>
                     </Menu.Items>

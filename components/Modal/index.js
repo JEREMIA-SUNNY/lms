@@ -2,7 +2,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 
-const Modal = ({ TitleIcon, title, ui }) => {
+const Modal = ({ TitleIcon, title, ui, className }) => {
     let [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
@@ -15,7 +15,7 @@ const Modal = ({ TitleIcon, title, ui }) => {
 
     return (
         <>
-            <button className='w-full' onClick={openModal}>
+            <button className={className} onClick={openModal}>
                 {TitleIcon}
             </button>
             <Transition appear show={isOpen} as={Fragment}>

@@ -7,15 +7,17 @@ const VideoStatus = ({ item }) => {
     return (
         <>
             <div className="shadow bg-white p-4 rounded-lg">
-                <Modal TitleIcon={<Image
-                    className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 h-40 rounded-lg w-full object-cover object-center"
-                    height={200}
-                    width={200}
-                    quality={100}
-                    src='/demoimage/module.webp'
-                    alt="Sample image"
-                />}
-                ui={<ReactPlayer width={'100%'} height={'100%'} url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />}
+                <Modal
+                    className={'w-full'}
+                    TitleIcon={<Image
+                        className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 h-40 rounded-lg w-full object-cover object-center"
+                        height={200}
+                        width={200}
+                        quality={100}
+                        src='/demoimage/module.webp'
+                        alt="Sample image"
+                    />}
+                    ui={<ReactPlayer width={'100%'} height={'100%'} url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />}
                 />
                 <div className="relative -mt-11">
                     <button

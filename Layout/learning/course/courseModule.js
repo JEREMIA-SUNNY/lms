@@ -5,6 +5,7 @@ const modules = [
     { status: 'Biginner' },
     { status: 'Master' },
     { status: 'Intermediate' },
+    { status: 'Intermediate' }
 ]
 
 const CourseModule = ({ id }) => {
@@ -21,7 +22,7 @@ const CourseModule = ({ id }) => {
                 </summary>
                 <hr className="my-2 scale-x-150" />
                 <div className="-m-4 -mt-2 p-4 bg-gray-50">
-                    <div className="my-4 w-full grid grid-cols-4 gap-5">
+                    <div className="my-4 w-full grid grid-cols-5 gap-5">
                         {
                             modules.map((item,i ) => {
                                 return (
