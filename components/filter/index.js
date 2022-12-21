@@ -3,13 +3,6 @@ import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import SelectInput from '../SelectInput'
 
-const filterMenu = [
-    'Filter 1',
-    'Filter 2',
-    'Filter 3',
-    'Filter 4'
-]
-
 const dropdowns = [
     { name: 'Filter1', title: 'Filter 1' },
     { name: 'Filter2', title: 'Filter 2' },
@@ -19,10 +12,6 @@ const dropdowns = [
 
 const Filter = () => {
     const [activeFilter, setActiveFilter] = useState([])
-
-    const addToFilter = (item) => {
-        setActiveFilter([...activeFilter, item])
-    }
 
     return (
         <div className="flex justify-end">

@@ -1,12 +1,12 @@
 
-import CourseForm from './courseForm'
+import MainCourseCreate from './mianCourseCreate'
 import Modal from '../../../components/Modal'
 
 const AddCourseOrTraining = ({ title }) => {
 
     return (
         <Modal ui={<div className="mt-2 w-full h-[80vh]">
-            <CourseForm />
+            <MainCourseCreate />
         </div>}
             title={title}
             TitleIcon={<div className="rounded-lg border-0 inline-flex items-center justify-center text-gray-500 mr-2 mt-2">
