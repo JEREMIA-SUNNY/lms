@@ -10,7 +10,7 @@ const level = [
     { name: 'intermediate', title: 'Intermediate' },
     { name: 'advance', title: 'Advance' },
 ]
-const CourseForm = ({ handleInput, courseInfo }) => {
+const CourseForm = ({ handleInput, courseInfo, IsAssessment, setIsAssessment }) => {
 
     return (
         <div>
@@ -64,8 +64,8 @@ const CourseForm = ({ handleInput, courseInfo }) => {
                 <label htmlFor="IsAssessment" className="block mb-2 text-sm font-semibold text-gray-900">Assessment Require ( Yes/No )</label>
                 <SwitchInput
                     name='IsAssessment'
-                    value={courseInfo?.IsAssessment}
-                    onChange={handleInput} />
+                    value={IsAssessment}
+                    onChange={setIsAssessment} />
             </div>
             <div className="mt-4">
                 <label htmlFor="skill" className="w-full block mb-2 text-sm font-semibold text-gray-900">Description</label>
