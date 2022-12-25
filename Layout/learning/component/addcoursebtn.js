@@ -1,8 +1,8 @@
 
-import MainCourseCreate from './mianCourseCreate'
+import MainCourseCreate from './form/course/mianCourseCreate'
 import Modal from '../../../components/Modal'
 
-const AddCourseOrTraining = ({ title }) => {
+const AddCourseBtn = ({ title }) => {
 
     return (
         <Modal ui={<div className="mt-2 w-full h-[80vh]">
@@ -16,4 +16,4 @@ const AddCourseOrTraining = ({ title }) => {
     )
 }
 
-export default AddCourseOrTraining;
+export default AddCourseBtn;

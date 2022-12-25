@@ -10,6 +10,7 @@ const Course = ({ id }) => {
                     height={200}
                     width={200}
                     quality={100}
+                    loading="eager" priority={true}
                     src='/demoimage/Courses.png'
                     alt="Sample image"
                 />

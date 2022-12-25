@@ -1,4 +1,4 @@
-import { useState } from "react";
+import SwitchInput from "../../../../../components/custom/switchInput";
 import SelectInput from "../../../../../components/SelectInput";
 
 const status = [
@@ -10,7 +10,7 @@ const level = [
     { name: 'intermediate', title: 'Intermediate' },
     { name: 'advance', title: 'Advance' },
 ]
-const CourseForm = ({ handleInput }) => {
+const CourseForm = ({ handleInput, courseInfo }) => {
 
     return (
         <div>
@@ -42,7 +42,13 @@ const CourseForm = ({ handleInput }) => {
                 </div>
                 <div>
                     <label htmlFor="module" className="block mb-2 text-sm font-semibold text-gray-900">Module</label>
-                    <input onChange={handleInput} type="number" defaultValue={1} name="module" id="module" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    <input onChange={(e) => {
+                        if (e.target.value < 0) {
+                            e.target.value = 1
+                        } else {
+                            handleInput(e)
+                        }
+                    }} type="number" defaultValue={courseInfo?.module} name="module" id="module" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="1" required="" />
                 </div>
                 <div>
@@ -53,6 +59,13 @@ const CourseForm = ({ handleInput }) => {
                     <label htmlFor="Level" className="block mb-2 text-sm font-semibold text-gray-900">Level</label>
                     <SelectInput onChange={handleInput} name='Level' id='Level' dropdowns={level} />
                 </div>
+            </div>
+            <div className="mt-4">
+                <label htmlFor="IsAssessment" className="block mb-2 text-sm font-semibold text-gray-900">Assessment Require ( Yes/No )</label>
+                <SwitchInput
+                    name='IsAssessment'
+                    value={courseInfo?.IsAssessment}
+                    onChange={handleInput} />
             </div>
             <div className="mt-4">
                 <label htmlFor="skill" className="w-full block mb-2 text-sm font-semibold text-gray-900">Description</label>
