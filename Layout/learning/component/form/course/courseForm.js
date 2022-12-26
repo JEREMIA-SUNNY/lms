@@ -1,10 +1,17 @@
 import SwitchInput from "../../../../../components/custom/switchInput";
 import SelectInput from "../../../../../components/SelectInput";
+import Skillform from "./skills";
 
 const status = [
     { name: 'active', title: 'Active' },
     { name: 'inactive', title: 'In Active' },
 ]
+
+const freePaid = [
+    { name: 'Free', title: 'Free' },
+    { name: 'Paid', title: 'Paid' },
+]
+
 const level = [
     { name: 'beginner', title: 'Beginner' },
     { name: 'intermediate', title: 'Intermediate' },
@@ -59,6 +66,18 @@ const CourseForm = ({ handleInput, courseInfo, IsAssessment, setIsAssessment }) 
                     <label htmlFor="Level" className="block mb-2 text-sm font-semibold text-gray-900">Level</label>
                     <SelectInput onChange={handleInput} name='Level' id='Level' dropdowns={level} />
                 </div>
+                <div>
+                    <label htmlFor="IsFree" className="block mb-2 text-sm font-semibold text-gray-900">Free / Paid</label>
+                    <SelectInput onChange={handleInput} name='IsFree' id='IsFree' dropdowns={freePaid} />
+                </div>
+                {courseInfo?.IsFree === 'Paid' ? <div>
+                    <label htmlFor="Price" className="block mb-2 text-sm font-semibold text-gray-900">Price</label>
+                    <input onChange={handleInput} type="number" name="Price" id="Price" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                        placeholder="Price" required="" />
+                </div> : ''}
+                <Skillform 
+                courseInfo={courseInfo}
+                handleInput={handleInput} />
             </div>
             <div className="mt-4">
                 <label htmlFor="IsAssessment" className="block mb-2 text-sm font-semibold text-gray-900">Assessment Require ( Yes/No )</label>

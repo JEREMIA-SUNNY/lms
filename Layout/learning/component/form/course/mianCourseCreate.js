@@ -84,6 +84,7 @@ const MainCourseCreate = () => {
         question['questions'][Number(id)] = { ...question['questions'][Number(id)], [name]: value }
     }
 
+    console.log(courseInfo)
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>

@@ -1,0 +1,106 @@
+{
+    "skillTypes": [
+        {
+            "type": "Teacher",
+            "skills": [
+                {
+                    "name": "Elementary School Teaching",
+                    "description": "The ability to teach elementary school students effectively."
+                },
+                {
+                    "name": "Middle School Teaching",
+                    "description": "The ability to teach middle school students effectively."
+                },
+                {
+                    "name": "High School Teaching",
+                    "description": "The ability to teach high school students effectively."
+                }
+            ]
+        },
+        {
+            "type": "Driver",
+            "skills": [
+                {
+                    "name": "Car Driving",
+                    "description": "The ability to operate a car safely and efficiently."
+                },
+                {
+                    "name": "Truck Driving",
+                    "description": "The ability to operate a truck safely and efficiently."
+                },
+                {
+                    "name": "Bus Driving",
+                    "description": "The ability to operate a bus safely and efficiently."
+                }
+            ]
+        },
+        {
+            "type": "Engineer",
+            "skills": [
+                {
+                    "name": "Mechanical Engineering",
+                    "description": "The ability to design, build, and test mechanical systems."
+                },
+                {
+                    "name": "Electrical Engineering",
+                    "description": "The ability to design, build, and test electrical systems."
+                },
+                {
+                    "name": "Computer Engineering",
+                    "description": "The ability to design, build, and test computer systems."
+                }
+            ]
+        },
+        {
+            "type": "Business",
+            "skills": [
+                {
+                    "name": "Financial Management",
+                    "description": "The ability to manage financial resources effectively."
+                },
+                {
+                    "name": "Marketing",
+                    "description": "The ability to identify and target potential customers."
+                },
+                {
+                    "name": "Business Strategy",
+                    "description": "The ability to develop and implement a business plan."
+                }
+            ]
+        },
+        {
+            "type": "Marketing",
+            "skills": [
+                {
+                    "name": "Content Marketing",
+                    "description": "The ability to create and distribute valuable, relevant, and consistent content to attract and retain a clearly defined audience."
+                },
+                {
+                    "name": "Social Media Marketing",
+                    "description": "The ability to use social media platforms to promote products or services."
+                },
+                {
+                    "name": "Email Marketing",
+                    "description": "The ability to use email to promote products or services."
+                }
+            ]
+        },
+        {
+            "type": "Leader",
+            "skills": [
+                {
+                    "name": "Team Leadership",
+                    "description": "The ability to lead and manage a team effectively."
+                },
+                {
+                    "name": "Strategic Thinking",
+                    "description": "The ability to analyze and develop long-term plans and goals."
+                },
+                {
+                    "name": "Conflict Resolution",
+                    "description": "The ability to resolve conflicts and disputes"
+                }
+            ]
+        }
+    ]
+}
