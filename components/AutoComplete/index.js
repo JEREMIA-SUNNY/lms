@@ -2,29 +2,17 @@
 import { Fragment, useState } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 
-const people = [
-    { id: 1, name: 'Wade Cooper' },
-    { id: 2, name: 'Arlene Mccoy' },
-    { id: 3, name: 'Devon Webb' },
-    { id: 4, name: 'Tom Cook' },
-    { id: 5, name: 'Tanya Fox' },
-    { id: 6, name: 'Hellen Schmidt' },
-    { id: 7, name: 'Tanya Fox' },
-    { id: 8, name: 'more kjwe Hellen Schmidt' },
-    { id: 9, name: 'Tanyaqwkef q  Fox' },
-    { id: 10, name: 'naresh Hellen Schmidt' },
-]
 
 // export default function Example() {
-const AutoComplete = () => {
-    const [selected, setSelected] = useState(people[0])
+const AutoComplete = ({ list, keyname }) => {
+    const [selected, setSelected] = useState(list[0])
     const [query, setQuery] = useState('')
 
     const filteredPeople =
         query === ''
-            ? people
-            : people.filter((person) =>
-                person.name
+            ? list
+            : list.filter((person) =>
+                person[keyname]
                     .toLowerCase()
                     .replace(/\s+/g, '')
                     .includes(query.toLowerCase().replace(/\s+/g, ''))
@@ -71,7 +59,7 @@ const AutoComplete = () => {
                                                     className={`cursor-pointer block truncate ${selected ? 'font-medium' : 'font-normal'
                                                         }`}
                                                 >
-                                                    {person.name}
+                                                    {person[keyname]}
                                                 </span>
                                             </>
                                         )}

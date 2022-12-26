@@ -3,6 +3,7 @@ import { Tab } from '@headlessui/react'
 import Tablist from '../../../../../components/custom/TabList'
 import CreateTrainingFrom from './createTraining'
 import MainAddAssessment from '../assessment/mainAddAssessment'
+import BatchesForm from '../batches/batchesform'
 
 const tablist = ['Training detail', 'Batches', 'Start Assesment']
 
@@ -10,6 +11,13 @@ const MainTrainingCreate = () => {
     const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: true })
     const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(false)
+    const [batchInfo, setbatchInfo] = useState({})
+    const [batchSession, setBatchSession] = useState([])
+
+    const handlebatchInfo = (e) => {
+        const { name, value, id } = e.target
+        setbatchInfo({ ...batchInfo, [name]: value })
+    }
 
     const handleTrainingInput = (e) => {
         const { value, name } = e.target
@@ -37,7 +45,7 @@ const MainTrainingCreate = () => {
         setTrainingInfo({ ...trainingInfo, thumbnail: file })
     }
 
-    console.log(trainingInfo)
+    console.log(batchSession)
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
@@ -52,11 +60,10 @@ const MainTrainingCreate = () => {
                             handleInput={handleTrainingInput} />
                     </Tab.Panel>
                     <Tab.Panel className='h-full'>
-                        {/* <MainModuleCreate handleModuleName={handleModuleName}
-                            ModuleFieldValue={ModuleFieldValue}
-                            moduleVideoInput={moduleVideoInput}
-                            trainingInfo={trainingInfo}
-                            listofModule={listofModule} /> */}
+                        <BatchesForm batchInfo={batchInfo}
+                            batchSession={batchSession}
+                            setBatchSession={setBatchSession}
+                            handlebatchInfo={handlebatchInfo} />
                     </Tab.Panel>
                     {IsAssessment ? <Tab.Panel className='h-full'>
                         <MainAddAssessment

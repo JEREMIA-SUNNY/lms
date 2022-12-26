@@ -4,6 +4,20 @@ import Filter from "../../../components/filter";
 import AddCourseBtn from "../component/addcoursebtn";
 import AddTrainingBtn from "../component/addTrainingbtn";
 
+
+const people = [
+    { id: 1, name: 'Wade Cooper' },
+    { id: 2, name: 'Arlene Mccoy' },
+    { id: 3, name: 'Devon Webb' },
+    { id: 4, name: 'Tom Cook' },
+    { id: 5, name: 'Tanya Fox' },
+    { id: 6, name: 'Hellen Schmidt' },
+    { id: 7, name: 'Tanya Fox' },
+    { id: 8, name: 'more kjwe Hellen Schmidt' },
+    { id: 9, name: 'Tanyaqwkef q  Fox' },
+    { id: 10, name: 'naresh Hellen Schmidt' },
+]
+
 const ModuleHeader = ({ title }) => {
 
     return (
@@ -12,7 +26,7 @@ const ModuleHeader = ({ title }) => {
                 <CustomLink href={'/app/learning/courses'} title={'Courses'} />
                 <CustomLink href={'/app/learning/trainings'} title={'Trainings'} />
             </div>
-            <AutoComplete />
+            <AutoComplete list={people} keyname='name' />
             <div className="flex items-center justify-end">
                 {title === 'Course' ? <AddCourseBtn title={'Create new Course'} /> : <AddTrainingBtn title={'Create Training'} />}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#419a00] mr-2">
