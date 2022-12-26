@@ -18,6 +18,15 @@ const level = [
     { name: 'intermediate', title: 'Intermediate' },
     { name: 'advance', title: 'Advance' },
 ]
+
+
+const language = [
+    { name: 'hindi', title: 'Hindi' },
+    { name: 'english', title: 'English' },
+    { name: 'Panjabi', title: 'Panjabi' },
+    { name: 'Maradhi', title: 'Maradhi' }
+
+]
 const TrainingForm = ({ handleInput, handlefile, trainingInfo, IsAssessment, setIsAssessment }) => {
 
     return (
@@ -32,11 +41,6 @@ const TrainingForm = ({ handleInput, handlefile, trainingInfo, IsAssessment, set
                     <label htmlFor="domain" className="block mb-2 text-sm font-semibold text-gray-900">Domain</label>
                     <input onChange={handleInput} type="text" name="domain" id="domain" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="domain" required="" />
-                </div>
-                <div>
-                    <label htmlFor="skill" className="block mb-2 text-sm font-semibold text-gray-900">Skill</label>
-                    <input onChange={handleInput} type="text" name="skill" id="skill" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="skill" required="" />
                 </div>
                 <div>
                     <label htmlFor="Published" className="block mb-2 text-sm font-semibold text-gray-900">Published by</label>
@@ -62,6 +66,10 @@ const TrainingForm = ({ handleInput, handlefile, trainingInfo, IsAssessment, set
                 <div>
                     <label htmlFor="Status" className="block mb-2 text-sm font-semibold text-gray-900">Status</label>
                     <SelectInput onChange={handleInput} name='status' id='status' dropdowns={status} />
+                </div>
+                <div>
+                    <label htmlFor="language" className="block mb-2 text-sm font-semibold text-gray-900">Language</label>
+                    <SelectInput onChange={handleInput} name='language' id='language' dropdowns={language} />
                 </div>
                 <div>
                     <label htmlFor="Level" className="block mb-2 text-sm font-semibold text-gray-900">Level</label>
