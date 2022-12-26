@@ -1,11 +1,12 @@
 
 import CourseForm from './courseForm';
 
-const CreateCourseFrom = ({ handleInput, courseInfo, IsAssessment, setIsAssessment }) => {
+const CreateCourseFrom = ({ handleInput, courseInfo, IsAssessment, setIsAssessment, handlefile }) => {
     return (
         <div className="w-full h-full flex flex-col justify-between">
             <CourseForm courseInfo={courseInfo}
                 IsAssessment={IsAssessment}
+                handlefile={handlefile}
                 setIsAssessment={setIsAssessment}
                 handleInput={handleInput} />
             <div className='flex justify-end'>

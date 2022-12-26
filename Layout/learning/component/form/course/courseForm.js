@@ -1,3 +1,4 @@
+import FileUploader from "../../../../../components/custom/fileUpload";
 import SwitchInput from "../../../../../components/custom/switchInput";
 import SelectInput from "../../../../../components/SelectInput";
 import Skillform from "./skills";
@@ -17,7 +18,7 @@ const level = [
     { name: 'intermediate', title: 'Intermediate' },
     { name: 'advance', title: 'Advance' },
 ]
-const CourseForm = ({ handleInput, courseInfo, IsAssessment, setIsAssessment }) => {
+const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAssessment }) => {
 
     return (
         <div>
@@ -75,9 +76,9 @@ const CourseForm = ({ handleInput, courseInfo, IsAssessment, setIsAssessment }) 
                     <input onChange={handleInput} type="number" name="Price" id="Price" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Price" required="" />
                 </div> : ''}
-                <Skillform 
-                courseInfo={courseInfo}
-                handleInput={handleInput} />
+                <Skillform
+                    courseInfo={courseInfo}
+                    handleInput={handleInput} />
             </div>
             <div className="mt-4">
                 <label htmlFor="IsAssessment" className="block mb-2 text-sm font-semibold text-gray-900">Assessment Require ( Yes/No )</label>
@@ -90,6 +91,7 @@ const CourseForm = ({ handleInput, courseInfo, IsAssessment, setIsAssessment }) 
                 <label htmlFor="skill" className="w-full block mb-2 text-sm font-semibold text-gray-900">Description</label>
                 <textarea onChange={handleInput} id="description" name="description" rows="3" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="description..." />
             </div>
+            <FileUploader handlefile={handlefile} />
         </div>
     )
 }

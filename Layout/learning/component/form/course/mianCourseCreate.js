@@ -12,6 +12,7 @@ const MainCourseCreate = () => {
     const [listofModule, setListOfModule] = useState([{ questions: [] }])
     const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(true)
+    const [thumbnail, setThumbnail] = useState('')
 
     // over here it controls the module tabs
     useMemo(() => {
@@ -84,6 +85,10 @@ const MainCourseCreate = () => {
         question['questions'][Number(id)] = { ...question['questions'][Number(id)], [name]: value }
     }
 
+    const handlefile = (file) => {
+        setCourseInfo({ ...courseInfo, thumbnail: file })
+    }
+
     console.log(courseInfo)
     return (
         <div className="w-full overflow-scroll h-full">
@@ -92,6 +97,7 @@ const MainCourseCreate = () => {
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
                         <CreateCourseFrom
+                            handlefile={handlefile}
                             IsAssessment={IsAssessment}
                             setIsAssessment={setIsAssessment}
                             courseInfo={courseInfo}
