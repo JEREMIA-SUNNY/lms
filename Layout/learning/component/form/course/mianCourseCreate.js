@@ -1,14 +1,16 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Tab } from '@headlessui/react'
 import Tablist from '../../../../../components/custom/TabList'
 import CreateCourseFrom from './createCourse'
 import MainModuleCreate from '../module/mainModuleCreate'
+import MainAddAssessment from '../assessment/mainAddAssessment'
 
 const tablist = ['Course detail', 'Modules', 'Start Assesment']
 
 const MainCourseCreate = () => {
-    const [courseInfo, setCourseInfo] = useState({ module: 1, IsAssessment: true })
-    const [listofModule, setListOfModule] = useState([])
+    const [courseInfo, setCourseInfo] = useState({ section: 1, module: 1, IsAssessment: true })
+    const [listofModule, setListOfModule] = useState([{ questions: [] }])
+    const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(true)
 
     // over here it controls the module tabs
@@ -65,7 +67,22 @@ const MainCourseCreate = () => {
         setCourseInfo({ ...courseInfo, modules: copymodule })
     }
 
-    console.log(courseInfo)
+    const createQuestionForm = (e) => {
+        const { value, name, id } = e.target
+        let copyprelist = listofSection
+        copyprelist[Number(id)] = { questions: [] }
+        Array.from(Array(Number(value)).keys()).forEach((element, i) => {
+            copyprelist[Number(id)]['questions'].push({})
+        });
+        setListOfSection([...copyprelist])
+    }
+
+    const handleAllQuestionInfo = (e, sIndex) => {
+        const { value, name, id } = e.target
+        const copyprelist = listofSection
+        let question = copyprelist[sIndex]
+        question['questions'][Number(id)] = { ...question['questions'][Number(id)], [name]: value }
+    }
 
     return (
         <div className="w-full overflow-scroll h-full">
@@ -87,7 +104,14 @@ const MainCourseCreate = () => {
                             listofModule={listofModule} />
                     </Tab.Panel>
                     {IsAssessment ? <Tab.Panel className='h-full'>
-                        <h1>start ass</h1>
+                        <MainAddAssessment
+                            courseInfo={courseInfo}
+                            handleInput={handleCourseInput}
+                            listofSection={listofSection}
+                            setListOfSection={setListOfSection}
+                            createQuestionForm={createQuestionForm}
+                            handleAllQuestionInfo={handleAllQuestionInfo}
+                        />
                     </Tab.Panel> : ''}
                 </Tab.Panels>
             </Tab.Group>
