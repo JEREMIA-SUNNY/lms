@@ -89,7 +89,6 @@ const MainCourseCreate = () => {
         setCourseInfo({ ...courseInfo, thumbnail: file })
     }
 
-    console.log(courseInfo)
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>

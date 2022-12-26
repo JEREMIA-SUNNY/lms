@@ -18,15 +18,15 @@ const level = [
     { name: 'intermediate', title: 'Intermediate' },
     { name: 'advance', title: 'Advance' },
 ]
-const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAssessment }) => {
+const TrainingForm = ({ handleInput, handlefile, trainingInfo, IsAssessment, setIsAssessment }) => {
 
     return (
         <div>
             <div className="mt-4 grid grid-cols-4 gap-4">
                 <div>
-                    <label htmlFor="name" className="block mb-2 text-sm font-semibold text-gray-900">Course Name</label>
+                    <label htmlFor="name" className="block mb-2 text-sm font-semibold text-gray-900">Training Name</label>
                     <input onChange={handleInput} type="name" name="name" id="name" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="course name" required="" />
+                        placeholder="traing name" required="" />
                 </div>
                 <div>
                     <label htmlFor="domain" className="block mb-2 text-sm font-semibold text-gray-900">Domain</label>
@@ -56,7 +56,7 @@ const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAs
                         } else {
                             handleInput(e)
                         }
-                    }} type="number" defaultValue={courseInfo?.module} name="module" id="module" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    }} type="number" defaultValue={trainingInfo?.module} name="module" id="module" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="1" required="" />
                 </div>
                 <div>
@@ -71,13 +71,13 @@ const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAs
                     <label htmlFor="IsFree" className="block mb-2 text-sm font-semibold text-gray-900">Free / Paid</label>
                     <SelectInput onChange={handleInput} name='IsFree' id='IsFree' dropdowns={freePaid} />
                 </div>
-                {courseInfo?.IsFree === 'Paid' ? <div>
+                {trainingInfo?.IsFree === 'Paid' ? <div>
                     <label htmlFor="Price" className="block mb-2 text-sm font-semibold text-gray-900">Price</label>
                     <input onChange={handleInput} type="number" name="Price" id="Price" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Price" required="" />
                 </div> : ''}
                 <Skillform
-                    courseInfo={courseInfo}
+                    trainingInfo={trainingInfo}
                     handleInput={handleInput} />
             </div>
             <div className="mt-4">
@@ -100,4 +100,4 @@ const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAs
     )
 }
 
-export default CourseForm;
+export default TrainingForm;
