@@ -1,7 +1,7 @@
 import AssessmentSection from "./section";
 
 
-const AddAssessment = ({ createQuestionForm, setListOfSection, handleAllQuestionInfo, listofSection, setListOfSection }) => {
+const AddAssessment = ({ createQuestionForm, setListOfSection, handleAllQuestionInfo, listofSection }) => {
 
     const addSection = () => {
         setListOfSection([...listofSection, { questions: [] }])
@@ -36,7 +36,6 @@ const AddAssessment = ({ createQuestionForm, setListOfSection, handleAllQuestion
                 listofSection?.map((item, i) => {
                     return (
                         <AssessmentSection key={i}
-                            setListOfSection={setListOfSection}
                             handleAllQuestionInfo={handleAllQuestionInfo}
                             createQuestionForm={createQuestionForm}
                             sItem={item} sIndex={i} />

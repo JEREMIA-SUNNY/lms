@@ -1,6 +1,6 @@
 import QuestionOfSection from "./question";
 
-const AssessmentSection = ({ sItem, sIndex, handleSectionName, createQuestionForm, handleAllQuestionInfo }) => {
+const AssessmentSection = ({ sItem, sIndex, createQuestionForm, handleAllQuestionInfo }) => {
 
     return (
         <div className="my-2 p-2">
