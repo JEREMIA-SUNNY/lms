@@ -14,7 +14,7 @@ const freePaid = [
     { name: 'Free', title: 'Free' },
     { name: 'Paid', title: 'Paid' },
 ]
-const demoCourse = [
+const demotrainng = [
     { id: 1, course: 'Javascript Cooper' },
     { id: 2, course: 'Python Mccoy' },
     { id: 3, course: 'Node js Webb' },
@@ -33,8 +33,8 @@ const BatchesForm = ({ batchInfo, handlebatchInfo, batchSession, setBatchSession
         <div>
             <div className="mt-4 grid grid-cols-3 gap-4">
                 <div>
-                    <label htmlFor="selectCourse" className="block mb-2 text-sm font-semibold text-gray-900">Select Course</label>
-                    <AutoComplete list={demoCourse} keyname='course' />
+                    <label htmlFor="selectTraining" className="block mb-2 text-sm font-semibold text-gray-900">Select Training</label>
+                    <AutoComplete list={demotrainng} keyname='course' />
                 </div>
                 <div>
                     <label htmlFor="language" className="block mb-2 text-sm font-semibold text-gray-900">Language</label>

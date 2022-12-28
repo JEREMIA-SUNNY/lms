@@ -45,7 +45,7 @@ const MainTrainingCreate = () => {
         setTrainingInfo({ ...trainingInfo, thumbnail: file })
     }
 
-    console.log(batchSession)
+    // console.log(batchSession)
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
