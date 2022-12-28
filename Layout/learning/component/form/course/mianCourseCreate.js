@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import Tablist from '../../../../../components/custom/TabList'
 import CreateCourseFrom from './createCourse'
 import MainModuleCreate from '../module/mainModuleCreate'
-import MainAddAssessment from '../assessment/mainAddAssessment'
+import AddAssessment from '../module/assessment/AddAssessment'
 
 const tablist = ['Course detail', 'Modules', 'Start Assesment']
 
@@ -12,7 +12,7 @@ const MainCourseCreate = () => {
     const [listofModule, setListOfModule] = useState([{ questions: [] }])
     const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(true)
-    const [thumbnail, setThumbnail] = useState('')
+    // const [thumbnail, setThumbnail] = useState('')
 
     // over here it controls the module tabs
     useMemo(() => {
@@ -106,11 +106,11 @@ const MainCourseCreate = () => {
                         <MainModuleCreate handleModuleName={handleModuleName}
                             ModuleFieldValue={ModuleFieldValue}
                             moduleVideoInput={moduleVideoInput}
-                            courseInfo={courseInfo}
+                            IsAssessment={IsAssessment}
                             listofModule={listofModule} />
                     </Tab.Panel>
                     {IsAssessment ? <Tab.Panel className='h-full'>
-                        <MainAddAssessment
+                        <AddAssessment
                             courseInfo={courseInfo}
                             handleInput={handleCourseInput}
                             listofSection={listofSection}

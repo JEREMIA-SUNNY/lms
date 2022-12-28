@@ -3,11 +3,6 @@ import SwitchInput from "../../../../../components/custom/switchInput";
 import SelectInput from "../../../../../components/SelectInput";
 import Skillform from "./skills";
 
-const status = [
-    { name: 'active', title: 'Active' },
-    { name: 'inactive', title: 'In Active' },
-]
-
 const freePaid = [
     { name: 'Free', title: 'Free' },
     { name: 'Paid', title: 'Paid' },
@@ -62,10 +57,6 @@ const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAs
                         }
                     }} type="number" defaultValue={courseInfo?.module} name="module" id="module" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="1" required="" />
-                </div>
-                <div>
-                    <label htmlFor="Status" className="block mb-2 text-sm font-semibold text-gray-900">Status</label>
-                    <SelectInput onChange={handleInput} name='status' id='status' dropdowns={status} />
                 </div>
                 <div>
                     <label htmlFor="language" className="block mb-2 text-sm font-semibold text-gray-900">Language</label>

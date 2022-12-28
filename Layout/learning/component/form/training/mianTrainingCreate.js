@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 import Tablist from '../../../../../components/custom/TabList'
 import CreateTrainingFrom from './createTraining'
-import MainAddAssessment from '../assessment/mainAddAssessment'
+import AddAssessment from './assessment/AddAssessment'
 import BatchesForm from '../batches/batchesform'
 
 const tablist = ['Training detail', 'Batches', 'Start Assesment']
@@ -45,7 +45,6 @@ const MainTrainingCreate = () => {
         setTrainingInfo({ ...trainingInfo, thumbnail: file })
     }
 
-    // console.log(batchSession)
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
@@ -66,7 +65,7 @@ const MainTrainingCreate = () => {
                             handlebatchInfo={handlebatchInfo} />
                     </Tab.Panel>
                     {IsAssessment ? <Tab.Panel className='h-full'>
-                        <MainAddAssessment
+                        <AddAssessment
                             trainingInfo={trainingInfo}
                             handleInput={handleTrainingInput}
                             listofSection={listofSection}
