@@ -47,6 +47,21 @@ const TrainingForm = ({ handleInput, handlefile, trainingInfo, IsAssessment, set
                     <input onChange={handleInput} type="text" name="Endorsed" id="Endorsed" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Endorsed by" required="" />
                 </div>
+                {IsAssessment ? <div>
+                    <label htmlFor="cutOfScore" className="block mb-2 text-sm font-semibold text-gray-900">Cut of score</label>
+                    <div className="flex justify-between items-center">
+                        <input
+                            onChange={(e) => {
+                                if (e.target.value < 0) {
+                                    e.target.value = 1
+                                } else {
+                                    handleInput(e)
+                                }
+                            }}
+                            type="number" name="cutOfScore" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                            placeholder="1" required="" />
+                    </div>
+                </div> : ''}
                 <div>
                     <label htmlFor="module" className="block mb-2 text-sm font-semibold text-gray-900">Module</label>
                     <input onChange={(e) => {
@@ -78,14 +93,15 @@ const TrainingForm = ({ handleInput, handlefile, trainingInfo, IsAssessment, set
                 <Skillform
                     trainingInfo={trainingInfo}
                     handleInput={handleInput} />
+                <div className="mt-4">
+                    <label htmlFor="IsAssessment" className="block mb-2 text-sm font-semibold text-gray-900">Assessment Require ( Yes/No )</label>
+                    <SwitchInput
+                        name='IsAssessment'
+                        value={IsAssessment}
+                        onChange={setIsAssessment} />
+                </div>
             </div>
-            <div className="mt-4">
-                <label htmlFor="IsAssessment" className="block mb-2 text-sm font-semibold text-gray-900">Assessment Require ( Yes/No )</label>
-                <SwitchInput
-                    name='IsAssessment'
-                    value={IsAssessment}
-                    onChange={setIsAssessment} />
-            </div>
+
             <div className="flex justify-between">
                 <div className="mt-4 w-1/2">
                     <label htmlFor="skill" className="w-full block mb-2 text-sm font-semibold text-gray-900">Description</label>

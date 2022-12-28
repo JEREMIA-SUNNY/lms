@@ -15,10 +15,10 @@ const level = [
 ]
 
 const language = [
-    {name:'hindi', title:'Hindi'},
-    {name:'english', title:'English'},
-    {name:'Panjabi', title:'Panjabi'},
-    {name:'Maradhi', title:'Maradhi'}
+    { name: 'hindi', title: 'Hindi' },
+    { name: 'english', title: 'English' },
+    { name: 'Panjabi', title: 'Panjabi' },
+    { name: 'Maradhi', title: 'Maradhi' }
 
 ]
 
@@ -78,14 +78,15 @@ const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAs
                 <Skillform
                     courseInfo={courseInfo}
                     handleInput={handleInput} />
+                <div className="mt-4">
+                    <label htmlFor="IsAssessment" className="block mb-2 text-sm font-semibold text-gray-900">Assessment Require ( Yes/No )</label>
+                    <SwitchInput
+                        name='IsAssessment'
+                        value={IsAssessment}
+                        onChange={setIsAssessment} />
+                </div>
             </div>
-            <div className="mt-4">
-                <label htmlFor="IsAssessment" className="block mb-2 text-sm font-semibold text-gray-900">Assessment Require ( Yes/No )</label>
-                <SwitchInput
-                    name='IsAssessment'
-                    value={IsAssessment}
-                    onChange={setIsAssessment} />
-            </div>
+
             <div className="flex justify-between">
                 <div className="mt-4 w-1/2">
                     <label htmlFor="skill" className="w-full block mb-2 text-sm font-semibold text-gray-900">Description</label>
