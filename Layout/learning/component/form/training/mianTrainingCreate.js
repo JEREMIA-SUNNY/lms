@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 import Tablist from '../../../../../components/custom/TabList'
 import CreateTrainingFrom from './createTraining'
-import AddAssessment from './assessment/AddAssessment'
+import MainAssessment from './assessment'
 import BatchesForm from '../batches/batchesform'
 
 const tablist = ['Training detail', 'Batches', 'Start Assesment']
@@ -65,7 +65,7 @@ const MainTrainingCreate = () => {
                             handlebatchInfo={handlebatchInfo} />
                     </Tab.Panel>
                     {IsAssessment ? <Tab.Panel className='h-full'>
-                        <AddAssessment
+                        <MainAssessment
                             trainingInfo={trainingInfo}
                             handleInput={handleTrainingInput}
                             listofSection={listofSection}

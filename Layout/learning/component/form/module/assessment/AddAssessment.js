@@ -1,7 +1,8 @@
 import AssessmentSection from "./section";
 
 
-const AddAssessment = ({ createQuestionForm, setListOfSection, handleAllQuestionInfo, listofSection }) => {
+const AddAssessment = (props) => {
+    const { createQuestionForm, setListOfSection, handleAllQuestionInfo, listofSection, module } = props
 
     const addSection = () => {
         setListOfSection([...listofSection, { questions: [] }])

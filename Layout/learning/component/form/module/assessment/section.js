@@ -1,12 +1,21 @@
 import QuestionOfSection from "./question";
 
 const AssessmentSection = ({ sItem, sIndex, setListOfSection, listofSection, createQuestionForm, handleAllQuestionInfo }) => {
-    console.log(listofSection)
+
+    const sectionName = (e) => {
+        const { name, value } = e.target
+        const copylist = listofSection
+        copylist[sIndex] = { ...sItem, [name]: value }
+        setListOfSection([...copylist])
+    }
     
     return (
         <div className="my-2 p-2">
             <div className="mb-2 flex justify-between items-center">
-                <h6 className="block mb-2 text-sm text-gray-900 font-semibold">Section {sIndex + 1}</h6>
+                <div>
+                    <input defaultValue={sItem?.section || ''} onChange={sectionName} type="text" name="section" id={sIndex} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                        placeholder={`Section ${sIndex + 1}`} required="" />
+                </div>
                 <input onChange={(e) => {
                     if (e.target.value < 0) {
                         e.target.value = 1

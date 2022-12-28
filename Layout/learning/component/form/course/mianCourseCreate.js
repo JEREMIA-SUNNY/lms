@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import Tablist from '../../../../../components/custom/TabList'
 import CreateCourseFrom from './createCourse'
 import MainModuleCreate from '../module/mainModuleCreate'
-import AddAssessment from '../module/assessment/AddAssessment'
+import MainAssessment from '../module/assessment'
 
 const tablist = ['Course detail', 'Modules', 'Start Assesment']
 
@@ -89,6 +89,8 @@ const MainCourseCreate = () => {
         setCourseInfo({ ...courseInfo, thumbnail: file })
     }
 
+    console.log(listofSection)
+
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
@@ -110,9 +112,10 @@ const MainCourseCreate = () => {
                             listofModule={listofModule} />
                     </Tab.Panel>
                     {IsAssessment ? <Tab.Panel className='h-full'>
-                        <AddAssessment
+                        <MainAssessment
+                        listofModule={listofModule}
                             courseInfo={courseInfo}
-                            handleInput={handleCourseInput}
+                            handleCourseInput={handleCourseInput}
                             listofSection={listofSection}
                             setListOfSection={setListOfSection}
                             createQuestionForm={createQuestionForm}
