@@ -5,7 +5,7 @@ import CreateCourseFrom from './createCourse'
 import MainModuleCreate from '../module/mainModuleCreate'
 import MainAssessment from '../module/assessment'
 
-const tablist = ['Course detail', 'Modules', 'Start Assesment']
+const tablist = ['Course Details', 'Module Details', 'Assessment Details']
 
 const MainCourseCreate = () => {
     const [courseInfo, setCourseInfo] = useState({ section: 1, module: 1, IsAssessment: true })
@@ -94,7 +94,7 @@ const MainCourseCreate = () => {
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
-                <Tablist courseInfo={courseInfo} list={IsAssessment ? tablist : ['Course detail', 'Modules']} />
+                <Tablist courseInfo={courseInfo} list={IsAssessment ? tablist : ['Course Details', 'Module Details']} />
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
                         <CreateCourseFrom

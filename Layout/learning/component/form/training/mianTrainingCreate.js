@@ -5,7 +5,7 @@ import CreateTrainingFrom from './createTraining'
 import MainAssessment from './assessment'
 import BatchesForm from '../batches/batchesform'
 
-const tablist = ['Training detail', 'Batches', 'Start Assesment']
+const tablist = ['Training detail', 'Batches', 'Assessment Details']
 
 const MainTrainingCreate = () => {
     const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: true })
