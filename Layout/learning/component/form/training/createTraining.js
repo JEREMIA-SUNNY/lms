@@ -1,11 +1,14 @@
 
 import TrainingForm from './trainingForm';
 
-const CreateTrainingFrom = ({ handleInput, trainingInfo, IsAssessment, setIsAssessment, handlefile }) => {
+const CreateTrainingFrom = (props) => {
+    const { handleInput, trainingInfo, IsAssessment, setIsAssessment, handlefile, IsCoursePaid, setIsCoursePaid } = props
     return (
         <div className="w-full h-full flex flex-col justify-between">
             <TrainingForm trainingInfo={trainingInfo}
                 IsAssessment={IsAssessment}
+                IsCoursePaid={IsCoursePaid}
+                setIsCoursePaid={setIsCoursePaid}
                 handlefile={handlefile}
                 setIsAssessment={setIsAssessment}
                 handleInput={handleInput} />

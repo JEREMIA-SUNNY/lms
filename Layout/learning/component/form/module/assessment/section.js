@@ -14,7 +14,7 @@ const AssessmentSection = ({ sItem, sIndex, setListOfSection, listofSection, cre
             <div className="mb-2 flex justify-between items-center">
                 <div>
                     <input defaultValue={sItem?.section || ''} onChange={sectionName} type="text" name="section" id={sIndex} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder={`Section ${sIndex + 1}`} required="" />
+                        placeholder={`Section ${sIndex + 1} Name`} required="" />
                 </div>
                 <input onChange={(e) => {
                     if (e.target.value < 0) {
@@ -23,7 +23,7 @@ const AssessmentSection = ({ sItem, sIndex, setListOfSection, listofSection, cre
                         createQuestionForm(e)
                     }
                 }} type="number" name="totalQuestion" id={sIndex} className="w-[210px] outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                    placeholder={`Total Questions sec- ${sIndex + 1}`} required="" />
+                    placeholder={`# Questions Section ${sIndex + 1}`} required="" />
             </div>
             {
                 sItem?.questions?.map((q, i) => {

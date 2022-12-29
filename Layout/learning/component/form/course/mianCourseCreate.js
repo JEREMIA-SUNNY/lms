@@ -12,6 +12,7 @@ const MainCourseCreate = () => {
     const [listofModule, setListOfModule] = useState([{ questions: [] }])
     const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(true)
+    const [IsCoursePaid, setIsCoursePaid] = useState(false)
     // const [thumbnail, setThumbnail] = useState('')
 
     // over here it controls the module tabs
@@ -89,7 +90,7 @@ const MainCourseCreate = () => {
         setCourseInfo({ ...courseInfo, thumbnail: file })
     }
 
-    console.log(listofSection)
+    // console.log(listofSection)
 
     return (
         <div className="w-full overflow-scroll h-full">
@@ -100,7 +101,8 @@ const MainCourseCreate = () => {
                         <CreateCourseFrom
                             handlefile={handlefile}
                             IsAssessment={IsAssessment}
-                            setIsAssessment={setIsAssessment}
+                            IsCoursePaid={IsCoursePaid}
+                            setIsCoursePaid={setIsCoursePaid}
                             courseInfo={courseInfo}
                             handleInput={handleCourseInput} />
                     </Tab.Panel>

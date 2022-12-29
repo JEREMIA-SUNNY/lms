@@ -1,13 +1,15 @@
 
 import CourseForm from './courseForm';
 
-const CreateCourseFrom = ({ handleInput, courseInfo, IsAssessment, setIsAssessment, handlefile }) => {
+const CreateCourseFrom = ({ handleInput, courseInfo, IsAssessment, setIsAssessment, IsCoursePaid, setIsCoursePaid, handlefile }) => {
     return (
         <div className="w-full h-full flex flex-col justify-between">
             <CourseForm courseInfo={courseInfo}
                 IsAssessment={IsAssessment}
-                handlefile={handlefile}
                 setIsAssessment={setIsAssessment}
+                IsCoursePaid={IsCoursePaid}
+                setIsCoursePaid={setIsCoursePaid}
+                handlefile={handlefile}
                 handleInput={handleInput} />
             <div className='flex justify-end'>
                 <button type="button" className="flex items-center mt-2 py-2 px-3 text-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-600">

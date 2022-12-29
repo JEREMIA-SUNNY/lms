@@ -3,11 +3,6 @@ import SwitchInput from "../../../../../components/custom/switchInput";
 import SelectInput from "../../../../../components/SelectInput";
 import Skillform from "./skills";
 
-const freePaid = [
-    { name: 'Free', title: 'Free' },
-    { name: 'Paid', title: 'Paid' },
-]
-
 const level = [
     { name: 'beginner', title: 'Beginner' },
     { name: 'intermediate', title: 'Intermediate' },
@@ -21,8 +16,15 @@ const language = [
     { name: 'Maradhi', title: 'Maradhi' }
 
 ]
+const domains = [
+    { name: 'Domain 1', title: 'Domain 1' },
+    { name: 'Domain 2', title: 'Domain 2' },
+    { name: 'Domain 3', title: 'Domain 3' },
+    { name: 'Domain 4', title: 'Domain 4' }
 
-const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAssessment }) => {
+]
+
+const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAssessment, IsCoursePaid, setIsCoursePaid }) => {
 
     return (
         <div>
@@ -34,8 +36,7 @@ const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAs
                 </div>
                 <div>
                     <label htmlFor="domain" className="block mb-2 text-sm font-semibold text-gray-900">Domain</label>
-                    <input onChange={handleInput} type="text" name="domain" id="domain" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="domain" required="" />
+                    <SelectInput onChange={handleInput} name='domain' id='domain' dropdowns={domains} />
                 </div>
                 <Skillform
                     courseInfo={courseInfo}
@@ -76,9 +77,12 @@ const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAs
                         value={IsAssessment}
                         onChange={setIsAssessment} />
                 </div>
-                <div>
-                    <label htmlFor="courseType" className="block mb-2 text-sm font-semibold text-gray-900">Paid (Yes/No)</label>
-                    <SelectInput onChange={handleInput} name='courseType' id='courseType' dropdowns={freePaid} />
+                <div className="mt-4">
+                    <label htmlFor="IsCoursePaid" className="block mb-2 text-sm font-semibold text-gray-900">Paid (Yes/No)</label>
+                    <SwitchInput
+                        name='courseType'
+                        value={IsCoursePaid}
+                        onChange={setIsCoursePaid} />
                 </div>
                 {courseInfo?.courseType === 'Paid' ? <div>
                     <label htmlFor="Price" className="block mb-2 text-sm font-semibold text-gray-900">Price</label>
@@ -88,12 +92,12 @@ const CourseForm = ({ handleInput, handlefile, courseInfo, IsAssessment, setIsAs
 
             </div>
 
-            <div className="flex justify-between">
-                <div className="mt-4 w-1/2">
+            <div className="mt-4 grid grid-cols-2 gap-4">
+                <div className="mt-4">
                     <label htmlFor="skill" className="w-full block mb-2 text-sm font-semibold text-gray-900">Course Description</label>
                     <textarea onChange={handleInput} id="description" name="description" rows="6" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="description..." />
                 </div>
-                <div className="mt-8 ml-2">
+                <div className="mt-4 ml-2 h-40">
                     <label htmlFor="Thumbnail" className="w-full block mb-2 text-sm font-semibold text-gray-900">Thumbnail</label>
                     <FileUploader handlefile={handlefile} />
                 </div>

@@ -19,8 +19,8 @@ const OptionAndAnswer = ({ sIndex, handleAllQuestionInfo }) => {
 
 
     return (
-        <div className="ml-8 my-2 grid grid-cols-2 gap-2">
-            <div>
+        <div className="ml-8 my-2 flex justify-start gap-2">
+            <div className="w-3/4">
                 <div className="my-1">
                     <input onChange={handleOption} type="text" name="option1" id="1" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Option 1" required="" />
@@ -38,22 +38,22 @@ const OptionAndAnswer = ({ sIndex, handleAllQuestionInfo }) => {
                         placeholder="Option 4" required="" />
                 </div>
             </div>
-            <div>
+            <div className="w-1/4">
                 <div className="my-1">
                     <input onChange={handleOption} type="text" name="weightage1" id="1" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="Weightage 1" required="" />
+                        placeholder="Weightage (%)" required="" />
                 </div>
                 <div className="my-1">
                     <input onChange={handleOption} type="text" name="weightage2" id="2" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="Weightage 2" required="" />
+                        placeholder="Weightage (%)" required="" />
                 </div>
                 <div className="my-1">
                     <input onChange={handleOption} type="text" name="weightage3" id="3" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="Weightage 3" required="" />
+                        placeholder="Weightage (%)" required="" />
                 </div>
                 <div className="my-1">
                     <input onChange={handleOption} type="text" name="weightage4" id="4" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="Weightage 4" required="" />
+                        placeholder="Weightage (%)" required="" />
                 </div>
             </div>
             {/* <div>
@@ -68,11 +68,11 @@ const OptionAndAnswer = ({ sIndex, handleAllQuestionInfo }) => {
                     })}
                 </select>
             </div> */}
-            <div>
+            {/* <div>
                 <button onClick={save} type="button" className="mr-2 py-2 px-3 text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-300">
                     <span>Save</span>
                 </button>
-            </div>
+            </div> */}
         </div>
     )
 }

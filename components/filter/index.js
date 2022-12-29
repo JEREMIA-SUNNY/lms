@@ -2,16 +2,43 @@
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import SelectInput from '../SelectInput'
+import Skillform from './skills';
 
-const dropdowns = [
-    { name: 'Filter1', title: 'Filter 1' },
-    { name: 'Filter2', title: 'Filter 2' },
-    { name: 'Filter3', title: 'Filter 3' },
-    { name: 'Filter4', title: 'Filter 4' }
+const level = [
+    { name: 'beginner', title: 'Beginner' },
+    { name: 'intermediate', title: 'Intermediate' },
+    { name: 'advance', title: 'Advance' },
+]
+
+const freePaid = [
+    { name: 'all', title: 'All' },
+    { name: 'free', title: 'Free' },
+    { name: 'paid', title: 'Paid' },
+]
+
+const language = [
+    { name: 'hindi', title: 'Hindi' },
+    { name: 'english', title: 'English' },
+    { name: 'Panjabi', title: 'Panjabi' },
+    { name: 'Maradhi', title: 'Maradhi' }
+
+]
+const domains = [
+    { name: 'Domain 1', title: 'Domain 1' },
+    { name: 'Domain 2', title: 'Domain 2' },
+    { name: 'Domain 3', title: 'Domain 3' },
+    { name: 'Domain 4', title: 'Domain 4' }
+
 ]
 
 const Filter = () => {
     const [activeFilter, setActiveFilter] = useState([])
+    const [filters, setFilters] = useState({})
+
+    const handleInput = (e) => {
+        const { name, value } = e.target
+        setFilters({ ...filters, [name]: value })
+    }
 
     return (
         <div className="flex justify-end">
@@ -49,30 +76,41 @@ const Filter = () => {
                                 </div>
                                 <hr className='mb-2' />
                             </>
-                            <div className="w-full flex">
-                                <div className="w-[84%] grid grid-cols-4 gap-2">
-                                    {
-                                        [1, 2, 3, 4, 5, 6, 7, 8, 9]?.map((item) => {
-                                            return (
-                                                <div className='px-2' key={item}>
-                                                    <SelectInput id={`${item}-id`} dropdowns={dropdowns} name={'Demo filter'} />
-                                                </div>
-                                            )
-                                        })
-                                    }
+                            <div className="w-full grid grid-cols-5 gap-2">
+                                <div>
+                                    <label htmlFor="domain" className="block mb-2 text-sm font-semibold text-gray-900">Domain</label>
+                                    <SelectInput name='domain' id='domain' dropdowns={domains} />
                                 </div>
-                                <div className='w-[16%]'>
-                                    <button onClick={() => { setActiveFilter([]) }} type="button" className="w-full mr-2 py-2 px-3 text-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-600">
+                                <Skillform
+                                    filters={filters}
+                                    handleInput={handleInput} />
+                                <div>
+                                    <label htmlFor="Level" className="block mb-2 text-sm font-semibold text-gray-900">Level</label>
+                                    <SelectInput name='Level' id='Level' dropdowns={level} />
+                                </div>
+                                <div>
+                                    <label htmlFor="language" className="block mb-2 text-sm font-semibold text-gray-900">Language</label>
+                                    <SelectInput name='language' id='language' dropdowns={language} />
+                                </div>
+                                <div>
+                                    <label htmlFor="Paidorfree" className="block mb-2 text-sm font-semibold text-gray-900">Paid or free</label>
+                                    <SelectInput name='Paidorfree' id='Paidorfree' dropdowns={freePaid} />
+                                </div>
+                            </div>
+                            <div className='flex justify-end'>
+                                <div className='mt-2 flex justify-start items-center'>
+                                    <button onClick={() => { setActiveFilter([]) }} type="button" className="h-10 mr-2 py-2 px-3 text-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-600">
                                         <span>Clear</span>
                                     </button>
                                     <Menu.Item>
-                                        <button type="button" className="mt-2 w-full mr-2 py-2 px-3 text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-300">
+                                        <button type="button" className="h-10 mr-2 py-2 px-3 text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-300">
                                             <span>Apply</span>
                                         </button>
                                     </Menu.Item>
                                 </div>
                             </div>
                         </div>
+
                     </Menu.Items>
                     {/* </div> */}
                 </Transition>
