@@ -1,4 +1,3 @@
-// import AutoComplete from "../../../../../components/AutoComplete"
 import SelectInput from "../../../../../components/SelectInput"
 import BatchSession from './session';
 
@@ -14,18 +13,6 @@ const freePaid = [
     { name: 'Free', title: 'Free' },
     { name: 'Paid', title: 'Paid' },
 ]
-// const demotrainng = [
-//     { id: 1, course: 'Javascript Cooper' },
-//     { id: 2, course: 'Python Mccoy' },
-//     { id: 3, course: 'Node js Webb' },
-//     { id: 4, course: 'react js Cook' },
-//     { id: 5, course: 'Next js Fox' },
-//     { id: 6, course: 'Html css Schmidt' },
-//     { id: 7, course: 'Vue js Fox' },
-//     { id: 8, course: 'Java kjwe Hellen Schmidt' },
-//     { id: 9, course: 'C++ q  Fox' },
-//     { id: 10, course: 'SOme more Hellen Schmidt' },
-// ]
 
 const BatchesForm = ({ batchInfo, handlebatchInfo, batchSession, setBatchSession }) => {
 

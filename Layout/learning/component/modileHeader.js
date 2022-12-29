@@ -4,7 +4,6 @@ import Filter from "../../../components/filter";
 import AddCourseBtn from "../component/addcoursebtn";
 import AddTrainingBtn from "../component/addTrainingbtn";
 
-
 const people = [
     { id: 1, name: 'Wade Cooper' },
     { id: 2, name: 'Arlene Mccoy' },
