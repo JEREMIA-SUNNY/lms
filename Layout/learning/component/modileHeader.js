@@ -25,6 +25,7 @@ const ModuleHeader = ({ title }) => {
             <div className="flex items-center justify-start">
                 <CustomLink href={'/app/learning/courses'} title={'Courses'} />
                 <CustomLink href={'/app/learning/trainings'} title={'Trainings'} />
+                <CustomLink href={'/app/learning/plan'} title={'Learning Plan'} />
             </div>
             <AutoComplete list={people} keyname='name' />
             <div className="flex items-center justify-end">
