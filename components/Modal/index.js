@@ -1,8 +1,9 @@
 
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import IconButton from '../custom/Buttons/IconButton'
 
-const Modal = ({ TitleIcon, title, ui, className }) => {
+const Modal = ({ TitleIcon, title, ui }) => {
     let [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
@@ -15,9 +16,9 @@ const Modal = ({ TitleIcon, title, ui, className }) => {
 
     return (
         <>
-            <button className={className} onClick={openModal}>
+            <IconButton onClick={openModal}>
                 {TitleIcon}
-            </button>
+            </IconButton>
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog as="div" onClose={openModal} className="relative z-50">
                     <Transition.Child

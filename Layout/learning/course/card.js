@@ -5,7 +5,7 @@ import Avatar from "../../../components/custom/Avatar";
 const Course = ({ id }) => {
     return (
         <Link className="w-full transition ease-in-out delay-150 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/learning/courses/detail/${id}`}>
-            <div className="shadow bg-white p-4 rounded-lg">
+            <div className="shadow-xl bg-white p-4 rounded-lg">
                 <Image
                     className="h-40 rounded-lg w-full object-cover object-center"
                     height={200}
@@ -16,7 +16,7 @@ const Course = ({ id }) => {
                     alt="Sample image"
                 />
                 <div className="relative -mt-9">
-                    <div className="backdrop-blur-[5px] bg-white/40 w-20 flex items-center mx-2 shadow-md text-yellow-400 px-1 py-2 rounded-full">
+                    <div className="backdrop-blur-[5px] bg-white/40 w-20 flex items-center mx-2 shadow-lg text-yellow-400 px-1 py-2 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-3">
                             <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
                         </svg>
