@@ -1,6 +1,7 @@
 import AddAssessment from "./AddAssessment"
 import { Tab } from '@headlessui/react'
 import ModuleTabsList from "../moduletabslist"
+import PrimaryButton from '../../../../../../components/custom/Buttons/PrimaryButton';
 
 const MainAssessment = (props) => {
     const { trainingInfo,
@@ -11,7 +12,7 @@ const MainAssessment = (props) => {
         handleAllQuestionInfo, listofModule } = props
 
     return (
-        <>
+        <div className="w-full">
             <Tab.Group>
                 <ModuleTabsList listofModule={listofModule} />
                 <Tab.Panels className='h-[90%]'>
@@ -34,8 +35,10 @@ const MainAssessment = (props) => {
                     }
                 </Tab.Panels>
             </Tab.Group>
-
-        </>
+            <PrimaryButton>
+                <span>Add course</span>
+            </PrimaryButton>
+        </div>
     )
 }
 
