@@ -6,7 +6,7 @@ const CustomLink = ({ href, title }) => {
     const { pathname } = route
 
     return (
-        <Link href={href} className={`${pathname === href ? 'text-[#419a00] font-bold' : ''} h-10 px-2`}>
+        <Link href={href} className={`${pathname === href ? 'text-[#419a00] font-bold text-[12px]' : ''} h-10 px-2 text-[15px]`}>
             {pathname === href ? `[ ${title} ]` : title}
         </Link>
     )

@@ -56,7 +56,7 @@ const Training = ({ id }) => {
                     In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the
                 </p>
                 <div className="mt-2 flex items-center space-x-2">
-                    <Avatar src='https://flowbite.com/docs/images/people/profile-picture-4.jpg' alt='Lorem ipsum' />
+                    <Avatar alt='Lorem ipsum' />
                     <div className="text-gray-800 leading-5">
                         <p>Lorem ipsum</p>
                         <p className="text-sm">30/11/2022</p>
