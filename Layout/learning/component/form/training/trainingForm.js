@@ -144,7 +144,7 @@ const domains = [
 ]
 
 const TrainingForm = (props) => {
-    const { handleInput, handlefile, trainingInfo, IsAssessment, setIsAssessment, IsCoursePaid, setIsCoursePaid } = props
+    const { handleInput, handlefile, trainingInfo, IsAssessment, setIsAssessment, IsTrainingPaid, setIsTrainingPaid } = props
     return (
         <div>
             <div className="mt-4 grid grid-cols-4 gap-4">
@@ -197,13 +197,13 @@ const TrainingForm = (props) => {
                         onChange={setIsAssessment} />
                 </div>
                 <div className="mt-4">
-                    <label htmlFor="IsCoursePaid" className="block mb-2 text-sm font-semibold text-gray-900">Paid (Yes/No)</label>
+                    <label htmlFor="IsTrainingPaid" className="block mb-2 text-sm font-semibold text-gray-900">Paid (Yes/No)</label>
                     <SwitchInput
                         name='courseType'
-                        value={IsCoursePaid}
-                        onChange={setIsCoursePaid} />
+                        value={IsTrainingPaid}
+                        onChange={setIsTrainingPaid} />
                 </div>
-                {trainingInfo?.courseType === 'Paid' ? <div>
+                {IsTrainingPaid ? <div>
                     <label htmlFor="Price" className="block mb-2 text-sm font-semibold text-gray-900">Price</label>
                     <input onChange={handleInput} type="number" name="Price" id="Price" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Price" required="" />

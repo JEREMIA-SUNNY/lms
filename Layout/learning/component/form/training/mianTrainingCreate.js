@@ -11,7 +11,7 @@ const MainTrainingCreate = () => {
     const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: true })
     const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(false)
-    const [IsCoursePaid, setIsCoursePaid] = useState(false)
+    const [IsTrainingPaid, setIsTrainingPaid] = useState(false)
     const [batchInfo, setbatchInfo] = useState({})
     const [batchSession, setBatchSession] = useState([])
 
@@ -55,8 +55,8 @@ const MainTrainingCreate = () => {
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
                         <CreateTrainingFrom
-                            IsCoursePaid={IsCoursePaid}
-                            setIsCoursePaid={setIsCoursePaid}
+                            IsTrainingPaid={IsTrainingPaid}
+                            setIsTrainingPaid={setIsTrainingPaid}
                             handlefile={handlefile}
                             IsAssessment={IsAssessment}
                             setIsAssessment={setIsAssessment}

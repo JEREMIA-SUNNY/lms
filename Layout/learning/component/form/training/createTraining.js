@@ -2,13 +2,13 @@
 import TrainingForm from './trainingForm';
 
 const CreateTrainingFrom = (props) => {
-    const { handleInput, trainingInfo, IsAssessment, setIsAssessment, handlefile, IsCoursePaid, setIsCoursePaid } = props
+    const { handleInput, trainingInfo, IsAssessment, setIsAssessment, handlefile, IsTrainingPaid, setIsTrainingPaid } = props
     return (
         <div className="w-full h-full flex flex-col justify-between">
             <TrainingForm trainingInfo={trainingInfo}
                 IsAssessment={IsAssessment}
-                IsCoursePaid={IsCoursePaid}
-                setIsCoursePaid={setIsCoursePaid}
+                setIsTrainingPaid={setIsTrainingPaid}
+                IsTrainingPaid={IsTrainingPaid}
                 handlefile={handlefile}
                 setIsAssessment={setIsAssessment}
                 handleInput={handleInput} />
