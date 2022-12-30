@@ -9,11 +9,10 @@ const ProfilePopup = () => {
     return (
         <Menu as="div" className="absolute right-8 origin-topRight inline-block text-left">
             <div>
-                <Menu.Button className="relative bg-white rounded-full shadow inline-flex text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-                    <div className="overflow-hidden relative w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+                <Menu.Button className="relative bg-white rounded-full border-2 border-gray-300 shadow inline-flex text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                    <div className="overflow-hidden relative w-10 h-10 bg-gray-100 rounded-full">
                         <svg className="absolute -left-1 w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
                     </div>
-
                 </Menu.Button>
             </div>
             <Transition
