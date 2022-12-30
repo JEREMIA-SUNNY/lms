@@ -1,5 +1,5 @@
 
-const DetailHeader = ({id }) => {
+const DetailHeader = ({ id }) => {
     return (
         <div className="rounded-lg shadow bg-[#F5F5F5] p-4">
             <table className="table-auto w-full">
@@ -12,17 +12,17 @@ const DetailHeader = ({id }) => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Course title: Course #{id}</td>
-                        <td>Level: </td>
-                        <td>Price: </td>
+                        <td><span className="font-semibld">Course title: Course #{id}</span></td>
+                        <td><span className="font-semibld">Level: </span></td>
+                        <td><span className="font-semibld">Price: </span></td>
                     </tr>
                     <tr>
-                        <td>Language: </td>
-                        <td>Rating: </td>
-                        <td>Taken by users: </td>
+                        <td><span className="font-semibld">Language: </span></td>
+                        <td><span className="font-semibld">Rating: </span></td>
+                        <td><span className="font-semibld">Taken by users: </span></td>
                     </tr>
                     <tr>
-                        <td>Publisher: </td>
+                        <td><span className="font-semibld">Publisher: </span></td>
                         <td> </td>
                         <td></td>
                     </tr>
@@ -34,7 +34,7 @@ const DetailHeader = ({id }) => {
                 </tbody>
             </table>
             <p className="mt-2 text-gray-900">
-            n publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final co          
+                n publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final co
             </p>
         </div>
     )

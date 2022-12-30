@@ -11,18 +11,18 @@ const DetailHeader = ({id }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Training title: training #{id}</td>
-                        <td>Level: </td>
-                        <td>Price: </td>
+                <tr>
+                        <td><span className="font-semibld">Training title: Training #{id}</span></td>
+                        <td><span className="font-semibld">Level: </span></td>
+                        <td><span className="font-semibld">Price: </span></td>
                     </tr>
                     <tr>
-                        <td>Language: </td>
-                        <td>Rating: </td>
-                        <td>Taken by users: </td>
+                        <td><span className="font-semibld">Language: </span></td>
+                        <td><span className="font-semibld">Rating: </span></td>
+                        <td><span className="font-semibld">Taken by users: </span></td>
                     </tr>
                     <tr>
-                        <td>Trainer: </td>
+                        <td><span className="font-semibld">Trainer: </span></td>
                         <td> </td>
                         <td></td>
                     </tr>
