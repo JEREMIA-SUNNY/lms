@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import GoBackButton from '../../../components/goBackBtn'
-import DetailHeader from '../component/detailHeader'
+import DetailHeader from './detailHeader'
 import TrainingModule from './trainingModule'
 
 const TrainingDetailLayout = () => {

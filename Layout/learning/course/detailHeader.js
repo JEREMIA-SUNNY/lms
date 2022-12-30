@@ -12,25 +12,25 @@ const DetailHeader = ({id }) => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Course Name: Course #{id}</td>
+                        <td>Course title: Course #{id}</td>
                         <td>Level: </td>
-                        <td>Rating: </td>
+                        <td>Price: </td>
                     </tr>
                     <tr>
-                        <td>Published By: </td>
-                        <td>Endorsed By: </td>
                         <td>Language: </td>
+                        <td>Rating: </td>
+                        <td>Taken by users: </td>
                     </tr>
                     <tr>
-                        <td>Domain: </td>
-                        <td>Status: </td>
-                        <td>Taken By: </td>
+                        <td>Publisher: </td>
+                        <td> </td>
+                        <td></td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                         <td>Skills: </td>
                         <td>Description: </td>
                         <td>Rating: </td>
-                    </tr>
+                    </tr> */}
                 </tbody>
             </table>
             <p className="mt-2 text-gray-900">
