@@ -59,7 +59,7 @@ const Filter = () => {
                 >
 
                     <Menu.Items className="w-full px-5 z-10 absolute right-0 mt-2 origin-top-right ring-opacity-5 focus:outline-none">
-                        <div className='rounded-lg bg-white shadow-lg px-1 py-1 h-[300px]'>
+                        <div className='rounded-lg bg-white shadow-lg px-4 py-1 h-[300px]'>
                             <>
                                 <div className='my-2 w-full flex justify-start items-center'>
                                     <p className='mx-2 text-gray-600 font-bold'>Filters: </p>
@@ -76,7 +76,7 @@ const Filter = () => {
                                 </div>
                                 <hr className='mb-2' />
                             </>
-                            <div className="w-full grid grid-cols-5 gap-2">
+                            <div className="w-full grid grid-cols-4 gap-4">
                                 <div>
                                     <label htmlFor="domain" className="block mb-2 text-sm font-semibold text-gray-900">Domain</label>
                                     <SelectInput name='domain' id='domain' dropdowns={domains} />

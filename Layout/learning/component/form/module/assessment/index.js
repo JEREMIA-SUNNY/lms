@@ -35,9 +35,12 @@ const MainAssessment = (props) => {
                     }
                 </Tab.Panels>
             </Tab.Group>
-            <PrimaryButton>
-                <span>Add course</span>
-            </PrimaryButton>
+            <div className='flex justify-end fixed bottom-0 right-5'>
+                <PrimaryButton>
+                    <span>Add Assessment</span>
+                </PrimaryButton>
+            </div>
+
         </div>
     )
 }
