@@ -102,6 +102,7 @@ const MainCourseCreate = () => {
                             handlefile={handlefile}
                             IsAssessment={IsAssessment}
                             IsCoursePaid={IsCoursePaid}
+                            setIsAssessment={setIsAssessment}
                             setIsCoursePaid={setIsCoursePaid}
                             courseInfo={courseInfo}
                             handleInput={handleCourseInput} />
@@ -115,7 +116,7 @@ const MainCourseCreate = () => {
                     </Tab.Panel>
                     {IsAssessment ? <Tab.Panel className='h-full'>
                         <MainAssessment
-                        listofModule={listofModule}
+                            listofModule={listofModule}
                             courseInfo={courseInfo}
                             handleCourseInput={handleCourseInput}
                             listofSection={listofSection}

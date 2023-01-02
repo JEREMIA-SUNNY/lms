@@ -1,7 +1,9 @@
+import PrimaryButton from "../../../../../components/custom/Buttons/PrimaryButton";
+import SwitchInput from "../../../../../components/custom/switchInput";
 import SelectInput from "../../../../../components/SelectInput"
 import BatchSession from './session';
-
 const language = [
+
     { name: 'hindi', title: 'Hindi' },
     { name: 'english', title: 'English' },
     { name: 'Panjabi', title: 'Panjabi' },
@@ -14,29 +16,27 @@ const freePaid = [
     { name: 'Paid', title: 'Paid' },
 ]
 
-const BatchesForm = ({ batchInfo, handlebatchInfo, batchSession, setBatchSession }) => {
+const BatchesForm = (props) => {
+    const { batchInfo, handlebatchInfo, batchSession, setBatchSession, IsBatchePaid,
+        setIsBatchePaid } = props
 
     return (
         <div>
-            <div className="mt-4 grid grid-cols-3 gap-4">
-                {/* <div>
-                    <label htmlFor="selectTraining" className="block mb-2 text-sm font-semibold text-gray-900">Select Training</label>
-                    <AutoComplete list={demotrainng} keyname='course' />
-                </div> */}
-                <div>
-                    <label htmlFor="language" className="block mb-2 text-sm font-semibold text-gray-900">Language</label>
-                    <SelectInput onChange={handlebatchInfo} name='language' id='language' dropdowns={language} />
-                </div>
+            <div className="mt-4 grid grid-cols-4 gap-4">
                 <div>
                     <label htmlFor="batchname" className="block mb-2 text-sm font-semibold text-gray-900">Batch name</label>
                     <input onChange={handlebatchInfo} type="name" name="batchname" id="batchname" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Batch name" required="" />
                 </div>
                 <div>
-                    <label htmlFor="batchType" className="block mb-2 text-sm font-semibold text-gray-900">Batch type</label>
-                    <SelectInput onChange={handlebatchInfo} name='batchType' id='batchType' dropdowns={freePaid} />
+                    <label htmlFor="language" className="block mb-2 text-sm font-semibold text-gray-900">Language</label>
+                    <SelectInput onChange={handlebatchInfo} name='language' id='language' dropdowns={language} />
                 </div>
-                {batchInfo?.batchType === 'Paid' ? <div>
+                <div>
+                    <label htmlFor="batchType" className="block mb-2 text-sm font-semibold text-gray-900">Batch type ( Paid/ Free )</label>
+                    <SwitchInput value={IsBatchePaid} name='IsBatchePaid' onChange={setIsBatchePaid} />
+                </div>
+                {IsBatchePaid ? <div>
                     <label htmlFor="Price" className="block mb-2 text-sm font-semibold text-gray-900">Price</label>
                     <input
                         onChange={(e) => {
@@ -67,6 +67,11 @@ const BatchesForm = ({ batchInfo, handlebatchInfo, batchSession, setBatchSession
             </div>
             <BatchSession batchSession={batchSession}
                 setBatchSession={setBatchSession} />
+            <div className='flex justify-end fixed bottom-0 right-5'>
+                <PrimaryButton>
+                    <span>Add Batch</span>
+                </PrimaryButton>
+            </div>
         </div>
     )
 }

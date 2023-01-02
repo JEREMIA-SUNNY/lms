@@ -12,10 +12,9 @@ const MainTrainingCreate = () => {
     const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(false)
     const [IsTrainingPaid, setIsTrainingPaid] = useState(false)
+    const [IsBatchePaid, setIsBatchePaid] = useState(false)
     const [batchInfo, setbatchInfo] = useState({})
     const [batchSession, setBatchSession] = useState([])
-
-
 
     const handlebatchInfo = (e) => {
         const { name, value, id } = e.target
@@ -66,6 +65,8 @@ const MainTrainingCreate = () => {
                     <Tab.Panel className='h-full'>
                         <BatchesForm batchInfo={batchInfo}
                             batchSession={batchSession}
+                            IsBatchePaid={IsBatchePaid}
+                            setIsBatchePaid={setIsBatchePaid}
                             setBatchSession={setBatchSession}
                             handlebatchInfo={handlebatchInfo} />
                     </Tab.Panel>
