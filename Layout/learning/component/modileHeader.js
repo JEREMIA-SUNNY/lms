@@ -27,7 +27,7 @@ const ModuleHeader = ({ title }) => {
                 <CustomLink href={'/app/learning/trainings'} title={'Trainings'} />
                 <CustomLink href={'/app/learning/plan'} title={'Learning Plan'} />
             </div>
-            <AutoComplete list={people} keyname='name' />
+            <AutoComplete title={title} list={people} keyname='name' />
             <div className="flex items-center justify-end">
                 {title === 'Course' ? <AddCourseBtn title={'Add Course'} /> : <AddTrainingBtn title={'Create Training'} />}
                 <Filter />
