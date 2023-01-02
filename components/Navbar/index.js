@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CustomLink from '../custom/Link'
 
-import MenuList from './menu.json'
+import navbarmenuList from '../../assets/Menu/navbar.json'
 import ProfilePopup from "./profilePopup";
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
                 </Link>
                 <nav className="w-full flex items-center">
                     <ul className="w-full flex justify-evenly">
-                        {MenuList?.map((item) => {
+                        {navbarmenuList?.map((item) => {
                             return (
                                 <li key={item?.id}>
                                     <CustomLink title={item?.title} href={item?.link} />
