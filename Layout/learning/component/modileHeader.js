@@ -1,6 +1,6 @@
 import AutoComplete from "../../../components/AutoComplete";
 import CustomLink from "../../../components/custom/Link";
-import Filter from "../../../components/filter";
+import Filter from "../../../components/Filter";
 import AddCourseBtn from "../component/addcoursebtn";
 import AddTrainingBtn from "../component/addTrainingbtn";
 import Sortby from "./Sort";

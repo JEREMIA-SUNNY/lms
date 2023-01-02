@@ -1,4 +1,4 @@
-import GoBackButton from '../../../components/goBackBtn'
+import GoBackButton from '../../../components/GoBackBtn'
 import IconButton from '../../../components/custom/Buttons/IconButton'
 
 const CourseAction = () => {
