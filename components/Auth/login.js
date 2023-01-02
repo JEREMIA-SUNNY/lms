@@ -23,7 +23,7 @@ const LoginForm = () => {
                         <input type="password" name="password" id="password" placeholder="••••••••" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="" />
                     </div>
                     <div className="flex justify-center">
-                        <Link href='/app/home' className="w-[70%] text-white bg-[#419a00] hover:bg-[#419a00] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#419a00] dark:hover:bg-[#419a00] dark:focus:ring-primary-800">
+                        <Link href='/app/learning/courses' className="w-[70%] text-white bg-[#419a00] hover:bg-[#419a00] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#419a00] dark:hover:bg-[#419a00] dark:focus:ring-primary-800">
                             Login
                         </Link>
                     </div>

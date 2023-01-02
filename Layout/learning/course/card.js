@@ -8,7 +8,7 @@ const Course = ({ item }) => {
         <Link className="p-4 rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/learning/courses/detail/${id}`}>
             <div className="w-full">
                 <div className="relative -mb-7">
-                    <button className="bg-[#409a00] font-semibold text-white backdrop-blure-50 flex text-sm items-center mx-2 shadow-lg  px-2 py-1 rounded-b-xl">
+                    <button className="bg-[#409a00] w-20 font-semibold text-white flex text-sm items-center mx-2 shadow-lg px-2 py-1 rounded-b-lg">
                         {price === '0' ? 'Free' : `$ ${price}`}
                     </button>
                 </div>
