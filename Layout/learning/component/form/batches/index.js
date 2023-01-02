@@ -3,6 +3,7 @@ import PrimaryButton from "../../../../../components/custom/Buttons/PrimaryButto
 import Tablist from "../../../../../components/custom/TabList";
 import BatchesForm from "./batchesform";
 import Sessions from './session/session'
+import MainAddStudentInBatch from "./student";
 
 const Batches = (props) => {
     const { handlebatchInfo, batchSession, setBatchSession, IsBatchePaid, setIsBatchePaid } = props
@@ -26,7 +27,7 @@ const Batches = (props) => {
                                 setBatchSession={setBatchSession} />
                         </Tab.Panel>
                         <Tab.Panel>
-                            Students
+                            <MainAddStudentInBatch />
                         </Tab.Panel>
                     </Tab.Panels>
                 </Tab.Group>

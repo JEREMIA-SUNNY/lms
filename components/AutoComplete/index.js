@@ -4,8 +4,7 @@ import { Combobox, Transition } from '@headlessui/react'
 
 
 // export default function Example() {
-const AutoComplete = ({ title, list, keyname }) => {
-    const [selected, setSelected] = useState()
+const AutoComplete = ({ title, list, keyname, selected, setSelected }) => {
     const [query, setQuery] = useState('')
 
     const filteredPeople =
@@ -17,6 +16,7 @@ const AutoComplete = ({ title, list, keyname }) => {
                     .replace(/\s+/g, '')
                     .includes(query.toLowerCase().replace(/\s+/g, ''))
             )
+    // console.log(selected)
 
     return (
         <div className='z-10'>
@@ -28,7 +28,7 @@ const AutoComplete = ({ title, list, keyname }) => {
                         </div>
                         <Combobox.Input
                             className="shadow-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#419a00] focus:border-[#419a00] block w-full pl-10 p-2.5"
-                            placeholder={`Search for ${title}`} required displayValue={(person) => person?.name}
+                            placeholder={`Search for ${title}`} required displayValue={(item) => selected[keyname] || ''}
                             onChange={(event) => setQuery(event.target.value)}
                         />
                     </div>

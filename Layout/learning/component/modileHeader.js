@@ -18,7 +18,7 @@ const people = [
     { id: 10, name: 'naresh Hellen Schmidt' },
 ]
 
-const ModuleHeader = ({ title }) => {
+const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
 
     return (
         <div className="mt-4 w-full grid grid-cols-3 gap-5">
@@ -27,7 +27,7 @@ const ModuleHeader = ({ title }) => {
                 <CustomLink href={'/app/learning/trainings'} title={'Trainings'} />
                 <CustomLink href={'/app/learning/plan'} title={'Learning Plan'} />
             </div>
-            <AutoComplete title={title} list={people} keyname='name' />
+            <AutoComplete title={title} list={people} keyname='name' selected={searchFor} setSelected={setSeachFor} />
             <div className="flex items-center justify-end">
                 {title === 'Course' ? <AddCourseBtn title={'Add Course'} /> : <AddTrainingBtn title={'Create Training'} />}
                 <Filter />
