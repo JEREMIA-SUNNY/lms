@@ -1,15 +1,16 @@
-import Course from "./card";
+import Training from "./card";
 import ModuleHeader from '../component/modileHeader'
+import Trainings from '../../../assets/courses.json'
 
 const TrainingLayout = () => {
 
     return (
         <>
-            <ModuleHeader title='Training' />
+            <ModuleHeader title='Course' />
             <section className="my-4 w-full grid grid-cols-4 gap-5">
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((item) => {
+                {Trainings?.map((item) => {
                     return (
-                        <Course id={item} key={item} />
+                        <Training item={item} key={item?.id} />
                     )
                 })}
             </section>

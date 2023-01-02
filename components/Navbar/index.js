@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <div className="w-full z-50 fixed top-0 right-0 bg-[#e6e6e6]">
-            <div className="rounded-lg m-5 shadow bg-white flex items-center justify-between">
+            <div className="rounded-lg m-5 shadow-lg bg-white flex items-center justify-between">
                 <Link href='/app/home' className="relative">
                     <Image
                         width={90}
