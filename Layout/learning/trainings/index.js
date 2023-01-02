@@ -6,7 +6,7 @@ const TrainingLayout = () => {
 
     return (
         <>
-            <ModuleHeader title='Course' />
+            <ModuleHeader title='Training' />
             <section className="my-4 w-full grid grid-cols-4 gap-5">
                 {Trainings?.map((item) => {
                     return (
