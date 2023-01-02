@@ -12,8 +12,8 @@ const BatchSession = ({ batchSession, setBatchSession }) => {
 
     return (
         <div>
-            <div className="mt-4 flex justify-between items-center">
-                <h6 className="block mb-2  text-gray-900 font-semibold">Session</h6>
+            <div className="flex justify-between items-center">
+                <h6 className="block mb-2  text-gray-900 font-semibold">Sessions</h6>
                 <div className="flex justify-start items-center">
                     <button onClick={rmSection} type="button" className="mr-2 text-gray-700 border border-gray-300 focus:ring-1 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">

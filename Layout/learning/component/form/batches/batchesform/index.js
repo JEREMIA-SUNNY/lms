@@ -1,9 +1,7 @@
-import PrimaryButton from "../../../../../components/custom/Buttons/PrimaryButton";
-import SwitchInput from "../../../../../components/custom/switchInput";
-import SelectInput from "../../../../../components/SelectInput"
-import BatchSession from './session';
-const language = [
+import SwitchInput from "../../../../../../components/custom/switchInput";
+import SelectInput from "../../../../../../components/SelectInput"
 
+const language = [
     { name: 'hindi', title: 'Hindi' },
     { name: 'english', title: 'English' },
     { name: 'Panjabi', title: 'Panjabi' },
@@ -11,13 +9,8 @@ const language = [
 
 ]
 
-const freePaid = [
-    { name: 'Free', title: 'Free' },
-    { name: 'Paid', title: 'Paid' },
-]
-
 const BatchesForm = (props) => {
-    const { batchInfo, handlebatchInfo, batchSession, setBatchSession, IsBatchePaid,
+    const { handlebatchInfo, IsBatchePaid,
         setIsBatchePaid } = props
 
     return (
@@ -64,13 +57,6 @@ const BatchesForm = (props) => {
             <div className="mt-4">
                 <label htmlFor="description" className="w-full block mb-2 text-sm font-semibold text-gray-900">Description</label>
                 <textarea onChange={handlebatchInfo} id="description" name="description" rows="2" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="description..." />
-            </div>
-            <BatchSession batchSession={batchSession}
-                setBatchSession={setBatchSession} />
-            <div className='flex justify-end fixed bottom-0 right-5'>
-                <PrimaryButton>
-                    <span>Add Batch</span>
-                </PrimaryButton>
             </div>
         </div>
     )

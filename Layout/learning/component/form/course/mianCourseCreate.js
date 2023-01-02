@@ -95,7 +95,7 @@ const MainCourseCreate = () => {
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
-                <Tablist courseInfo={courseInfo} list={IsAssessment ? tablist : ['Course Details', 'Module Details']} />
+                <Tablist list={IsAssessment ? tablist : ['Course Details', 'Module Details']} />
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
                         <CreateCourseFrom

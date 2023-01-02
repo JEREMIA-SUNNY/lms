@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import Tablist from '../../../../../components/custom/TabList'
 import CreateTrainingFrom from './createTraining'
 import MainAssessment from './assessment'
-import BatchesForm from '../batches/batchesform'
+import Batches from '../batches'
 
 const tablist = ['Training detail', 'Batches', 'Assessment Details']
 
@@ -63,7 +63,7 @@ const MainTrainingCreate = () => {
                             handleInput={handleTrainingInput} />
                     </Tab.Panel>
                     <Tab.Panel className='h-full'>
-                        <BatchesForm batchInfo={batchInfo}
+                        <Batches batchInfo={batchInfo}
                             batchSession={batchSession}
                             IsBatchePaid={IsBatchePaid}
                             setIsBatchePaid={setIsBatchePaid}
