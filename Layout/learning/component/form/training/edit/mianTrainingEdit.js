@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 import Tablist from '@/components/custom/TabList'
-import CreateTrainingFrom from './createTraining'
+import EditTrainingFrom from './editTraining'
 import MainAssessment from './assessment'
-import Batches from '../../batches'
+import Batches from '../../batches/edit'
 
 const tablist = ['Training detail', 'Batches', 'Assessment Details']
 
-const MainTrainingCreate = () => {
+const MainTrainingEdit = () => {
     const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: true })
     const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(false)
@@ -53,7 +53,7 @@ const MainTrainingCreate = () => {
                 <Tablist trainingInfo={trainingInfo} list={IsAssessment ? tablist : ['Training detail', 'Batches']} />
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
-                        <CreateTrainingFrom
+                        <EditTrainingFrom
                             IsTrainingPaid={IsTrainingPaid}
                             setIsTrainingPaid={setIsTrainingPaid}
                             handlefile={handlefile}
@@ -86,4 +86,4 @@ const MainTrainingCreate = () => {
     )
 }
 
-export default MainTrainingCreate;
+export default MainTrainingEdit;
