@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import Tablist from '@/components/custom/TabList'
 import EditCourseFrom from './editCourse'
 import MainAssessment from '../../module/edit/assessment'
-import MainModuleEdit from '../../module/edit/MainModuleEdit'
+import MainModuleEdit from '../../module/edit/mainModuleEdit'
 
 const tablist = ['Course Details', 'Module Details', 'Assessment Details']
 

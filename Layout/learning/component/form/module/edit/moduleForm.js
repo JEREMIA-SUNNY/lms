@@ -1,7 +1,7 @@
 import VideoForm from "./videoForm"
 
-const ModuleForm = ({ item, handleModuleName, IsAssessment, index, ModuleFieldValue, moduleVideoInput }) => {
-
+const ModuleForm = (props) => {
+    const { item, handleModuleName, IsAssessment, index, ModuleFieldValue, moduleVideoInput } = props
     return (
         <div className="mt-2">
             <div className="mt-4 flex gap-4">

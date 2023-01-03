@@ -3,8 +3,8 @@ import { Tab } from '@headlessui/react'
 import ModuleForm from './moduleForm'
 import PrimaryButton from '@/components/custom/Buttons/PrimaryButton';
 
-const MainModuleCreate = ({ listofModule, IsAssessment, handleModuleName, ModuleFieldValue, moduleVideoInput }) => {
-
+const MainModuleEdit = (props) => {
+    const { listofModule, IsAssessment, handleModuleName, ModuleFieldValue, moduleVideoInput } = props
     return (
         <div className='w-full'>
             <Tab.Group>
@@ -33,4 +33,4 @@ const MainModuleCreate = ({ listofModule, IsAssessment, handleModuleName, Module
     )
 }
 
-export default MainModuleCreate
+export default MainModuleEdit
