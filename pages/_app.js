@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import AppLayout from '../AppLayout'
-import AppContext from '../context/AppContext'
+import AppContext from '@/contextapi/AppContext'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {

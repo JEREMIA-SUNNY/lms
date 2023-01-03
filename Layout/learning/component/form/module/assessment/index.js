@@ -1,7 +1,7 @@
 import AddAssessment from "./AddAssessment"
 import { Tab } from '@headlessui/react'
 import ModuleTabsList from "../moduletabslist"
-import PrimaryButton from '../../../../../../components/custom/Buttons/PrimaryButton';
+import PrimaryButton from '@/components/custom/Buttons/PrimaryButton';
 
 const MainAssessment = (props) => {
     const { trainingInfo,

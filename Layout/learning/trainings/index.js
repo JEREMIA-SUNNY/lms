@@ -1,6 +1,6 @@
 import Training from "./card";
 import ModuleHeader from '../component/modileHeader'
-import Trainings from '../../../assets/mokedata/courses.json'
+import Trainings from '@/assets/mokedata/courses.json'
 import { useState } from "react";
 
 const TrainingLayout = () => {

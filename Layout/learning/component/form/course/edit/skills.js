@@ -2,16 +2,17 @@
 import { useMemo, useState } from 'react'
 import skilltype from '@/assets/mokedata/skill.json'
 
-const Skillform = ({ handleInput, filters }) => {
+const Skillform = ({ handleInput, courseInfo }) => {
     const [skill, setSkill] = useState([])
 
     useMemo(() => {
-        const skills = skilltype?.skillTypes?.filter((item => item?.type === filters.skilltype))
+        const skills = skilltype?.skillTypes?.filter((item => item?.type === courseInfo.skilltype))
         if (skills?.length) {
+            console.log(skills)
             setSkill(skills[0]['skills'])
         }
-    }, [filters.skilltype])
-
+    }, [courseInfo.skilltype])
+    
     return (
         <>
             <div>
@@ -25,8 +26,8 @@ const Skillform = ({ handleInput, filters }) => {
                 </select>
             </div>
             <div>
-                <label htmlFor="subSkill" className="block mb-2 text-sm font-semibold text-gray-900">Sub Skill</label>
-                <select onChange={handleInput} name='subSkill' className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                <label htmlFor="skillclass" className="block mb-2 text-sm font-semibold text-gray-900">Sub Skill</label>
+                <select onChange={handleInput} name='skillClass' className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                     {skill?.map((item, i) => {
                         return (
                             <option key={i} value={item?.name}>{item?.name}</option>

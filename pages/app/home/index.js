@@ -1,4 +1,4 @@
-import { HomeLayout } from "../../../Layout";
+import { HomeLayout } from "Layout";
 
 const Home = () => {
     return (

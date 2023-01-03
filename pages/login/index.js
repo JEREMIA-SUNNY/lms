@@ -1,5 +1,5 @@
-import HeadTag from "../../components/Head";
-import { Authlayout } from '../../Layout'
+import HeadTag from "@/components/Head";
+import { Authlayout } from 'Layout'
 
 const Login = () => {
     return (

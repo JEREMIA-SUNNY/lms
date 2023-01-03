@@ -1,4 +1,4 @@
-import PeopleLayout from "../../../Layout/home";
+import PeopleLayout from "@/Layout/home";
 
 const People = () => {
     return (

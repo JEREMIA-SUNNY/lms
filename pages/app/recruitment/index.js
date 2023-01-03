@@ -1,4 +1,4 @@
-import RecruitmentLayout from "../../../Layout/home";
+import RecruitmentLayout from "@/Layout/home";
 
 const Recruitment = () => {
     return (
