@@ -1,4 +1,4 @@
-import { CoursesLayout } from "../../../../Layout";
+import { CoursesLayout } from "Layout";
 
 const Coursespage = () => {
     return (

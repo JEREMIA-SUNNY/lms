@@ -1,4 +1,4 @@
-import AnalyticsLayout from "../../../Layout/home";
+import AnalyticsLayout from "@/Layout/home";
 
 const Analytics = () => {
     return (

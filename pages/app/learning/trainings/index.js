@@ -1,4 +1,4 @@
-import { TrainingLayout } from "../../../../Layout";
+import { TrainingLayout } from "Layout";
 
 const Trainingpage = () => {
     return (

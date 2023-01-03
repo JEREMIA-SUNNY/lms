@@ -1,4 +1,4 @@
-import { TrainingDetailLayout } from '../../../../../Layout'
+import { TrainingDetailLayout } from 'Layout'
 
 const TrainingDetail = () => {
     return (

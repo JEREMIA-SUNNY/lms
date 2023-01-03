@@ -1,5 +1,5 @@
 import Table from './Table'
-import StudentJson from '../../../../../../assets/mokedata/student.json';
+import StudentJson from '@/assets/mokedata/student.json';
 
 const StudentTable = () => {
 

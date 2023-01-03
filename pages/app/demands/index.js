@@ -1,4 +1,4 @@
-import DemandsLayout from "../../../Layout/home";
+import DemandsLayout from "@/Layout/home";
 
 const Demands = () => {
     return (

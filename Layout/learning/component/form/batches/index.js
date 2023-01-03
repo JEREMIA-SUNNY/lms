@@ -1,6 +1,6 @@
 import { Tab } from "@headlessui/react";
-import PrimaryButton from "../../../../../components/custom/Buttons/PrimaryButton";
-import Tablist from "../../../../../components/custom/TabList";
+import PrimaryButton from "@/components/custom/Buttons/PrimaryButton";
+import Tablist from "@/components/custom/TabList";
 import BatchesForm from "./batchesform";
 import Sessions from './session/session'
 import MainAddStudentInBatch from "./student";

@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react'
 import { Tab } from '@headlessui/react'
-import Tablist from '../../../../../components/custom/TabList'
+import Tablist from '@/components/custom/TabList'
 import CreateCourseFrom from './createCourse'
-import MainModuleCreate from '../module/mainModuleCreate'
-import MainAssessment from '../module/assessment'
+import MainModuleCreate from '../../module/mainModuleCreate'
+import MainAssessment from '../../module/assessment'
 
 const tablist = ['Course Details', 'Module Details', 'Assessment Details']
 
