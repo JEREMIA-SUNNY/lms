@@ -1,13 +1,13 @@
 import { useMemo, useState } from 'react'
 import { Tab } from '@headlessui/react'
 import Tablist from '@/components/custom/TabList'
-import CreateCourseFrom from './createCourse'
-import MainModuleCreate from '../module/mainModuleCreate'
-import MainAssessment from '../module/assessment'
+import EditCourseFrom from './editCourse'
+import MainAssessment from '../../module/edit/assessment'
+import MainModuleEdit from '../../module/edit/MainModuleEdit'
 
 const tablist = ['Course Details', 'Module Details', 'Assessment Details']
 
-const MainCourseCreate = () => {
+const MainCourseEdit = () => {
     const [courseInfo, setCourseInfo] = useState({ section: 1, module: 1, IsAssessment: true })
     const [listofModule, setListOfModule] = useState([{ questions: [] }])
     const [listofSection, setListOfSection] = useState([])
@@ -98,7 +98,7 @@ const MainCourseCreate = () => {
                 <Tablist list={IsAssessment ? tablist : ['Course Details', 'Module Details']} />
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
-                        <CreateCourseFrom
+                        <EditCourseFrom
                             handlefile={handlefile}
                             IsAssessment={IsAssessment}
                             IsCoursePaid={IsCoursePaid}
@@ -108,7 +108,7 @@ const MainCourseCreate = () => {
                             handleInput={handleCourseInput} />
                     </Tab.Panel>
                     <Tab.Panel className='h-full'>
-                        <MainModuleCreate handleModuleName={handleModuleName}
+                        <MainModuleEdit handleModuleName={handleModuleName}
                             ModuleFieldValue={ModuleFieldValue}
                             moduleVideoInput={moduleVideoInput}
                             IsAssessment={IsAssessment}
@@ -131,4 +131,4 @@ const MainCourseCreate = () => {
     )
 }
 
-export default MainCourseCreate;
+export default MainCourseEdit;

@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import Tablist from '@/components/custom/TabList'
 import CreateTrainingFrom from './createTraining'
 import MainAssessment from './assessment'
-import Batches from '../batches'
+import Batches from '../../batches/add'
 
 const tablist = ['Training detail', 'Batches', 'Assessment Details']
 
