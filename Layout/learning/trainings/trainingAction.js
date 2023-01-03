@@ -1,5 +1,5 @@
 
-import GoBackButton from '../../../components/GoBackBtn/index'
+import GoBackButton from '../../../components/goBackBtn'
 import IconButton from '../../../components/custom/Buttons/IconButton'
 
 const TrainingAction = () => {
