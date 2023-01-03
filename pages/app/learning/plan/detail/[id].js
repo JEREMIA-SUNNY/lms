@@ -1,4 +1,4 @@
-import { CourseDetailLayout } from '@/Layout'
+import { CourseDetailLayout } from 'Layout'
 
 const CourseDetail = () => {
     return (
