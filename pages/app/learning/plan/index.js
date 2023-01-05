@@ -1,11 +1,11 @@
-import { CoursesLayout } from "Layout";
+import { PlanLayout } from "Layout";
 
-const Coursespage = () => {
+const Planpage = () => {
     return (
         <>
-            <CoursesLayout />
+            <PlanLayout />
         </>
     )
 }
 
-export default Coursespage;
+export default Planpage;
