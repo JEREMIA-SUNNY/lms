@@ -8,7 +8,7 @@ const PlanLayout = ( ) => {
     
     return (
         <>
-            <ModuleHeader searchFor={searchFor} setSeachFor={setSeachFor} title='Course' />
+            <ModuleHeader searchFor={searchFor} setSeachFor={setSeachFor} title='LearningPlan' />
             <section className="my-4 w-full grid grid-cols-4 gap-5">
                 {learningPlans?.map((item) => {
                     return (

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import DetailHeader from './detailHeader'
 import CourseModule from './courseModule'
-import CourseAction from "./courseAction";
+import CourseAction from "./planAction";
 
 const CourseDetailLayout = () => {
     const route = useRouter()

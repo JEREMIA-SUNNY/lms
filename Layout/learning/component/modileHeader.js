@@ -3,6 +3,7 @@ import CustomLink from "@/components/custom/Link";
 import Filter from "@/components/filter";
 import AddCourseBtn from "../component/addcoursebtn";
 import AddTrainingBtn from "../component/addTrainingbtn";
+import AddPlanBtn from "./addPlanBtn";
 import Sortby from "./Sort";
 
 const people = [
@@ -29,7 +30,9 @@ const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
             </div>
             <AutoComplete title={title} list={people} keyname='name' selected={searchFor} setSelected={setSeachFor} />
             <div className="flex items-center justify-end">
-                {title === 'Course' ? <AddCourseBtn title={'Add Course'} /> : <AddTrainingBtn title={'Create Training'} />}
+                {title === 'Course' ? <AddCourseBtn title={'Add Course'} /> : ''}
+                {title === 'LearningPlan' ? <AddPlanBtn title={'Create New plan'} /> : ''}
+                {title === 'Training' ? <AddTrainingBtn title={'Create Training'} />:''}
                 <Filter />
                 <Sortby />
             </div>
