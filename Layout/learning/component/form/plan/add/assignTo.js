@@ -18,19 +18,19 @@ const AssignTo = ({ handleInput, planPayload }) => {
 
     useMemo(() => {
         if (searchFor?.email) {
-            if (selectedUserList.includes(searchFor.email)) {
-                let rm = selectedUserList.filter(item => item !== searchFor?.email)
-                setSelectedUsersList([...rm])
-            } else {
-                setSelectedUsersList([...selectedUserList, searchFor.email])
-            }
+            setSelectedUsersList([...selectedUserList, searchFor.email])
         }
         
     }, [searchFor?.email])
 
+    const removeSelected = (itemselected)=>{
+        let rm = selectedUserList.filter(item => item !== itemselected?.email)
+        setSelectedUsersList([...rm])
+    }
+
     return (
         <>
-            <div className='w-1/4'>
+            <div className='w-1/2'>
                 <label htmlFor="assignToCat" className="block mb-2 text-sm font-semibold text-gray-900">Assign To Category</label>
                 <select onChange={handleInput} name='assignToCat' className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                     {assignTo?.assignTo?.map((item, i) => {
@@ -40,9 +40,10 @@ const AssignTo = ({ handleInput, planPayload }) => {
                     })}
                 </select>
             </div>
-            <div className='w-3/4'>
+            <div className='w-1/2'>
                 <label htmlFor="users" className="block mb-2 text-sm font-semibold text-gray-900">Select users</label>
                 <MultiSelect
+                    removeSelected={removeSelected}
                     selected={searchFor} setSelected={setSeachFor}
                     title={'Search users'}
                     selectedList={selectedUserList}

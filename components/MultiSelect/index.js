@@ -1,16 +1,17 @@
 
 import { Fragment, useState } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
+import ButtonWithIcon from 'components/custom/Buttons/ButtonWithIcon'
 
 // export default function Example() {
-const MultiSelect = ({ title, list, keyname, selected, setSelected, selectedList }) => {
+const MultiSelect = ({ title, list, keyname, selected, setSelected, selectedList, removeSelected }) => {
     const [query, setQuery] = useState('')
 
     const filteredList =
         query === ''
             ? list
-            : list.filter((person) =>
-                person[keyname]
+            : list.filter((item) =>
+                item[keyname]
                     .toLowerCase()
                     .replace(/\s+/g, '')
                     .includes(query.toLowerCase().replace(/\s+/g, ''))
@@ -38,30 +39,33 @@ const MultiSelect = ({ title, list, keyname, selected, setSelected, selectedList
                         leaveTo="opacity-0"
                         afterLeave={() => setQuery('')}
                     >
-                        <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white py-1 text-base ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                        <Combobox.Options className="active absolute mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white py-1 text-base ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                             {filteredList.length === 0 && query !== '' ? (
                                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                                     Nothing found.
                                 </div>
                             ) : (
-                                filteredList.map((person) => (
+                                filteredList.map((item) => (
                                     <Combobox.Option
-                                        key={person.id || person[keyname]}
+                                        key={item?.id || item[keyname]}
                                         className={({ active }) =>
                                             `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'text-green-600' : 'text-gray-900'
                                             }`
                                         }
-                                        value={person}
+                                        value={item}
                                     >
                                         {({ selected, active }) => (
                                             <div className='flex items-center'>
-                                                {selectedList.includes(person[keyname]) ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mr-2 w-5 h-5 text-green-600">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                                </svg>
-                                                    : <span className='ml-7'>{''}</span>}
-                                                <span className={`cursor-pointer block truncate ${selectedList.includes(person[keyname]) ? 'font-medium border border-green-500 bg-green-100 py-1 px-2 rounded-lg text-green-600' : 'font-normal'}`}>
-                                                    {person[keyname]}
-                                                </span>
+                                                {selectedList.includes(item[keyname]) ?
+                                                    <button onClick={() => removeSelected(item)} className='text-center inline-flex items-center border border-green-500 bg-green-100 py-1 px-2 rounded-lg text-green-600'>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mr-2 w-5 h-5 text-green-600">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                                        </svg>
+                                                        {item[keyname]}
+                                                    </button> : <span className={`cursor-pointer block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
+                                                        {item[keyname]}
+                                                    </span>}
+
                                             </div>
                                         )}
                                     </Combobox.Option>
