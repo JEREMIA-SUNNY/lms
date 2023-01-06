@@ -1,11 +1,11 @@
 import GoBackButton from '@/components/goBackBtn'
 import IconButton from '@/components/custom/Buttons/IconButton'
-import EditCourseBtn from '../component/editcoursebtn'
+import EditPanBtn from '../component/editPlanBtn'
 import { useState } from 'react'
 import DeleteAlert from '@/components/DeleteAlert'
 import { useRouter } from 'next/router'
 
-const CourseAction = () => {
+const PlanAction = () => {
     const router = useRouter()
     const [isOpen, setIsOpen] = useState(false)
 
@@ -15,18 +15,18 @@ const CourseAction = () => {
 
     const confirmDelete = () => {
         setIsOpen(!isOpen)
-        router.push('/app/learning/courses')
+        router.push('/app/learning/plan')
     }
 
     return (
         <div className="mt-4 flex items-center justify-between">
-            <GoBackButton title={'Course Details'} />
+            <GoBackButton title={'Plan Details'} />
             <div className="flex ustify-start text-[#419a00]">
-                <EditCourseBtn />
+                <EditPanBtn />
                 <DeleteAlert
                     isOpen={isOpen}
-                    title='Delete Course ?'
-                    des='You are about to delete this course permanentaly'
+                    title='Delete Plan ?'
+                    des='You are about to delete this PLan permanentaly'
                     button={
                         <IconButton onClick={() => { setIsOpen(true) }}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -44,7 +44,6 @@ const CourseAction = () => {
                     </svg>
                 </IconButton>
                 <IconButton>
-
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
                     </svg>
@@ -59,4 +58,4 @@ const CourseAction = () => {
     )
 }
 
-export default CourseAction
+export default PlanAction

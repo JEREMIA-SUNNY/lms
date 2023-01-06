@@ -5,6 +5,7 @@ import CourseDetailLayout from './learning/course/coursedetail'
 import TrainingLayout from "./learning/trainings";
 import TrainingDetailLayout from './learning/trainings/trainingsdetail'
 import PlanLayout from './learning/plan'
+import PlanDetailLayout from './learning/plan/Plandetail'
 
 export {
     Authlayout,
@@ -13,5 +14,6 @@ export {
     PlanLayout,
     TrainingLayout,
     CourseDetailLayout,
-    TrainingDetailLayout
+    TrainingDetailLayout,
+    PlanDetailLayout
 }

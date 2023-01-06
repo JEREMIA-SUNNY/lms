@@ -4,7 +4,7 @@ const PlanCard = ({ item }) => {
     const { id, name, asignedTo, completedUserCount, UserCount, description, course, training, duedate } = item
 
     return (
-        <Link className="rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/learning/courses/detail/${id}`}>
+        <Link className="rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/learning/plan/detail/${id}`}>
             <div className="relative flex justify-end">
                 <button className={`${item?.close ? 'bg-red-200 text-red-500' : 'bg-[#409a00] text-white'}   flex text-[10px] items-center mx-2 px-2 py-1 rounded-b-lg`}>
                     Due Date: {duedate}
@@ -63,13 +63,6 @@ const PlanCard = ({ item }) => {
                 <p className="text-gray-500 text-sm leading-5">
                     {description}
                 </p>
-                {/* <div className="mt-2 flex items-center space-x-2">
-                    <Avatar alt='Lorem ipsum' />
-                    <div className="text-gray-800 leading-5">
-                        <p>Lorem ipsum</p>
-                        <p className="text-sm">30/11/2022</p>
-                    </div>
-                </div> */}
             </div>
         </Link>
     )

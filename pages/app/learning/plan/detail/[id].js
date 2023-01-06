@@ -1,8 +1,8 @@
-import { CourseDetailLayout } from 'Layout'
+import { PlanDetailLayout } from 'Layout'
 
-const CourseDetail = () => {
+const LearningPlanDetailLayout = () => {
     return (
-        <CourseDetailLayout />
+        <PlanDetailLayout />
     )
 }
-export default CourseDetail;
+export default LearningPlanDetailLayout;
