@@ -17,11 +17,9 @@ const AssignTo = ({ handleInput, planPayload }) => {
     }, [planPayload.assignToCat])
 
     useMemo(() => {
-
         if (searchFor?.email) {
             if (selectedUserList.includes(searchFor.email)) {
                 let rm = selectedUserList.filter(item => item !== searchFor?.email)
-                console.log(rm)
                 setSelectedUsersList([...rm])
             } else {
                 setSelectedUsersList([...selectedUserList, searchFor.email])
