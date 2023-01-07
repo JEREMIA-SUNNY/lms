@@ -34,32 +34,28 @@ const TrainingCourseForm = () => {
     }
 
     return (
-        <>
-            <div className='w-full'>
-                <label htmlFor="users" className="block mb-2 text-sm font-semibold text-gray-900">Select {type}</label>
-                <div className='flex w-full'>
-                    <div className='w-1/2'>
-                        <MultiSelect
-                            selected={searchFor} setSelected={setSeachFor}
-                            title={`Select ${type}`}
-                            removeSelected={removeSelected}
-                            selectedList={selectedListId}
-                            list={type === 'Course' ? courses : trainings} keyname='name' />
-                    </div>
-                    <div className='w-1/2 mt-1 ml-2'>
-                        <select value={type} onChange={(e) => {
-                            setType(e.target.value)
-                            setSeachFor({})
+        <div className='flex w-full gap-4'>
+            <div className='w-1/2 mt-1 ml-2'>
+                <label htmlFor="users" className="block mb-2 text-sm font-semibold text-gray-900"> Select component</label>
+                <select value={type} onChange={(e) => {
+                    setType(e.target.value)
+                    setSeachFor({})
 
-                        }} name={'type'} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                            <option>Select ... </option>
-                            <option value='Course'>Course</option>
-                            <option value='Training'>Training</option>
-                        </select>
-                    </div>
-                </div>
+                }} name={'type'} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                    <option value='Course'>Course</option>
+                    <option value='Training'>Training</option>
+                </select>
             </div>
-        </>
+            <div className='w-1/2'>
+                <label htmlFor="users" className="block mb-2 text-sm font-semibold text-gray-900">Select {type}</label>
+                <MultiSelect
+                    selected={searchFor} setSelected={setSeachFor}
+                    title={type}
+                    removeSelected={removeSelected}
+                    selectedList={selectedListId}
+                    list={type === 'Course' ? courses : trainings} keyname='name' />
+            </div>
+        </div>
 
     )
 }

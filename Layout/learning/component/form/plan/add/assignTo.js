@@ -41,11 +41,11 @@ const AssignTo = ({ handleInput, planPayload }) => {
                 </select>
             </div>
             <div className='w-1/2'>
-                <label htmlFor="users" className="block mb-2 text-sm font-semibold text-gray-900">Select users</label>
+                <label htmlFor="users" className="block mb-2 text-sm font-semibold text-gray-900">Select {planPayload.assignToCat}</label>
                 <MultiSelect
                     removeSelected={removeSelected}
                     selected={searchFor} setSelected={setSeachFor}
-                    title={'Search users'}
+                    title={planPayload.assignToCat}
                     selectedList={selectedUserList}
                     list={users} keyname='email' />
             </div>

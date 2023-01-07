@@ -59,7 +59,7 @@ const PlanCard = ({ item }) => {
                     {description}
                 </p> */}
                 <div>
-                    <GroupAvatar rows={4} total={UserCount} />
+                    <GroupAvatar rows={5} total={UserCount} />
                 </div>
             </div>
         </Link>
