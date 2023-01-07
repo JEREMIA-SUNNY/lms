@@ -12,7 +12,7 @@ const CreateForm = () => {
 
     return (
         <>
-                <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
                 <div>
                     <label htmlFor="name" className="block mb-2 text-sm font-semibold text-gray-900">Plan Name</label>
                     <input type="name" onChange={handleInput} name="name" id="name" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
@@ -36,6 +36,11 @@ const CreateForm = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="mt-2">
+                <label htmlFor="description" className="block mb-2 text-sm font-semibold text-gray-900">Description</label>
+                <input type="text" onChange={handleInput} name="description" id="description" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    placeholder="Description" required="" />
             </div>
             <div className="flex gap-4 mt-2">
                 <AssignTo planPayload={planPayload} handleInput={handleInput} />

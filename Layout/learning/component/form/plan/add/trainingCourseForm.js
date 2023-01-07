@@ -15,13 +15,12 @@ const TrainingCourseForm = () => {
         if (searchFor.name) {
             setSelectedListId([...selectedListId, searchFor?.name])
             if (type === 'Course') {
-                setSelectedCourseList([...selectedCourseList, searchFor?.name])
+                setSelectedCourseList([...selectedCourseList, searchFor])
             } else {
-                setSelectedTrainingList([...selectedTrainingList, searchFor?.name])
+                setSelectedTrainingList([...selectedTrainingList, searchFor])
             }
         }
 
-        // console.log(searchFor)
     }, [searchFor])
 
     const removeSelected = (itemselected) => {
@@ -32,6 +31,8 @@ const TrainingCourseForm = () => {
         setSelectedTrainingList([...rmT])
         setSelectedCourseList([...rmC])
     }
+
+    console.log(selectedTrainingList)
 
     return (
         <div className='flex w-full gap-4'>

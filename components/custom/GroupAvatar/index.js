@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const GroupAvatar = ({ rows, total }) => {
-    
+
     return (
         <>
             <div className="flex -space-x-4">
@@ -9,7 +9,7 @@ const GroupAvatar = ({ rows, total }) => {
                     Array.from(Array(Number(rows)).keys()).map((item) => {
                         return (
                             <div key={item} className="overflow-hidden relative w-9 h-9 rounded-full">
-                                <Image src={`/happy-people-avatars/${Math.floor(Math.random() * 5) + 1}.png`}
+                                <Image src={`/demoimage/users/${Math.floor(Math.random() * 5) + 1}.png`}
                                     alt='user admin avatar'
                                     className="w-8 h-8 border-2 border-white rounded-full"
                                     height={60}
