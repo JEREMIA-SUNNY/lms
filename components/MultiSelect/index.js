@@ -39,7 +39,7 @@ const MultiSelect = ({ title, list, keyname, selected, setSelected, selectedList
                         leaveTo="opacity-0"
                         afterLeave={() => setQuery('')}
                     >
-                        <Combobox.Options className="active absolute mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white py-1 text-base ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                        <Combobox.Options className="z-10 active absolute mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white py-1 text-base ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                             {filteredList.length === 0 && query !== '' ? (
                                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                                     Nothing found.
