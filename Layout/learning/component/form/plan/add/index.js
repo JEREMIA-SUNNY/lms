@@ -2,7 +2,7 @@ import CreateForm from "./createForm";
 
 const CreateLearningPlan = ()=>{
     return(
-        <div>
+        <div className="overflow-scroll h-full">
            <CreateForm />
         </div>
     )

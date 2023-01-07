@@ -7,9 +7,6 @@ const PlanCard = ({ item }) => {
     return (
         <Link className="rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/learning/plan/detail/${id}`}>
             <div className="relative flex justify-end">
-                {/* <button className={`${item?.close ? 'bg-red-200 text-red-500' : 'bg-[#409a00] text-white'}   flex text-[10px] items-center mx-2 px-2 py-1 rounded-b-lg`}>
-                    {asignedTo}
-                </button> */}
                 <button className={`bg-[#409a00] text-white flex text-[10px] items-center mx-2 px-2 py-1 rounded-b-lg`}>
                     {asignedTo}
                 </button>
@@ -55,9 +52,6 @@ const PlanCard = ({ item }) => {
                     </div>
                     <p className="ml-2 text-xs text-gray-400">{completedUserCount}%</p>
                 </div>
-                {/* <p className="text-gray-500 text-sm leading-5">
-                    {description}
-                </p> */}
                 <div>
                     <GroupAvatar rows={5} total={UserCount} />
                 </div>
