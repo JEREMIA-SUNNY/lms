@@ -1,0 +1,323 @@
+{
+    "assignTo": [
+        {
+            "type": "None",
+            "users": []
+        },
+        {
+            "type": "All Users",
+            "users": [
+                {
+                    "name": "John Doe",
+                    "email": "j1ohndoe@example.com"
+                },
+                {
+                    "name": "Jane Doe",
+                    "email": "janwedoe@example.com"
+                },
+                {
+                    "name": "John Smith",
+                    "email": "johnswmith@example.com"
+                },
+                {
+                    "name": "Jane Smith",
+                    "email": "janescwmith@example.com"
+                },
+                {
+                    "name": "Robert Williams",
+                    "email": "robertwilliams@example.com"
+                },
+                {
+                    "name": "Samantha Williams",
+                    "email": "samanthawilliams@example.com"
+                },
+                {
+                    "name": "Michael Brown",
+                    "email": "michaelbrown@example.com"
+                },
+                {
+                    "name": "Ashley Brown",
+                    "email": "ashleybrown@example.com"
+                },
+                {
+                    "name": "David Johnson",
+                    "email": "davidjohnson@example.com"
+                },
+                {
+                    "name": "Stephanie Johnson",
+                    "email": "stephaniejohnson@example.com"
+                }
+            ]
+        },
+        {
+            "type": "Project",
+            "users": [
+                {
+                    "name": "John Doe",
+                    "email": "johncsdoe@example.com"
+                },
+                {
+                    "name": "Jane Doe",
+                    "email": "janesdoe@example.com"
+                },
+                {
+                    "name": "John Smith",
+                    "email": "jocshnsmith@example.com"
+                },
+                {
+                    "name": "Jane Smith",
+                    "email": "janesmith@example.com"
+                },
+                {
+                    "name": "Robert Williams",
+                    "email": "robertwilliams@example.com"
+                },
+                {
+                    "name": "Samantha Williams",
+                    "email": "samanthawilliams@example.com"
+                },
+                {
+                    "name": "Michael Brown",
+                    "email": "michaelbrown@example.com"
+                },
+                {
+                    "name": "Ashley Brown",
+                    "email": "ashleybrown@example.com"
+                },
+                {
+                    "name": "David Johnson",
+                    "email": "davidjohnson@example.com"
+                },
+                {
+                    "name": "Stephanie Johnson",
+                    "email": "stephaniejohnson@example.com"
+                }
+            ]
+        },
+        {
+            "type": "Department",
+            "users": [
+                {
+                    "name": "John Doe",
+                    "email": "csc@example.com"
+                },
+                {
+                    "name": "Jane Doe",
+                    "email": "janedocsce@example.com"
+                },
+                {
+                    "name": "John Smith",
+                    "email": "johnscssmith@example.com"
+                },
+                {
+                    "name": "Jane Smith",
+                    "email": "janescscmith@example.com"
+                },
+                {
+                    "name": "Robert Williams",
+                    "email": "robertwilliams@example.com"
+                },
+                {
+                    "name": "Samantha Williams",
+                    "email": "samanthawilliams@example.com"
+                },
+                {
+                    "name": "Michael Brown",
+                    "email": "michaelbrown@example.com"
+                },
+                {
+                    "name": "Ashley Brown",
+                    "email": "ashleybrown@example.com"
+                },
+                {
+                    "name": "David Johnson",
+                    "email": "davidjohnson@example.com"
+                },
+                {
+                    "name": "Stephanie Johnson",
+                    "email": "stephaniejohnson@example.com"
+                }
+            ]
+        },
+        {
+            "type": "Business Unit",
+            "users": [
+                {
+                    "name": "John Doe",
+                    "email": "johndcsoe@example.com"
+                },
+                {
+                    "name": "Jane Doe",
+                    "email": "jaww2wqnedoe@example.com"
+                },
+                {
+                    "name": "John Smith",
+                    "email": "johnfqsmith@example.com"
+                },
+                {
+                    "name": "Jane Smith",
+                    "email": "janescwqcmith@example.com"
+                },
+                {
+                    "name": "Robert Williams",
+                    "email": "robertwilliams@example.com"
+                },
+                {
+                    "name": "Samantha Williams",
+                    "email": "samanthawilliams@example.com"
+                },
+                {
+                    "name": "Michael Brown",
+                    "email": "michaelbrown@example.com"
+                },
+                {
+                    "name": "Ashley Brown",
+                    "email": "ashleybrown@example.com"
+                },
+                {
+                    "name": "David Johnson",
+                    "email": "davidjohnson@example.com"
+                },
+                {
+                    "name": "Stephanie Johnson",
+                    "email": "stephaniejohnson@example.com"
+                }
+            ]
+        },
+        {
+            "type": "Role",
+            "users": [
+                {
+                    "name": "John Doe",
+                    "email": "johwqfqfqndoe@example.com"
+                },
+                {
+                    "name": "Jane Doe",
+                    "email": "janeqwfqfdoe@example.com"
+                },
+                {
+                    "name": "John Smith",
+                    "email": "johnsqwfqmith@example.com"
+                },
+                {
+                    "name": "Jane Smith",
+                    "email": "janesmith@example.com"
+                },
+                {
+                    "name": "Robert Williams",
+                    "email": "robertwilliams@example.com"
+                },
+                {
+                    "name": "Samantha Williams",
+                    "email": "samanthawilliams@example.com"
+                },
+                {
+                    "name": "Michael Brown",
+                    "email": "michaelbrown@example.com"
+                },
+                {
+                    "name": "Ashley Brown",
+                    "email": "ashleybrown@example.com"
+                },
+                {
+                    "name": "David Johnson",
+                    "email": "davidjohnson@example.com"
+                },
+                {
+                    "name": "Stephanie Johnson",
+                    "email": "stephaniejohnson@example.com"
+                }
+            ]
+        },
+        {
+            "type": "Country",
+            "users": [
+                {
+                    "name": "John Doe",
+                    "email": "johqwfqwfqwndoe@example.com"
+                },
+                {
+                    "name": "Jane Doe",
+                    "email": "janeqfwdoe@example.com"
+                },
+                {
+                    "name": "John Smith",
+                    "email": "johnsmith@example.com"
+                },
+                {
+                    "name": "Jane Smith",
+                    "email": "janeqfwsmith@example.com"
+                },
+                {
+                    "name": "Robert Williams",
+                    "email": "robertwilliams@example.com"
+                },
+                {
+                    "name": "Samantha Williams",
+                    "email": "samanthawilliams@example.com"
+                },
+                {
+                    "name": "Michael Brown",
+                    "email": "michaelbrown@example.com"
+                },
+                {
+                    "name": "Ashley Brown",
+                    "email": "ashleybrown@example.com"
+                },
+                {
+                    "name": "David Johnson",
+                    "email": "davidjohnson@example.com"
+                },
+                {
+                    "name": "Stephanie Johnson",
+                    "email": "stephaniejohnson@example.com"
+                }
+            ]
+        },
+        {
+            "type": "Location",
+            "users": [
+                {
+                    "name": "John Doe",
+                    "email": "johnfqwfqdoe@example.com"
+                },
+                {
+                    "name": "Jane Doe",
+                    "email": "janedoqwfwe@example.com"
+                },
+                {
+                    "name": "John Smith",
+                    "email": "johnqwsmith@example.com"
+                },
+                {
+                    "name": "Jane Smith",
+                    "email": "janesmith@example.com"
+                },
+                {
+                    "name": "Robert Williams",
+                    "email": "robertwilliams@example.com"
+                },
+                {
+                    "name": "Samantha Williams",
+                    "email": "samanthawilliams@example.com"
+                },
+                {
+                    "name": "Michael Brown",
+                    "email": "michaelbrown@example.com"
+                },
+                {
+                    "name": "Ashley Brown",
+                    "email": "ashleybrown@example.com"
+                },
+                {
+                    "name": "David Johnson",
+                    "email": "davidjohnson@example.com"
+                },
+                {
+                    "name": "Stephanie Johnson",
+                    "email": "stephaniejohnson@example.com"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+[
+  {
+    "name": "Smith Inc.",
+    "duedate": "05/15/2022",
+    "close": true,
+    "asignedTo": "Marketing Department",
+    "completedUserCount": 3,
+    "UserCount": 20,
+    "complete": 15,
+    "description": "Design and implementation of new customer loyalty program",
+    "course": 9,
+    "training": 2,
+    "id": 2,
+    "courseTrainingList": [
+      {
+        "name": "Mueller Group",
+        "auther": "Darcie Enden",
+        "price": "0",
+        "thumnnail": "https://images.unsplash.com/file-1636585210491-f28ca34ea8ecimage?dpr=2&auto=format&fit=crop&w=416&q=60",
+        "complete": 0,
+        "description": "External constriction of left ear, initial encounter",
+        "modules": 7,
+        "id": 1,
+        "level": "intermediate",
+        "language": "Assamese"
+      },
+      {
+        "name": "Sauer, Kassulke and Cole",
+        "auther": "Lorine L'Amie",
+        "price": "9.36",
+        "thumnnail": "https://images.unsplash.com/photo-1601807576163-587225545555?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGVkdWNhdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+        "complete": 80,
+        "description": "Unspecified mastoiditis",
+        "modules": 6,
+        "id": 2,
+        "level": "beginner",
+        "language": "Assamese"
+      },
+      {
+        "name": "Leannon LLC",
+        "auther": "Hester Bird",
+        "price": "0",
+        "thumnnail": "https://images.unsplash.com/photo-1588702547919-26089e690ecc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNvdXJzZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+        "complete": 1,
+        "description": "Corrosion of unspecified degree of lower back",
+        "modules": 0,
+        "id": 3,
+        "level": "advance",
+        "language": "Assamese"
+      }
+    ]
+  },
+  {
+    "name": "Johnson Enterprises",
+    "duedate": "08/30/2022",
+    "close": false,
+    "asignedTo": "IT Department",
+    "completedUserCount": 5,
+    "UserCount": 25,
+    "complete": 20,
+    "description": "Upgrade of company-wide information systems",
+    "course": 6,
+    "training": 3,
+    "id": 3
+  },
+  {
+    "name": "Williams & Associates",
+    "duedate": "01/15/2023",
+    "close": true,
+    "asignedTo": "Human Resources",
+    "completedUserCount": 2,
+    "UserCount": 30,
+    "complete": 10,
+    "description": "Implementation of new employee onboarding process",
+    "course": 8,
+    "training": 5,
+    "id": 4
+  },
+  {
+    "name": "Brown Co.",
+    "duedate": "03/31/2023",
+    "close": false,
+    "asignedTo": "Finance Department",
+    "completedUserCount": 1,
+    "UserCount": 35,
+    "complete": 5,
+    "description": "Creation of new budgeting and forecasting system",
+    "course": 7,
+    "training": 4,
+    "id": 5
+  },
+  {
+    "name": "Jones Enterprises",
+    "duedate": "07/15/2023",
+    "close": false,
+    "asignedTo": "Sales Team",
+    "completedUserCount": 4,
+    "UserCount": 40,
+    "complete": 20,
+    "description": "Revamp of sales training and onboarding program",
+    "course": 8,
+    "training": 3,
+    "id": 6
+  },
+  {
+    "name": "Miller Inc.",
+    "duedate": "09/30/2023",
+    "close": false,
+    "asignedTo": "Research and Development",
+    "completedUserCount": 3,
+    "UserCount": 45,
+    "complete": 15,
+    "description": "Implementation of new product development process",
+    "course": 10,
+    "training": 5,
+    "id": 7
+  },
+  {
+    "name": "Davis & Co.",
+    "duedate": "12/15/2023",
+    "close": true,
+    "asignedTo": "Executive Team",
+    "completedUserCount": 2,
+    "UserCount": 50,
+    "complete": 10,
+    "description": "Leadership development program for top executives",
+    "course": 9,
+    "training": 4,
+    "id": 8
+  }
+]
