@@ -5,7 +5,7 @@ import BatchesForm from "../add/batchesform";
 import Sessions from './session/session'
 import MainAddStudentInBatch from "./student";
 
-const Batches = (props) => {
+const BatchesAdd = (props) => {
     const { handlebatchInfo, batchSession, setBatchSession, IsBatchePaid, setIsBatchePaid } = props
 
     return (
@@ -42,4 +42,4 @@ const Batches = (props) => {
     )
 }
 
-export default Batches;
+export default BatchesAdd;

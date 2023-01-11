@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import Tablist from '@/components/custom/TabList'
 import EditTrainingFrom from './editTraining'
 import MainAssessment from './assessment'
-import Batches from '../../batches/edit'
+import EditOrAddBatchComponents from '../../batches/editorAddBatch'
 
 const tablist = ['Training detail', 'Batches', 'Assessment Details']
 
@@ -50,7 +50,9 @@ const MainTrainingEdit = () => {
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
+                <div className='w-full mb-2'>
                 <Tablist trainingInfo={trainingInfo} list={IsAssessment ? tablist : ['Training detail', 'Batches']} />
+                </div>
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
                         <EditTrainingFrom
@@ -63,7 +65,8 @@ const MainTrainingEdit = () => {
                             handleInput={handleTrainingInput} />
                     </Tab.Panel>
                     <Tab.Panel className='h-full'>
-                        <Batches batchInfo={batchInfo}
+                        <EditOrAddBatchComponents 
+                            batchInfo={batchInfo}
                             batchSession={batchSession}
                             IsBatchePaid={IsBatchePaid}
                             setIsBatchePaid={setIsBatchePaid}
