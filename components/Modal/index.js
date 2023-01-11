@@ -4,7 +4,7 @@ import PrimaryButton from 'components/custom/Buttons/PrimaryButton'
 import { Fragment, useState } from 'react'
 import IconButton from '../custom/Buttons/IconButton'
 
-const Modal = ({ TitleIcon, title, ui, button }) => {
+const Modal = ({ TitleIcon, title, ui, button, classTitleIcon = 'bg-white text-[#419a00]' }) => {
     let [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
@@ -19,7 +19,7 @@ const Modal = ({ TitleIcon, title, ui, button }) => {
         <>
             {button ? <PrimaryButton className='rounded-lg ' onClick={openModal}>
                 {TitleIcon}
-            </PrimaryButton> : <IconButton className='bg-white text-[#419a00]' onClick={openModal}>
+            </PrimaryButton> : <IconButton className={classTitleIcon}  onClick={openModal}>
                 {TitleIcon}
             </IconButton>}
 

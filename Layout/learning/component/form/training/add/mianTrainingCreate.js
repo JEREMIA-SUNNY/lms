@@ -5,7 +5,7 @@ import CreateTrainingFrom from './createTraining'
 import MainAssessment from './assessment'
 import Batches from '../../batches/add'
 
-const tablist = ['Training detail', 'Batches', 'Assessment Details']
+const tablist = ['Training Details', 'Batches', 'Assessment Details']
 
 const MainTrainingCreate = () => {
     const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: true })
@@ -50,7 +50,7 @@ const MainTrainingCreate = () => {
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
-                <Tablist trainingInfo={trainingInfo} list={IsAssessment ? tablist : ['Training detail', 'Batches']} />
+                <Tablist trainingInfo={trainingInfo} list={IsAssessment ? tablist : ['Training Details', 'Batches']} />
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
                         <CreateTrainingFrom

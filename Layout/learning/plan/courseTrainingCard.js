@@ -1,7 +1,6 @@
 import IconButton from "@/components/custom/Buttons/IconButton";
 import Image from "next/image";
 import Link from "next/link";
-// import Avatar from "../../../components/custom/Avatar";
 
 const CourseTrainingCard = ({ item, length, index }) => {
     const { id, auther, price, thumnnail, complete, description, modules, language, level, name } = item
@@ -76,7 +75,7 @@ const CourseTrainingCard = ({ item, length, index }) => {
                     </p>
                 </div>
             </Link>
-            {index < length - 1 ? <div className="absolute right-[-1.2rem] top-[50%] z-10">
+            {index < length - 1 ? <div>
                 <IconButton className='bg-white shadow-lg text-[#419a00]'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />

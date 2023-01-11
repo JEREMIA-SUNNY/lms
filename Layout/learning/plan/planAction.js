@@ -4,7 +4,6 @@ import EditPanBtn from '../component/editPlanBtn'
 import { useState } from 'react'
 import DeleteAlert from '@/components/DeleteAlert'
 import { useRouter } from 'next/router'
-import GroupUserListingModal from './GroupUserListingModal'
 
 const PlanAction = () => {
     const router = useRouter()
@@ -23,7 +22,6 @@ const PlanAction = () => {
         <div className="mt-4 flex items-center justify-between">
             <GoBackButton title={'Plan Details'} />
             <div className="h-10 flex justify-start text-[#419a00]">
-                <GroupUserListingModal assigmentType={'Marketing Department'} />
                 <EditPanBtn />
                 <DeleteAlert
                     isOpen={isOpen}
