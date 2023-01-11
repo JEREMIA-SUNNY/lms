@@ -5,7 +5,7 @@ const StartAssessmentBtn = () => {
 
     return (
         <div className='flex justify-center items-center'>
-            <Modal ui={<StartAssessmentForm />} title={''} button={true}
+            <Modal ui={<StartAssessmentForm />} title={'Start Assessment'} button={true}
                 TitleIcon='Start Assessment'
             />
         </div>
