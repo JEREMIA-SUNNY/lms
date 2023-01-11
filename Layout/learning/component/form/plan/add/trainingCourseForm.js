@@ -4,6 +4,8 @@ import courses from '@/assets/mokedata/courses.json'
 import trainings from '@/assets/mokedata/trainings.json'
 import MultiSelect from 'components/MultiSelect'
 import CourseTrainingCard from './courseTrainingCard'
+import Tablist from '@/components/custom/TabList'
+import { Tab } from '@headlessui/react'
 
 const TrainingCourseForm = () => {
     const [searchFor, setSeachFor] = useState({})
@@ -34,9 +36,6 @@ const TrainingCourseForm = () => {
         setSelectedCourseList([...rmC])
     }
 
-    console.log(selectedTrainingList)
-    console.log(selectedCourseList);
-
     return (
         <>
             <div className='flex w-full gap-4'>
@@ -61,18 +60,33 @@ const TrainingCourseForm = () => {
                         list={type === 'Course' ? courses : trainings} keyname='name' />
                 </div>
             </div>
-            <div className='grid grid-cols-4 gap-2 mt-2'>
-                {
-                    selectedTrainingList?.map((item, i) => {
-                        return (<CourseTrainingCard removeSelected={removeSelected} key={item?.name} item={item} />)
-                    })
-                }
+            <div className='w-full mt-2'>
+                <Tab.Group>
+                    <div className="w-[300px]">
+                        <Tablist list={['Courses', 'Training']} />
+                    </div>
+                    <Tab.Panels>
+                        <Tab.Panel>
+                            <div className='grid grid-cols-4 gap-2'>
+                                {
+                                    selectedCourseList?.map((item, i) => {
+                                        return (<CourseTrainingCard removeSelected={removeSelected} key={item?.name} item={item} />)
+                                    })
+                                }
+                            </div>
+                        </Tab.Panel>
+                        <Tab.Panel>
+                            <div className='grid grid-cols-4 gap-2'>
+                                {
+                                    selectedTrainingList?.map((item, i) => {
+                                        return (<CourseTrainingCard removeSelected={removeSelected} key={item?.name} item={item} />)
+                                    })
+                                }
+                            </div>
+                        </Tab.Panel>
+                    </Tab.Panels>
+                </Tab.Group>
 
-                {
-                    selectedCourseList?.map((item, i) => {
-                        return (<CourseTrainingCard removeSelected={removeSelected} key={item?.name} item={item} />)
-                    })
-                }
             </div>
         </>
 
