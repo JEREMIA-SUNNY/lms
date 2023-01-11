@@ -56,7 +56,7 @@ const PlanCard = ({ item }) => {
                     <p className="ml-2 text-xs text-gray-400">{completedUserCount}%</p>
                 </div>
                 <div>
-                    <GroupAvatar rows={5} total={UserCount} />
+                    <GroupAvatar className='w-7 h-7' rows={5} total={UserCount} />
                 </div>
             </div>
         </Link>

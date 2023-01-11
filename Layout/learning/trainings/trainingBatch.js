@@ -43,8 +43,8 @@ const TrainingBatch = ({ id }) => {
                 <hr className="my-2 scale-x-150" />
                 <div className="py-4 -m-4 -mt-2 px-2 bg-gray-50">
                     <Tab.Group>
-                        <div className="w-48">
-                            <Tablist list={['Session', 'Students']} />
+                        <div className="w-[300px]">
+                            <Tablist list={['Session (10)', 'Students (30)']} />
                         </div>
                         <Tab.Panels>
                             <Tab.Panel> <ListOfSession /></Tab.Panel>

@@ -1,19 +1,19 @@
 import Image from "next/image";
 
-const GroupAvatar = ({ rows, total }) => {
+const GroupAvatar = ({ rows, total, className }) => {
 
     return (
         <>
-            <div className="flex -space-x-4">
+            <div className="flex -space-x-3">
                 {
                     Array.from(Array(Number(rows)).keys()).map((item) => {
                         return (
-                            <div key={item} className="overflow-hidden relative w-9 h-9 rounded-full">
-                                <Image src={`/demoimage/users/${Math.floor(Math.random() * 5) + 1}.png`}
+                            <div key={item} className={`overflow-hidden relative rounded-full ${className}`}>
+                                <Image src={`/demoimage/usericon.webp`}
                                     alt='user admin avatar'
-                                    className="w-8 h-8 border-2 border-white rounded-full"
-                                    height={60}
-                                    width={60}
+                                    className={`${className} border-2 border-white rounded-full`}
+                                    height={40}
+                                    width={40}
                                     quality={100}
                                     loading="eager" priority={true}
                                 />
@@ -21,7 +21,7 @@ const GroupAvatar = ({ rows, total }) => {
                         )
                     })
                 }
-                <div className="z-[4] flex items-center justify-center w-8 h-8 text-[10px] font-medium text-gray-500 bg-gray-300 border-2 border-white rounded-full">+{total - rows}</div>
+                <div className={`${className}  z-[4] flex items-center justify-center text-[10px] font-medium text-green-800 bg-green-200 border-2 border-white rounded-full`}>+{total - rows}</div>
             </div>
         </>
     )

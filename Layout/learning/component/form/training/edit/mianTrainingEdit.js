@@ -5,7 +5,7 @@ import EditTrainingFrom from './editTraining'
 import MainAssessment from './assessment'
 import EditOrAddBatchComponents from '../../batches/EditOrAddBatchComponents'
 
-const tablist = ['Training detail', 'Batches', 'Assessment Details']
+const tablist = ['Training Details', 'Batches', 'Assessment Details']
 
 const MainTrainingEdit = () => {
     const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: true })
@@ -51,7 +51,7 @@ const MainTrainingEdit = () => {
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
                 <div className='w-full mb-2'>
-                <Tablist trainingInfo={trainingInfo} list={IsAssessment ? tablist : ['Training detail', 'Batches']} />
+                <Tablist trainingInfo={trainingInfo} list={IsAssessment ? tablist : ['Training Details', 'Batches']} />
                 </div>
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
