@@ -34,7 +34,7 @@ const PlanDetailLayout = () => {
                 <div className="mt-4 grid grid-cols-4 gap-5">
                     {Plans[0]['courseTrainingList']?.map((item, i) => {
                         return (
-                            <CourseTrainingCard key={i} item={item} />
+                            <CourseTrainingCard key={i} index={i} length={Plans[0]['courseTrainingList']?.length} item={item} />
                         )
                     })}
                 </div>
