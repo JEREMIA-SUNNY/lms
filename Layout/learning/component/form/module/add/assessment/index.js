@@ -36,7 +36,7 @@ const MainAssessment = (props) => {
                 </Tab.Panels>
             </Tab.Group>
             <div className='flex justify-end fixed bottom-0 right-5'>
-                <PrimaryButton>
+            <PrimaryButton className='rounded-lg'>
                     <span>Add Assessment</span>
                 </PrimaryButton>
             </div>

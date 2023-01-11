@@ -1,19 +1,19 @@
 import TableRow from "./row"
 import TableHead from './head'
 
-const Table = ({ data }) => {
+const Table = ({ data, column, tablename }) => {
     return (
         <>
             <div className="overflow-x-auto relative">
                 <table className="w-full text-sm text-left text-gray-500">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50">
-                        <TableHead />
+                        <TableHead list={column} />
                     </thead>
                     <tbody>
                         {
                             data?.map((item, i) => {
                                 return (
-                                    <TableRow key={i} row={item} />
+                                    <TableRow key={i} tablename={tablename} row={item} />
                                 )
                             })
                         }

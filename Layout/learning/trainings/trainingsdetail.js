@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import DetailHeader from './detailHeader'
 import TrainingAction from "./trainingAction";
-import TrainingModule from './trainingModule'
+import TrainingBatch from './trainingBatch'
 
 const TrainingDetailLayout = () => {
     const route = useRouter()
@@ -15,7 +15,7 @@ const TrainingDetailLayout = () => {
                 {
                     [1, 2, 3, 4, 5, 6].map((item) => {
                         return (
-                            <TrainingModule key={item} id={item} />
+                            <TrainingBatch key={item} id={item} />
                         )
                     })
                 }

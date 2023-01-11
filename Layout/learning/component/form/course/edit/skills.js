@@ -8,7 +8,6 @@ const Skillform = ({ handleInput, courseInfo }) => {
     useMemo(() => {
         const skills = skilltype?.skillTypes?.filter((item => item?.type === courseInfo.skilltype))
         if (skills?.length) {
-            console.log(skills)
             setSkill(skills[0]['skills'])
         }
     }, [courseInfo.skilltype])

@@ -5,7 +5,7 @@ import BatchesForm from "../edit/batchesform";
 import Sessions from './session/session'
 import MainAddStudentInBatch from "./student";
 
-const Batches = (props) => {
+const BatchesEdit = (props) => {
     const { handlebatchInfo, batchSession, setBatchSession, IsBatchePaid, setIsBatchePaid } = props
 
     return (
@@ -34,12 +34,12 @@ const Batches = (props) => {
             </div>
 
             <div className='flex justify-end fixed bottom-0 right-5'>
-                <PrimaryButton>
-                    <span>Add Batch</span>
+                <PrimaryButton className='rounded-lg'>
+                    <span>Edit Batch</span>
                 </PrimaryButton>
             </div>
         </>
     )
 }
 
-export default Batches;
+export default BatchesEdit;

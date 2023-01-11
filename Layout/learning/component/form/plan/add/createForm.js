@@ -45,7 +45,7 @@ const CreateForm = () => {
             <div className="flex gap-4 mt-2">
                 <AssignTo planPayload={planPayload} handleInput={handleInput} />
             </div>
-            <div className="flex gap-4 mt-2">
+            <div className="w-full gap-4 mt-2">
                 <TrainingCourseForm planPayload={planPayload} handleInput={handleInput} />
             </div>
 

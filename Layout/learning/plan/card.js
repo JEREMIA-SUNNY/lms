@@ -7,16 +7,16 @@ const PlanCard = ({ item }) => {
     return (
         <Link className="rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/learning/plan/detail/${id}`}>
             <div className="relative flex justify-end">
-                {/* <button className={`${item?.close ? 'bg-red-200 text-red-500' : 'bg-[#409a00] text-white'}   flex text-[10px] items-center mx-2 px-2 py-1 rounded-b-lg`}>
-                    {asignedTo}
-                </button> */}
                 <button className={`bg-[#409a00] text-white flex text-[10px] items-center mx-2 px-2 py-1 rounded-b-lg`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mr-1">
+                        <path strokeLinecap="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
+                    </svg>
                     {asignedTo}
                 </button>
             </div>
             <div className="w-full px-4 pb-4">
                 <h2 className="text-lg text-gray-900 font-medium title-font truncate">{name}</h2>
-              
+
                 <div className="grid grid-cols-2 gap-2 text-gray-500 text-sm">
                     <div className="mr-2 flex justify-start items-center py-1 flex">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
@@ -55,9 +55,6 @@ const PlanCard = ({ item }) => {
                     </div>
                     <p className="ml-2 text-xs text-gray-400">{completedUserCount}%</p>
                 </div>
-                {/* <p className="text-gray-500 text-sm leading-5">
-                    {description}
-                </p> */}
                 <div>
                     <GroupAvatar rows={5} total={UserCount} />
                 </div>

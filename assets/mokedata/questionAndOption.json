@@ -1,0 +1,92 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Paris",
+            "London",
+            "Rome",
+            "Berlin"
+        ]
+    },
+    {
+        "question": "Which planet is closest to the sun?",
+        "options": [
+            "Mercury",
+            "Mars",
+            "Venus",
+            "Jupiter"
+        ]
+    },
+    {
+        "question": "Which river runs through the city of London?",
+        "options": [
+            "Thames",
+            "Seine",
+            "Danube",
+            "Rhine"
+        ]
+    },
+    {
+        "question": "What is the largest mammal in the world?",
+        "options": [
+            "Blue Whale",
+            "Elephant",
+            "Giraffe",
+            "Hippopotamus"
+        ]
+    },
+    {
+        "question": "Which country is home to the Great Wall?",
+        "options": [
+            "China",
+            "India",
+            "Russia",
+            "Mexico"
+        ]
+    },
+    {
+        "question": "Which element has the chemical symbol Ag?",
+        "options": [
+            "Silver",
+            "Gold",
+            "Copper",
+            "Platinum"
+        ]
+    },
+    {
+        "question": "Which actor played the character of Indiana Jones?",
+        "options": [
+            "Harrison Ford",
+            "Tom Cruise",
+            "Brad Pitt",
+            "Will Smith"
+        ]
+    },
+    {
+        "question": "What is the name of the longest bone in the human body?",
+        "options": [
+            "Femur",
+            "Humerus",
+            "Tibia",
+            "Fibula"
+        ]
+    },
+    {
+        "question": "Which US state is known as the Sunshine State?",
+        "options": [
+            "Florida",
+            "California",
+            "Hawaii",
+            "Arizona"
+        ]
+    },
+    {
+        "question": "Which country is the largest by area?",
+        "options": [
+            "Russia",
+            "China",
+            "United States",
+            "Canada"
+        ]
+    }
+]

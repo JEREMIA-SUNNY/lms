@@ -1,5 +1,5 @@
 import VideoStatus from "./videoStatus";
-import StartAssesment from './startAssessment'
+import StartAssessmentBtn from './startAssessmentBtn'
 
 const modules = [
     { status: 'Biginner' },
@@ -30,7 +30,7 @@ const CourseModule = ({ id }) => {
                                 )
                             })
                         }
-                        <StartAssesment />
+                        <StartAssessmentBtn />
                     </div>
                 </div>
             </details>
