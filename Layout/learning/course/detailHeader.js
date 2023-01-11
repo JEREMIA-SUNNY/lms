@@ -26,11 +26,6 @@ const DetailHeader = ({ id }) => {
                         <td> </td>
                         <td></td>
                     </tr>
-                    {/* <tr>
-                        <td>Skills: </td>
-                        <td>Description: </td>
-                        <td>Rating: </td>
-                    </tr> */}
                 </tbody>
             </table>
             <p className="font-semibld">Description: </p>
