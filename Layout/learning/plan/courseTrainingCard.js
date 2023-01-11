@@ -6,8 +6,8 @@ import Link from "next/link";
 const CourseTrainingCard = ({ item, length, index }) => {
     const { id, auther, price, thumnnail, complete, description, modules, language, level, name } = item
     return (
-        <div className="h-full w-full flex justify-start items-center">
-            <Link className="p-4 rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/learning/courses/detail/${id}`}>
+        <div className="relative h-full w-full flex justify-start items-center">
+            <Link className="p-4 rounded-lg shadow-xl bg-white h-full  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/learning/courses/detail/${id}`}>
                 <div className="w-full">
                     <div className="relative -mb-7">
                         <button className="bg-[#409a00] w-20 font-semibold text-white flex text-sm items-center mx-2 shadow-lg px-2 py-1 rounded-b-lg">
@@ -76,14 +76,13 @@ const CourseTrainingCard = ({ item, length, index }) => {
                     </p>
                 </div>
             </Link>
-            {index < length - 1 ? <div className="mx-2">
-                <IconButton className='bg-white text-[#419a00]'>
+            {index < length - 1 ? <div className="absolute right-[-1.2rem] top-[50%] z-10">
+                <IconButton className='bg-white shadow-lg text-[#419a00]'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                     </svg>
                 </IconButton>
             </div> : ''}
-
         </div>
     )
 }

@@ -1,7 +1,7 @@
 
 import TableAction from "./Action";
 
-const TableRow = ({ row, action, tablename }) => {
+const TableRow = ({ row, tablename }) => {
 
     return (
         <>
