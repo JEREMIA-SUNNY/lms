@@ -25,7 +25,7 @@ const MainModuleEdit = (props) => {
                 </Tab.Panels>
             </Tab.Group>
             <div className='flex justify-end fixed bottom-0 right-5'>
-                <PrimaryButton>
+            <PrimaryButton className='rounded-lg'>
                     <span>Add Module</span>
                 </PrimaryButton>
             </div>

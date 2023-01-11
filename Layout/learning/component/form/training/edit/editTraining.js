@@ -14,7 +14,7 @@ const EditTrainingFrom = (props) => {
                 setIsAssessment={setIsAssessment}
                 handleInput={handleInput} />
             <div className='flex justify-end fixed bottom-0 right-5'>
-                <PrimaryButton>
+                <PrimaryButton className='rounded-lg'>
                     <span>Edit Training</span>
                 </PrimaryButton>
             </div>

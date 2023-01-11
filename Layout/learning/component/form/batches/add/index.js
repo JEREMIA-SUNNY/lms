@@ -34,7 +34,7 @@ const BatchesAdd = (props) => {
             </div>
 
             <div className='flex justify-end fixed bottom-0 right-5'>
-                <PrimaryButton>
+                <PrimaryButton className='rounded-lg '>
                     <span>Add Batch</span>
                 </PrimaryButton>
             </div>

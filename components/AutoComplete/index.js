@@ -48,7 +48,7 @@ const AutoComplete = ({ title, list, keyname, selected, setSelected }) => {
                                     <Combobox.Option
                                         key={person.id}
                                         className={({ active }) =>
-                                            `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'text-green-600' : 'text-gray-900'
+                                            `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'text-green-600' : 'text-gray-[#419a00]'
                                             }`
                                         }
                                         value={person}

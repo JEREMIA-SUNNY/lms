@@ -17,7 +17,7 @@ const Modal = ({ TitleIcon, title, ui, button }) => {
 
     return (
         <>
-            {button ? <PrimaryButton onClick={openModal}>
+            {button ? <PrimaryButton className='rounded-lg ' onClick={openModal}>
                 {TitleIcon}
             </PrimaryButton> : <IconButton onClick={openModal}>
                 {TitleIcon}

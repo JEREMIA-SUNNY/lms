@@ -12,7 +12,7 @@ const SwitchInput = ({ value, onChange }) => {
             <span className="sr-only">Use setting</span>
             <span
                 aria-hidden="true"
-                className={`${value ? 'translate-x-9 border-2 border-green-700' : 'translate-x-0 bg-gray-500'}
+                className={`${value ? 'translate-x-9 border-2 border-[#419a00]' : 'translate-x-0 bg-gray-500'}
     pointer-events-none inline-block h-[24px] w-[24px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
             />
         </Switch>

@@ -1,6 +1,5 @@
 
-const list = ['S No.', 'Student Name', 'Student Id', 'Phone Number', 'Gender', 'Action']
-const TableHead = () => {
+const TableHead = ({list}) => {
     return (
         <tr>
             {list?.map((item, i) => {
