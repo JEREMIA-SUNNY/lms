@@ -4,7 +4,7 @@ import StudentAction from "./StudentAction";
 const TableAction = ({ tablename }) => {
     return (
         <>
-            {tablename ? <StudentAction /> : ''}
+            {tablename === 'studentApproval' ? <StudentAction /> : ''}
         </>
     )
 }
