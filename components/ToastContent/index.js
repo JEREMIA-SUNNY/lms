@@ -6,7 +6,7 @@ const ToastContent = ({ title, text, icon, type }) => (
     <Fragment>
         <div className='toastify-header'>
             <div className='title-wrapper'>
-                <IconButton>
+                <IconButton className='bg-white text-[#419a00]'>
                     {icon}
                 </IconButton>
                 <h6 className='toast-title font-weight-bold'>{title}</h6>

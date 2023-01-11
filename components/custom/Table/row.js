@@ -9,7 +9,7 @@ const TableRow = ({ row, action, tablename }) => {
                 {
                     Object.values(row).map((item, i) => {
                         return (
-                            <td key={i} className="py-1 px-6">
+                            <td key={i} className="py-4 px-6">
                                 {item}
                             </td>
                         )

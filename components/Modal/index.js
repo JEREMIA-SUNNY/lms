@@ -19,7 +19,7 @@ const Modal = ({ TitleIcon, title, ui, button }) => {
         <>
             {button ? <PrimaryButton className='rounded-lg ' onClick={openModal}>
                 {TitleIcon}
-            </PrimaryButton> : <IconButton onClick={openModal}>
+            </PrimaryButton> : <IconButton className='bg-white text-[#419a00]' onClick={openModal}>
                 {TitleIcon}
             </IconButton>}
 
