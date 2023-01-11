@@ -4,7 +4,7 @@ import BatchesAdd from "./add";
 import BatchesEdit from "./edit";
 
 const EditOrAddBatchComponents = (props) => {
-    const { handlebatchInfo, batchSession, setBatchSession, IsBatchePaid, setIsBatchePaid } = props
+    const { handlebatchInfo, batchSession, setBatchSession, IsBatchePaid, setIsBatchePaid, batchInfo } = props
 
     return (
         <Tab.Group>
