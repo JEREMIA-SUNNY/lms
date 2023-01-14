@@ -15,12 +15,13 @@ const PlanDetailLayout = () => {
                 <div className="bg-gray-100 shadow p-2 rounded-lg font-semibld">
                     <div className="grid grid-cols-2 ">
                         <div className="font-semibld">Plan Name: <span className="text-gray-700"> here is anme</span></div>
-                        <div className="font-semibld">Status: <span className="text-gray-700"> Completed</span></div>
+                        <div className="flex justify-start items-center">
+                            <div className="font-semibld">Assigned to: <span className="text-gray-700 h-8">Marketing Department {'>'} </span></div> <div > <PlanInfoViewUsers /> </div>
+                        </div>
                         <div className="font-semibld">Mandatory: <span className="text-gray-700">Yes</span></div>
                         <div className="font-semibld">Due date: <span className="text-gray-700">10/02/2023</span></div>
-                        <div className="flex justify-start items-center">
-                            <div className="font-semibld">Assigned to: <span className="text-gray-700 h-8">Marketing Department</span></div> <div > <PlanInfoViewUsers /> </div>
-                        </div>
+                        <div className="font-semibld">Status: <span className="text-gray-700"> Completed</span></div>
+
                     </div>
                     <div className="font-semibld">
                         Description: <span className="text-gray-700">
