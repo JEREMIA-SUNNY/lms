@@ -2,7 +2,6 @@
 import { useMemo, useState } from 'react'
 import assignTo from '@/assets/mokedata/assignTo.json'
 import MultiSelect from 'components/MultiSelect'
-import IconButton from 'components/custom/Buttons/IconButton'
 
 const AssignTo = ({ handleInput, planPayload }) => {
     const [users, setusers] = useState([])
@@ -63,13 +62,13 @@ const AssignTo = ({ handleInput, planPayload }) => {
                             list={users} keyname='email' />
                     </div>
                     <div className='mt-6 w-1/4 flex justify-start items-center'>
-                        <button onClick={selectAll} type="button" className={`w-8 h-8 border border-green-600 text-green-600 text-sm font-medium text-center bg-white focus:ring-0 focus:outline-none focus:ring-white`}>
+                        <button onClick={selectAll} type="button" className={`w-6 h-6 border border-green-600 text-green-600 text-sm font-medium text-center bg-white focus:ring-0 focus:outline-none focus:ring-white`}>
                             {selectedUserList?.length ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-green-600">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                             </svg> : ''}
                         </button>
                         <span className='ml-2'>
-                            Select
+                            Select All
                         </span>
                     </div>
                 </div>
