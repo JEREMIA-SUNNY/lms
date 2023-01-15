@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import JobAction from "./Action";
 
 const aJob = {
@@ -15,11 +15,10 @@ const aJob = {
     "Skills": "SQL, Excel, R, Python",
     "Technology": "Tableau, Power BI, Alteryx",
     "Experience": "1-3 years",
-    // "Job Responsibilities": "• Collect, clean, and process large datasets.• Create and maintain data visualizations and dashboards.• Perform statistical analysis and provide insights.• Collaborate with cross-functional teams to deliver data-driven solutions.• Communicate findings and recommendations to stakeholders."
 }
 
 const JobDetailLayout = () => {
-    const route = useRouter()
+    // const route = useRouter()
     // const { query } = route
 
     return (

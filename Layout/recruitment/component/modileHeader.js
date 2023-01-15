@@ -1,9 +1,5 @@
 import AutoComplete from "@/components/AutoComplete";
-import CustomLink from "@/components/custom/Link";
 import Filter from "@/components/filter";
-import AddCourseBtn from "./addcoursebtn";
-import AddTrainingBtn from "./addTrainingbtn";
-import AddPlanBtn from "./addPlanBtn";
 import Sortby from "./Sort";
 
 const people = [
@@ -24,15 +20,11 @@ const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
     return (
         <div className="mt-4 w-full grid grid-cols-3 gap-5">
             <div className="flex items-center justify-start">
-                <CustomLink href={'/app/learning/courses'} title={'Courses'} />
-                <CustomLink href={'/app/learning/trainings'} title={'Trainings'} />
-                <CustomLink href={'/app/learning/plan'} title={'Learning Plan'} />
+               
             </div>
             <AutoComplete title={title} list={people} keyname='name' selected={searchFor} setSelected={setSeachFor} />
             <div className="flex items-center justify-end">
-                {title === 'Course' ? <AddCourseBtn title={'Add Course'} /> : ''}
-                {title === 'LearningPlan' ? <AddPlanBtn title={'Create New plan'} /> : ''}
-                {title === 'Training' ? <AddTrainingBtn title={'Create Training'} />:''}
+
                 <Filter />
                 <Sortby />
             </div>

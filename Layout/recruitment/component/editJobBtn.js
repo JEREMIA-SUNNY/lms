@@ -1,12 +1,11 @@
 
-import CreateLearningPlan from './form/plan/add'
 import Modal from '@/components/Modal'
 
-const AddPlanBtn = ({ title }) => {
+const EditJobBtn = ({ title }) => {
 
     return (
         <Modal ui={<div className="mt-2 w-full h-[80vh]">
-            <CreateLearningPlan />
+            edit
         </div>}
             title={'Edit Plan'}
             TitleIcon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -16,4 +15,4 @@ const AddPlanBtn = ({ title }) => {
     )
 }
 
-export default AddPlanBtn;
+export default EditJobBtn;

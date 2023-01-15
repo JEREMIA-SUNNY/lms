@@ -1,6 +1,6 @@
 import GoBackButton from '@/components/goBackBtn'
 import IconButton from '@/components/custom/Buttons/IconButton'
-import EditPanBtn from '../component/editPlanBtn'
+import EditJobBtn from '../component/editJobBtn'
 import { useState } from 'react'
 import DeleteAlert from '@/components/DeleteAlert'
 import { useRouter } from 'next/router'
@@ -22,7 +22,7 @@ const JobAction = () => {
         <div className="mt-4 flex items-center justify-between">
             <GoBackButton title={'Job Details'} />
             <div className="h-10 flex justify-start text-[#419a00]">
-                <EditPanBtn />
+                <EditJobBtn />
                 <DeleteAlert
                     isOpen={isOpen}
                     title='Delete Job ?'
