@@ -6,14 +6,18 @@ import TrainingLayout from "./learning/trainings";
 import TrainingDetailLayout from './learning/trainings/trainingsdetail'
 import PlanLayout from './learning/plan'
 import PlanDetailLayout from './learning/plan/Plandetail'
+import RecruitmentLayout from "./recruitment/main";
+import JobDetailLayout from './recruitment/main/Jobdetail'
 
 export {
     Authlayout,
     HomeLayout,
     CoursesLayout,
-    PlanLayout,
-    TrainingLayout,
     CourseDetailLayout,
+    TrainingLayout,
     TrainingDetailLayout,
-    PlanDetailLayout
+    PlanLayout,
+    PlanDetailLayout,
+    RecruitmentLayout,
+    JobDetailLayout
 }
