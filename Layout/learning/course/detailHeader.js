@@ -1,22 +1,21 @@
 import DetailHeaderSection from "@/components/detailHeaderSection"
 
-const course = {
-    "name": "Mueller Group",
-    "publisher": "Darcie Enden",
-    "price": "32",
-    "complete": 0,
-    "modules": 7,
-    "level": "intermediate",
-    "language": "Assamese",
-    "rating": "5"
-}
+const DetailHeader = ({ course }) => {
 
-const DetailHeader = ({ id }) => {
     return (
         <DetailHeaderSection
             gap="1"
-            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium"
-            item={course}
+            des={course?.description}
+            item={{
+                name: course?.name,
+                auther: course?.auther,
+                price: course?.price,
+                complete: course?.complete,
+                modules: course?.modules,
+                level: course?.level,
+                language: course?.language,
+                rating: course?.rating || 4.5
+            }}
             cols={3} />
     )
 }
