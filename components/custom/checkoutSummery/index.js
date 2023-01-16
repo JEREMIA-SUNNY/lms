@@ -1,50 +1,49 @@
+import IconButton from "../Buttons/IconButton";
+
 const CheckoutSummery = ({ title, subtotal, discout = 0.00, discoutInPer = "10", total, itemList }) => {
     return (
-        <>
-            <div className="px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
-                <div className="flex justify-center item-start space-y-2 flex-col">
-                    <h3 className="text-xl font-semibold leading-5 text-gray-800">{title}</h3>
-                </div>
-                <div className="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
-                    <div className="flex flex-col justify-start items-start w-full space-y-4 md:space-y-6 xl:space-y-8">
-                        <div className="flex justify-center flex-col w-full space-y-4">
-                            <div className="shadow flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50 space-y-6">
-                                <h3 className="text-xl font-semibold leading-5 text-gray-800">Summary</h3>
-                                <div className="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b pb-4">
-                                    {
-                                        itemList?.map((item, i) => {
-                                            return (
-                                                <div key={i} className="flex justify-between w-full">
-                                                    <p className="text-base leading-4 text-gray-800">{item?.name}</p>
-                                                    <p className="text-base leading-4 text-gray-600">${item?.price}</p>
-                                                </div>
-                                            )
-                                        })
-                                    }
-                                    <div className="flex justify-between w-full">
-                                        <p className="text-base leading-4 text-gray-800">Subtotal</p>
-                                        <p className="text-base leading-4 text-gray-600">${subtotal}</p>
+        <div className="shadow bg-gray-50 mt-4 px-4 py-2 rounded-lg">
+            <div className="flex justify-center item-start space-y-2 flex-col">
+                <h3 className="text-xl font-semibold leading-5 text-gray-800">{title}</h3>
+            </div>
+            <div>
+                <div className="flex flex-col py-3 w-full">
+                    <h3 className="mb-4 text-xl font-semibold leading-5 text-gray-800">Summary</h3>
+                    <div className="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b pb-4">
+                        {
+                            itemList?.map((item, i) => {
+                                return (
+                                    <div key={i} className="flex justify-between w-full">
+                                        <p className="text-base leading-4 text-gray-800">{item?.name}</p>
+                                        <p className="text-base leading-4 text-gray-600">$ {item?.price}</p>
                                     </div>
-                                    <div className="flex justify-between items-center w-full">
-                                        <p className="text-base leading-4 text-gray-800">Discount <span className="bg-gray-200 p-1 text-xs font-medium leading-3 text-gray-800">STUDENT</span></p>
-                                        <p className="text-base leading-4 text-gray-600">-${discout} ({discoutInPer}%)</p>
-                                    </div>
-                                </div>
-                                <div className="flex justify-between items-center w-full">
-                                    <p className="text-base font-semibold leading-4 text-gray-800">Total</p>
-                                    <p className="text-base font-semibold leading-4 text-gray-600">${total}</p>
-                                </div>
-                            </div>
-                            <div className="w-full flex justify-center items-center">
-                                <button className="shadow rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#409a00] py-5 w-96 md:w-full bg-[#409a00] text-base font-medium leading-4 text-white">Pay Now</button>
-                            </div>
+                                )
+                            })
+                        }
+                        <div className="flex justify-between w-full">
+                            <p className="text-base leading-4 text-gray-800">Subtotal</p>
+                            <p className="text-base leading-4 text-gray-600">$ {subtotal}</p>
+                        </div>
+                        <div className="flex justify-between items-center w-full">
+                            <p className="text-base leading-4 text-gray-800">Discount </p>
+                            <p className="text-base leading-4 text-gray-600">$ {discout} ({discoutInPer}%)</p>
                         </div>
                     </div>
-
+                    <div className="flex justify-between items-center w-full py-4 border-gray-200 border-b">
+                        <p className="text-base font-semibold leading-4 text-gray-800">Total</p>
+                        <p className="text-base font-semibold leading-4 text-gray-600">$ {total}</p>
+                    </div>
+                </div>
+                <div className="w-full flex justify-end items-center">
+                    <IconButton className='rounded bg-green-600 text-white'>
+                        Pay Now
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                        </svg>
+                    </IconButton>
                 </div>
             </div>
-
-        </>
+        </div>
     )
 }
 

@@ -21,14 +21,16 @@ const CourseDetailLayout = () => {
                     )
                 }) :
                     <div className="w-full flex justify-center">
-                        <CheckoutSummery
-                            title=''
-                            itemList={[]}
-                            subtotal='100'
-                            discout='20'
-                            discoutInPer="20"
-                            total={course?.price}
-                        />
+                        <div className="w-[300px]">
+                            <CheckoutSummery
+                                title=''
+                                itemList={[]}
+                                subtotal='100'
+                                discout='20'
+                                discoutInPer="20"
+                                total={course?.price}
+                            />
+                        </div>
                     </div>
                 }
             </section>
