@@ -4,7 +4,7 @@ import PrimaryButton from 'components/custom/Buttons/PrimaryButton'
 import { Fragment, useState } from 'react'
 import IconButton from '../custom/Buttons/IconButton'
 
-const Modal = ({ TitleIcon, title, ui, button, classTitleIcon = 'bg-white text-[#419a00]' }) => {
+const Modal = ({ TitleIcon, title, ui, button, classTitleIcon = 'bg-white text-[#419a00]', width = 'w-[1160px]', moduleHeight='h-[80vh]' }) => {
     let [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
@@ -19,7 +19,7 @@ const Modal = ({ TitleIcon, title, ui, button, classTitleIcon = 'bg-white text-[
         <>
             {button ? <PrimaryButton className='rounded-lg ' onClick={openModal}>
                 {TitleIcon}
-            </PrimaryButton> : <IconButton className={classTitleIcon}  onClick={openModal}>
+            </PrimaryButton> : <IconButton className={classTitleIcon} onClick={openModal}>
                 {TitleIcon}
             </IconButton>}
 
@@ -48,7 +48,7 @@ const Modal = ({ TitleIcon, title, ui, button, classTitleIcon = 'bg-white text-[
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-[1160px] transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className={`${width} transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all`}>
                                     <>
                                         <div className='flex justify-between items-center'>
                                             <h3 className="mb-4 text-lg font-medium leading-6 text-gray-900">
@@ -61,7 +61,7 @@ const Modal = ({ TitleIcon, title, ui, button, classTitleIcon = 'bg-white text-[
                                                 <span className="sr-only">Icon description</span>
                                             </button>
                                         </div>
-                                        <div className="mt-2 w-full h-[80vh] flex items-center">
+                                        <div className={`mt-2 w-full ${moduleHeight} flex items-center`}>
                                             {ui}
                                         </div>
                                     </>
