@@ -4,7 +4,7 @@ import PrimaryButton from 'components/custom/Buttons/PrimaryButton'
 import { Fragment, useState } from 'react'
 import IconButton from '../custom/Buttons/IconButton'
 
-const Modal = ({ TitleIcon, title, ui, button, classTitleIcon = 'bg-white text-[#419a00]', width = 'w-[1160px]', moduleHeight='h-[80vh]' }) => {
+const Modal = ({ TitleIcon, title, ui, button, classTitleIcon = 'bg-white text-[#419a00]', width = 'w-[1160px]', moduleHeight = 'h-[80vh]' }) => {
     let [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
@@ -61,7 +61,7 @@ const Modal = ({ TitleIcon, title, ui, button, classTitleIcon = 'bg-white text-[
                                                 <span className="sr-only">Icon description</span>
                                             </button>
                                         </div>
-                                        <div className={`mt-2 w-full ${moduleHeight} flex items-center`}>
+                                        <div className={`mt-2 pt-8 pb-20 w-full ${moduleHeight} flex items-center`}>
                                             {ui}
                                         </div>
                                     </>

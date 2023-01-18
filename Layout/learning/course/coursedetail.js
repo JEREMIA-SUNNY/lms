@@ -3,7 +3,7 @@ import DetailHeader from './detailHeader'
 import CourseModule from './courseModule'
 import CourseAction from "./courseAction";
 import courses from '@/assets/mokedata/courses.json'
-import CheckoutSummery from "@/components/custom/checkoutSummery";
+import IconButton from "components/custom/Buttons/IconButton";
 
 const CourseDetailLayout = () => {
     const route = useRouter()
@@ -20,16 +20,14 @@ const CourseDetailLayout = () => {
                         <CourseModule key={item} id={item} />
                     )
                 }) :
-                    <div className="w-full flex justify-center">
-                        <div className="w-[300px]">
-                            <CheckoutSummery
-                                title=''
-                                itemList={[]}
-                                subtotal='100'
-                                discout='20'
-                                discoutInPer="20"
-                                total={course?.price}
-                            />
+                    <div className="w-full h-[400px] flex justify-center items-center">
+                        <div>
+                            <p>This is a paid course. Please complete the payment to unlock the course.</p>
+                            <div className="mt-2 flex justify-center">
+                                <IconButton className='rounded bg-green-600 text-white'>
+                                    Pay  $ {course?.price}  Now
+                                </IconButton>
+                            </div>
                         </div>
                     </div>
                 }
