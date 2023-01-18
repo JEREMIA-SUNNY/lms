@@ -4,8 +4,6 @@ import courses from '@/assets/mokedata/courses.json'
 import trainings from '@/assets/mokedata/trainings.json'
 import MultiSelect from 'components/MultiSelect'
 import CourseTrainingCard from './courseTrainingCard'
-import Tablist from '@/components/custom/TabList'
-import { Tab } from '@headlessui/react'
 
 const TrainingCourseForm = () => {
     const [searchFor, setSeachFor] = useState({})
@@ -61,32 +59,16 @@ const TrainingCourseForm = () => {
                 </div>
             </div>
             <div className='w-full mt-2'>
-                <Tab.Group>
-                    <div className="w-[300px]">
-                        <Tablist list={['Courses', 'Training']} />
-                    </div>
-                    <Tab.Panels>
-                        <Tab.Panel>
-                            <div className='grid grid-cols-4 gap-2'>
-                                {
-                                    selectedCourseList?.map((item, i) => {
-                                        return (<CourseTrainingCard removeSelected={removeSelected} key={item?.name} item={item} />)
-                                    })
-                                }
-                            </div>
-                        </Tab.Panel>
-                        <Tab.Panel>
-                            <div className='grid grid-cols-4 gap-2'>
-                                {
-                                    selectedTrainingList?.map((item, i) => {
-                                        return (<CourseTrainingCard removeSelected={removeSelected} key={item?.name} item={item} />)
-                                    })
-                                }
-                            </div>
-                        </Tab.Panel>
-                    </Tab.Panels>
-                </Tab.Group>
-
+                <div className='grid grid-cols-4 gap-2'>
+                    {
+                        selectedCourseList.concat(selectedTrainingList)?.map((item, index) => {
+                            return (<CourseTrainingCard removeSelected={removeSelected}
+                                length={selectedCourseList.concat(selectedTrainingList)?.length}
+                                key={item?.name}
+                                item={item} index={index} />)
+                        })
+                    }
+                </div>
             </div>
         </>
 

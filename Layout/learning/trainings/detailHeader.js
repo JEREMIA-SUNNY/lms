@@ -1,43 +1,23 @@
+import DetailHeaderSection from "@/components/detailHeaderSection"
 
-const DetailHeader = ({id }) => {
+const training = {
+    "name": "Mueller Group",
+    "publisher": "Darcie Enden",
+    "price": "32",
+    "complete": 0,
+    "batchs": 7,
+    "level": "intermediate",
+    "language": "Assamese",
+    "rating": "5"
+}
+
+const DetailHeader = ({ id }) => {
     return (
-        <div className="rounded-lg shadow bg-[#F5F5F5] p-4">
-            <table className="table-auto w-full">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                        <td><span className="font-semibld">Training title: Training #{id}</span></td>
-                        <td><span className="font-semibld">Level: </span></td>
-                        <td><span className="font-semibld">Price: </span></td>
-                    </tr>
-                    <tr>
-                        <td><span className="font-semibld">Language: </span></td>
-                        <td><span className="font-semibld">Rating: </span></td>
-                        <td><span className="font-semibld">Taken by users: </span></td>
-                    </tr>
-                    <tr>
-                        <td><span className="font-semibld">Trainer: </span></td>
-                        <td> </td>
-                        <td></td>
-                    </tr>
-                    {/* <tr>
-                        <td>Skills: </td>
-                        <td>Description: </td>
-                        <td>Rating: </td>
-                    </tr> */}
-                </tbody>
-            </table>
-            <p className="font-semibld">Description: </p>
-            <p className="mt-2 text-gray-700">
-                n publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final co
-            </p>
-        </div>
+        <DetailHeaderSection
+            gap="1"
+            des="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium"
+            item={training}
+            cols={3} />
     )
 }
 
