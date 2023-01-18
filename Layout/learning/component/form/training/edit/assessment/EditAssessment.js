@@ -1,7 +1,7 @@
 import AssessmentSection from "./section";
 
 
-const AddAssessment = (props) => {
+const EditAssessment = (props) => {
     const { createQuestionForm, setListOfSection, handleAllQuestionInfo, listofSection } = props
 
     const addSection = () => {
@@ -49,4 +49,4 @@ const AddAssessment = (props) => {
     )
 }
 
-export default AddAssessment;
+export default EditAssessment;
