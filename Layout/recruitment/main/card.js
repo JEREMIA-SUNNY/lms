@@ -6,16 +6,8 @@ const JobCard = ({ item }) => {
 
     return (
         <Link className="h-full rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/recruitment/detail/${id}`}>
-            <div className="relative flex justify-between">
-                <div className="mr-2 text-gray-500 justify-start items-center py-1 flex ml-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                    <p className="ml-1">{item?.Location}</p>
-                </div>
-                <button className={` w-16 ${item['status'] ? 'bg-[#409a00] text-white' : 'bg-gray-200 text-gray-500'} text-sm mx-2 px-2 py-1 rounded-b-lg`}>
-                    {/* Skills: {item['Skills']} */}
+            <div className="relative flex justify-end">
+                <button className={`w-16 ${item['status'] ? 'bg-[#409a00] text-white' : 'bg-gray-200 text-gray-500'} text-sm mx-2 px-2 py-1 rounded-b-lg`}>
                     {item['status'] ? 'Open' : 'Closed'}
                 </button>
             </div>
@@ -42,7 +34,7 @@ const JobCard = ({ item }) => {
                         </svg>
                         <p className="ml-1">{item?.Level}</p>
                     </div>
-                    <div className={`${item?.close ? 'text-red-500' : 'text-gray-500'} text-sm mr-2 flex justify-start items-center py-1 flex`}>
+                    <div className={`${item?.close ? 'text-red-500' : 'text-gray-500'} text-sm mr-2 flex justify-start items-center py-1`}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
                         </svg>
@@ -69,7 +61,18 @@ const JobCard = ({ item }) => {
                 <div className="flex justify-end text-right">
                     <div>
                         <p className="text-sm"><i>- Naresh Gautam</i></p>
-                        <time className="text-xs"><i>20/11/2021</i></time>
+                        <div className=" text-gray-500 text-xs justify-start items-center py-1 flex ml-4">
+                            <div>
+                                <time><i>20/11/2021</i></time>
+                                <span className="mx-1 text-[16px]">•</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                            <p className="ml-1">{item?.Location}</p>
+                        </div>
+
                     </div>
                 </div>
 

@@ -5,7 +5,7 @@ import AddJobForm from './form/add';
 const AddJobBtn = () => {
 
     return (
-        <Modal ui={<div className="mt-2 w-full h-[80vh]">
+        <Modal ui={<div className="mt-2 w-full h-[80vh] overflow-scroll">
             <AddJobForm />
         </div>}
             title={'Post New Job'}

@@ -2,19 +2,7 @@ import AutoComplete from "@/components/AutoComplete";
 import Filter from "@/components/filter";
 import AddJobBtn from "./AddJobBtn";
 import Sortby from "./Sort";
-
-const people = [
-    { id: 1, name: 'Wade Cooper' },
-    { id: 2, name: 'Arlene Mccoy' },
-    { id: 3, name: 'Devon Webb' },
-    { id: 4, name: 'Tom Cook' },
-    { id: 5, name: 'Tanya Fox' },
-    { id: 6, name: 'Hellen Schmidt' },
-    { id: 7, name: 'Tanya Fox' },
-    { id: 8, name: 'more kjwe Hellen Schmidt' },
-    { id: 9, name: 'Tanyaqwkef q  Fox' },
-    { id: 10, name: 'naresh Hellen Schmidt' },
-]
+import jobs from '@/assets/mokedata/jobs.json'
 
 const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
 
@@ -23,7 +11,7 @@ const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
             <div className="flex items-center justify-start">
 
             </div>
-            <AutoComplete title={title} list={people} keyname='name' selected={searchFor} setSelected={setSeachFor} />
+            <AutoComplete title={title} list={jobs} keyname='Job title' selected={searchFor} setSelected={setSeachFor} />
             <div className="flex items-center justify-end">
                 <AddJobBtn />
                 <Filter />
