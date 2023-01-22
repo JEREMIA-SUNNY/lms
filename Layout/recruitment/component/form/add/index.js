@@ -4,6 +4,7 @@ import { useState } from "react";
 import JobDetailForm from "./jobDetailForm";
 import ResponsibilitiesSummary from "./ResponsibilitiesSummary";
 import Responsibilities from './ResponsibilitiesForm'
+import PrimaryButton from "components/custom/Buttons/PrimaryButton";
 
 const MainAddJobForm = () => {
     const [skills, setSkills] = useState([])
@@ -15,7 +16,7 @@ const MainAddJobForm = () => {
     }
 
     return (
-        <>
+        <div className="w-full">
             <Tab.Group>
                 <div className="w-1/2">
                     <Tablist list={['Job Detail', 'Responsibilities and Summary']} />
@@ -38,9 +39,13 @@ const MainAddJobForm = () => {
                         />
                     </Tab.Panel>
                 </Tab.Panels>
-
             </Tab.Group>
-        </>
+            <div className='flex justify-end fixed bottom-0 right-5'>
+                <PrimaryButton className='rounded-lg'>
+                    <span>Create</span>
+                </PrimaryButton>
+            </div>
+        </div>
     )
 }
 

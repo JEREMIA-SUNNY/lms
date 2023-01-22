@@ -1,7 +1,11 @@
 import CustoMultipleSelect from "components/CustomMultilpleSelect";
+import { useState } from "react";
+import countrylist from '@/assets/mokedata/country.json'
+import AutoComplete from "components/AutoComplete";
 
 const JobDetailForm = (props) => {
-    const {skills, setSkills, Technology, setTechnology, handleInput} = props
+    const { skills, setSkills, Technology, setTechnology, handleInput } = props
+    const [country, setCountry] = useState({})
 
     return (
         <>
@@ -75,6 +79,27 @@ const JobDetailForm = (props) => {
                     <input onChange={handleInput} type="number" title="Experience" id="Experience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Experience in year" required="" />
                 </div>
+                <div>
+                    <label htmlFor="country" className="block mb-2 text-sm font-semibold text-gray-900">Country</label>
+                    <AutoComplete title={'country'} list={countrylist} keyname='country' selected={country} setSelected={setCountry} />
+                </div>
+                <div>
+                    <label htmlFor="States" className="block mb-2 text-sm font-semibold text-gray-900">States</label>
+                    <select
+                        name="States"
+                        id="States"
+                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                        <option>Select ...</option>
+                        {
+                            country?.states?.map((state) => {
+                                return (
+                                    <option key={state} value={state}>{state}</option>
+                                )
+                            })
+                        }
+                    </select>
+                </div>
+
             </div>
             <CustoMultipleSelect selecteditem={skills}
                 setSelected={setSkills}
@@ -84,19 +109,6 @@ const JobDetailForm = (props) => {
                 setSelected={setTechnology}
                 title='Technology'
                 name='Technology' />
-
-            {/* <div className="mt-3">
-                <label htmlFor="Responsibilities" className="block mb-2 text-sm font-semibold text-gray-900">Responsibilities</label>
-                <textarea onChange={handleInput} id="Responsibilities"
-                    name="Responsibilities" rows="4"
-                    className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                    placeholder="Responsibilities..." />
-            </div> */}
-            {/* <div className='flex justify-end fixed bottom-0 right-5'>
-                <PrimaryButton className='rounded-lg'>
-                    <span>Create</span>
-                </PrimaryButton>
-            </div> */}
         </>
     )
 }
