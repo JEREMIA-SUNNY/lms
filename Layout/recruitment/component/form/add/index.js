@@ -3,7 +3,7 @@ import { useState } from "react";
 import AddSklls from "./addSkills";
 
 const AddJobForm = () => {
-    const [skills, setSkills] = useState(['Java', 'Python', 'JavaScript', 'SQL'])
+    const [skills, setSkills] = useState([])
 
     const handleInput = (e) => {
         // const { name, value } = e.target

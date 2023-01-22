@@ -1,9 +1,12 @@
 
 const list = [
-    { name: 'Avg Rating', title: 'Avg Rating' },
-    { name: 'Price(H-L)', title: 'Price (High-Low)' },
-    { name: 'Price(L-H)', title: 'Price (Low-High)' },
-    { name: 'Popularity', title: 'Popularity' },
+    { name: 'Enter Level', title: 'Enter Level' },
+    { name: 'Mid Level', title: 'Mid Level' },
+    { name: 'Mid Level', title: 'Mid Level' },
+    { name: 'Principal', title: 'Principal' },
+    { name: 'Remote', title: 'Remote' },
+    { name: 'Onsite', title: 'Onsite' },
+    { name: 'Hybrid', title: 'Hybrid' },
     { name: 'Recent', title: 'Most Recent' },
 ]
 
