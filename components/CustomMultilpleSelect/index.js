@@ -19,8 +19,8 @@ const CustoMultipleSelect = ({ selecteditem, setSelected, title, name }) => {
     }
 
     return (
-        <>
-            <div className="mt-3 flex justify-between">
+        <div>
+            <div className="mt-3 gap-2 flex justify-between">
                 <div className="w-[86%]">
                     <label htmlFor={title} className="block mb-2 text-sm font-semibold text-gray-900">{title}</label>
                     <input onChange={handleInput} type="text" title="item" id="item" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
@@ -50,7 +50,7 @@ const CustoMultipleSelect = ({ selecteditem, setSelected, title, name }) => {
                 }
             </div>
 
-        </>
+        </div>
     )
 }
 

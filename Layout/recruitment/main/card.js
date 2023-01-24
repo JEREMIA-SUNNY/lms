@@ -8,9 +8,8 @@ const JobCard = ({ item }) => {
         <Link className="h-full rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/recruitment/detail/${id}`}>
             <div className="relative flex justify-between">
                 <div className="flex justify-center items-center ml-4 my-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-blue-500">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-red-500">
+                        <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
                     </svg>
                     <p className="ml-1">{item?.Location}</p>
                 </div>
@@ -60,7 +59,7 @@ const JobCard = ({ item }) => {
                         <p><span className="text-gray-700">Created on:</span> 30/11/2001</p>
                     </div>
                 </div>
-                <div className="my-2 flex gap-2 justify-start">
+                <div className="my-2 flex flex-wrap gap-2">
                     <p className="text-sm">
                         Skills:
                     </p>
@@ -75,7 +74,7 @@ const JobCard = ({ item }) => {
                     }
 
                 </div>
-                <div className="my-2 gap-2 flex">
+                <div className="my-2 gap-2 flex flex-wrap">
                     <p className="text-sm">
                         Technology:
                     </p>

@@ -19,7 +19,7 @@ const MainAddJobForm = () => {
         <div className="w-full">
             <Tab.Group>
                 <div className="w-1/2">
-                    <Tablist list={['Job Detail', 'Responsibilities and Summary']} />
+                <Tablist list={['Job Details', 'Job Responsibilities']} />
                 </div>
                 <Tab.Panels>
                     <Tab.Panel>

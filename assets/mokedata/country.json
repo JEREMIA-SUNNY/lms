@@ -1,7 +1,7 @@
 [
     {
       "country": "United States",
-      "states": [
+      "location": [
         "Alabama",
         "Alaska",
         "Arizona",
@@ -16,7 +16,7 @@
     },
     {
       "country": "Canada",
-      "states": [
+      "location": [
         "Alberta",
         "British Columbia",
         "Manitoba",
@@ -31,7 +31,7 @@
     },
     {
       "country": "Australia",
-      "states": [
+      "location": [
         "Australian Capital Territory",
         "New South Wales",
         "Northern Territory",
@@ -44,7 +44,7 @@
     },
     {
       "country": "India",
-      "states": [
+      "location": [
         "Andhra Pradesh",
         "Arunachal Pradesh",
         "Assam",
@@ -59,7 +59,7 @@
     },
     {
       "country": "China",
-      "states": [
+      "location": [
         "Anhui",
         "Fujian",
         "Gansu",
@@ -74,7 +74,7 @@
     },
     {
       "country": "Russia",
-      "states": [
+      "location": [
         "Amur Oblast",
         "Arkhangelsk Oblast",
         "Astrakhan Oblast",
@@ -89,7 +89,7 @@
     },
     {
       "country": "Brazil",
-      "states": [
+      "location": [
         "Acre",
         "Alagoas",
         "Amapa",
@@ -104,7 +104,7 @@
     },
     {
       "country": "Mexico",
-      "states": [
+      "location": [
         "Aguascalientes",
         "Baja California",
         "Baja California Sur",

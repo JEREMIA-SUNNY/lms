@@ -4,7 +4,7 @@ import countrylist from '@/assets/mokedata/country.json'
 import AutoComplete from "components/AutoComplete";
 
 const JobDetailForm = (props) => {
-    const { skills, setSkills, Technology, setTechnology, handleInput } = props
+    const { skills, setSkills, Technologies, setTechnologies, handleInput } = props
     const [country, setCountry] = useState({})
 
     return (
@@ -84,16 +84,16 @@ const JobDetailForm = (props) => {
                     <AutoComplete title={'country'} list={countrylist} keyname='country' selected={country} setSelected={setCountry} />
                 </div>
                 <div>
-                    <label htmlFor="States" className="block mb-2 text-sm font-semibold text-gray-900">States</label>
+                    <label htmlFor="location" className="block mb-2 text-sm font-semibold text-gray-900">Location</label>
                     <select
-                        name="States"
-                        id="States"
+                        name="location"
+                        id="location"
                         onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                         <option>Select ...</option>
                         {
-                            country?.states?.map((state) => {
+                            country?.location?.map((location) => {
                                 return (
-                                    <option key={state} value={state}>{state}</option>
+                                    <option key={location} value={location}>{location}</option>
                                 )
                             })
                         }
@@ -101,14 +101,16 @@ const JobDetailForm = (props) => {
                 </div>
 
             </div>
-            <CustoMultipleSelect selecteditem={skills}
-                setSelected={setSkills}
-                title='Skills'
-                name='skill' />
-            <CustoMultipleSelect selecteditem={Technology}
-                setSelected={setTechnology}
-                title='Technology'
-                name='Technology' />
+            <div className="grid gap-4 grid-cols-2">
+                <CustoMultipleSelect selecteditem={skills}
+                    setSelected={setSkills}
+                    title='Skills'
+                    name='skill' />
+                <CustoMultipleSelect selecteditem={Technologies}
+                    setSelected={setTechnologies}
+                    title='Technologies'
+                    name='Technologies' />
+            </div>
         </>
     )
 }
