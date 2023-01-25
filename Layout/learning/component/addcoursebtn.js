@@ -1,6 +1,6 @@
 
 import MainCourseCreate from './form/course/add/mianCourseCreate'
-import Modal from '@/components/Modal'
+import Modal from 'components/Modal'
 
 const AddCourseBtn = ({ title }) => {
 

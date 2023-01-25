@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Tab } from '@headlessui/react'
-import Tablist from '@/components/custom/TabList'
+import Tablist from 'components/custom/TabList'
 import CreateCourseFrom from './createCourse'
 import MainModuleCreate from '../../module/add/mainModuleCreate'
 import MainAssessment from '../../module/add/assessment'

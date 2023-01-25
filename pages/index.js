@@ -1,4 +1,4 @@
-import HeadTag from '@/components/Head'
+import HeadTag from 'components/Head'
 import { Authlayout } from 'Layout'
 
 const Login = () => {

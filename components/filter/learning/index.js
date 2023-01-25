@@ -1,7 +1,7 @@
 
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
-import SelectInput from '../SelectInput'
+import SelectInput from '../../SelectInput'
 import Skillform from './skills';
 
 const level = [
@@ -112,7 +112,6 @@ const Filter = () => {
                         </div>
 
                     </Menu.Items>
-                    {/* </div> */}
                 </Transition>
             </Menu>
 

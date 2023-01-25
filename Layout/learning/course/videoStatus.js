@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ReactPlayer from 'react-player/lazy'
-import Modal from "@/components/Modal";
+import Modal from "components/Modal";
 
 const VideoStatus = ({ item }) => {
 

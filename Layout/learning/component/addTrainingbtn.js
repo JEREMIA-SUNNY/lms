@@ -1,6 +1,6 @@
 
 import MainTrainingCreate from './form/training/add/mianTrainingCreate'
-import Modal from '@/components/Modal'
+import Modal from 'components/Modal'
 
 const AddTrainingBtn = ({ title }) => {
 

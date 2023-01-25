@@ -1,6 +1,6 @@
 
 import CreateLearningPlan from './form/plan/add'
-import Modal from '@/components/Modal'
+import Modal from 'components/Modal'
 
 const AddPlanBtn = ({ title }) => {
 

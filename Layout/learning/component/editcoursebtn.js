@@ -1,6 +1,6 @@
 
 import MainCourseEdit from './form/course/edit/mianCourseEdit'
-import Modal from '@/components/Modal'
+import Modal from 'components/Modal'
 
 const EditCourseBtn = () => {
 

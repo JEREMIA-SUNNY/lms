@@ -1,4 +1,4 @@
-import DetailHeaderSection from "@/components/detailHeaderSection"
+import DetailHeaderSection from "components/detailHeaderSection"
 
 const training = {
     "name": "Mueller Group",

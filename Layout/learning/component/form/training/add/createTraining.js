@@ -1,5 +1,5 @@
 
-import PrimaryButton from '@/components/custom/Buttons/PrimaryButton';
+import PrimaryButton from 'components/custom/Buttons/PrimaryButton';
 import TrainingForm from './trainingForm';
 
 const CreateTrainingFrom = (props) => {

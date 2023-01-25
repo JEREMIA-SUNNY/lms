@@ -1,5 +1,5 @@
 
-import Modal from '@/components/Modal'
+import Modal from 'components/Modal'
 import EditJobForm from './form/edit';
 
 const EditJobBtn = ({ title }) => {

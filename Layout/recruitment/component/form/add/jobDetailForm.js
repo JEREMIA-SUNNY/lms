@@ -4,7 +4,7 @@ import countrylist from '@/assets/mokedata/country.json'
 import AutoComplete from "components/AutoComplete";
 
 const JobDetailForm = (props) => {
-    const { skills, setSkills, Technologies, setTechnologies, handleInput } = props
+    const { skills, setSkills, Technology, setTechnology, handleInput } = props
     const [country, setCountry] = useState({})
 
     return (
@@ -106,8 +106,8 @@ const JobDetailForm = (props) => {
                     setSelected={setSkills}
                     title='Skills'
                     name='skill' />
-                <CustoMultipleSelect selecteditem={Technologies}
-                    setSelected={setTechnologies}
+                <CustoMultipleSelect selecteditem={Technology}
+                    setSelected={setTechnology}
                     title='Technologies'
                     name='Technologies' />
             </div>

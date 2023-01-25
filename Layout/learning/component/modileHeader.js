@@ -1,6 +1,6 @@
-import AutoComplete from "@/components/AutoComplete";
-import CustomLink from "@/components/custom/Link";
-import Filter from "@/components/filter";
+import AutoComplete from "components/AutoComplete";
+import CustomLink from "components/custom/Link";
+import FilterLearing from "components/filter/learning";
 import AddCourseBtn from "../component/addcoursebtn";
 import AddTrainingBtn from "../component/addTrainingbtn";
 import AddPlanBtn from "./addPlanBtn";
@@ -33,7 +33,7 @@ const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
                 {title === 'Course' ? <AddCourseBtn title={'Add Course'} /> : ''}
                 {title === 'LearningPlan' ? <AddPlanBtn title={'Create New plan'} /> : ''}
                 {title === 'Training' ? <AddTrainingBtn title={'Create Training'} />:''}
-                <Filter />
+                <FilterLearing />
                 <Sortby />
             </div>
         </div>

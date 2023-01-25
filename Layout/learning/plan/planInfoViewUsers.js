@@ -1,7 +1,6 @@
-import Modal from '@/components/Modal'
-import GroupAvatar from '@/components/custom/GroupAvatar'
-import students from '@/assets/mokedata/student.json'
-import Table from '@/components/custom/Table'
+import Modal from 'components/Modal'
+import students from 'assets/mokedata/student.json'
+import Table from 'components/custom/Table'
 
 const list = ['S No.', 'Fullname', 'Phone Number', 'Gender']
 const AssignedUsers = () => {

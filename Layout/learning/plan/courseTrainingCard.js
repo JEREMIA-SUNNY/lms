@@ -1,4 +1,4 @@
-import IconButton from "@/components/custom/Buttons/IconButton";
+import IconButton from "components/custom/Buttons/IconButton";
 import Image from "next/image";
 import Link from "next/link";
 

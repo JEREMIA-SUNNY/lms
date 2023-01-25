@@ -1,7 +1,7 @@
 import axios from "axios"
 
 // ** Toaster 
-import ToastContent from "@/components/ToastContent"
+import ToastContent from "components/ToastContent"
 import { Slide, toast } from 'react-toastify'
 
 const AlertError = (text) => {

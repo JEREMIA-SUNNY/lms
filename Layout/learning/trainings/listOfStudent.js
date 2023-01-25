@@ -1,6 +1,6 @@
 
-import Table from '@/components/custom/Table'
-import StudentJson from '@/assets/mokedata/student.json';
+import Table from 'components/custom/Table'
+import StudentJson from 'assets/mokedata/student.json';
 
 const list = ['S No.', 'Student Name', 'Student Id', 'Phone Number', 'Gender']
 

@@ -1,6 +1,6 @@
-import FileUploader from "@/components/custom/fileUpload";
-import SwitchInput from "@/components/custom/switchInput";
-import SelectInput from "@/components/SelectInput";
+import FileUploader from "components/custom/fileUpload";
+import SwitchInput from "components/custom/switchInput";
+import SelectInput from "components/SelectInput";
 import Skillform from "./skills";
 
 const level = [

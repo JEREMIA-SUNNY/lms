@@ -1,8 +1,8 @@
-import AutoComplete from "@/components/AutoComplete";
-import Filter from "@/components/filter";
+import AutoComplete from "components/AutoComplete";
+import FilterRecruitment from "components/filter/recruitment";
 import AddJobBtn from "./AddJobBtn";
 import Sortby from "./Sort";
-import jobs from '@/assets/mokedata/jobs.json'
+import jobs from 'assets/mokedata/jobs.json'
 
 const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
 
@@ -14,7 +14,7 @@ const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
             <AutoComplete title={title} list={jobs} keyname='Job title' selected={searchFor} setSelected={setSeachFor} />
             <div className="flex items-center justify-end">
                 <AddJobBtn />
-                <Filter />
+                <FilterRecruitment />
                 <Sortby />
             </div>
         </div>

@@ -1,5 +1,5 @@
 
-import IconButton from "@/components/custom/Buttons/IconButton";
+import IconButton from "components/custom/Buttons/IconButton";
 
 const TableRow = ({ row }) => {
 

@@ -1,12 +1,12 @@
 import CustoMultipleSelect from "components/CustomMultilpleSelect";
 import { useState } from "react";
-import countrylist from '@/assets/mokedata/country.json'
+import countrylist from 'assets/mokedata/country.json'
 import AutoComplete from "components/AutoComplete";
 
 const JobDetailForm = (props) => {
-    const { skills, setSkills, Technologies, setTechnologies, handleInput } = props
+    const { skills, setSkills, Technology, setTechnology, handleInput } = props
     const [country, setCountry] = useState({})
-
+    console.log(Technology);
     return (
         <>
             <div className="mt-4 grid grid-cols-4 gap-4">
@@ -106,8 +106,8 @@ const JobDetailForm = (props) => {
                     setSelected={setSkills}
                     title='Skills'
                     name='skill' />
-                <CustoMultipleSelect selecteditem={Technologies}
-                    setSelected={setTechnologies}
+                <CustoMultipleSelect selecteditem={Technology}
+                    setSelected={setTechnology}
                     title='Technologies'
                     name='Technologies' />
             </div>

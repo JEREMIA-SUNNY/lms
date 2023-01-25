@@ -1,5 +1,5 @@
-import IconButton from "@/components/custom/Buttons/IconButton";
-import IconWithChip from "@/components/custom/Chip/iconWithChip";
+import IconButton from "components/custom/Buttons/IconButton";
+import IconWithChip from "components/custom/Chip/iconWithChip";
 import Image from "next/image";
 import Link from "next/link";
 

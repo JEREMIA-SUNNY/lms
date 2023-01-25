@@ -1,4 +1,4 @@
-import Tablist from "@/components/custom/TabList";
+import Tablist from "components/custom/TabList";
 import { Tab } from "@headlessui/react";
 import BatchesAdd from "./add";
 import BatchesEdit from "./edit";

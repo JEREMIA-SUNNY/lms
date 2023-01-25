@@ -1,7 +1,7 @@
 
-import AutoComplete from '@/components/AutoComplete'
+import AutoComplete from 'components/AutoComplete'
 import StudentTable from './studentTable';
-import Modal from '@/components/Modal'
+import Modal from 'components/Modal'
 
 const StudentAddForm = (props) => {
     const { studentList, searchFor, setSeachFor } = props

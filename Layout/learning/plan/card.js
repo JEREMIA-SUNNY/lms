@@ -1,4 +1,4 @@
-import GroupAvatar from "@/components/custom/GroupAvatar";
+import GroupAvatar from "components/custom/GroupAvatar";
 import Link from "next/link";
 
 const PlanCard = ({ item }) => {

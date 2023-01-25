@@ -1,6 +1,6 @@
 
 import MainTrainingEdit from './form/training/edit/mianTrainingEdit'
-import Modal from '@/components/Modal'
+import Modal from 'components/Modal'
 
 const EditTrainingBtn = () => {
 

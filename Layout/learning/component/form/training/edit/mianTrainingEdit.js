@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Tab } from '@headlessui/react'
-import Tablist from '@/components/custom/TabList'
+import Tablist from 'components/custom/TabList'
 import EditTrainingFrom from './editTraining'
 import MainAssessment from './assessment'
 import EditOrAddBatchComponents from '../../batches/EditOrAddBatchComponents'

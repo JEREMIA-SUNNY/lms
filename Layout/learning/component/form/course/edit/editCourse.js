@@ -1,6 +1,6 @@
 
 import CourseForm from './courseForm';
-import PrimaryButton from '@/components/custom/Buttons/PrimaryButton';
+import PrimaryButton from 'components/custom/Buttons/PrimaryButton';
 
 const CreateCourseFrom = ({ handleInput, courseInfo, IsAssessment, setIsAssessment, IsCoursePaid, setIsCoursePaid, handlefile }) => {
     return (

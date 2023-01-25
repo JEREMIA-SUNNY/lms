@@ -1,6 +1,6 @@
 
-import Modal from '@/components/Modal'
-import CheckoutSummery from '@/components/custom/checkoutSummery';
+import Modal from 'components/Modal'
+import CheckoutSummery from 'components/custom/checkoutSummery';
 
 const JoinBatch = ({ }) => {
 

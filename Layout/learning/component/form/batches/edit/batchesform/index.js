@@ -1,5 +1,5 @@
-import SwitchInput from "@/components/custom/switchInput";
-import SelectInput from "@/components/SelectInput"
+import SwitchInput from "components/custom/switchInput";
+import SelectInput from "components/SelectInput"
 
 const language = [
     { name: 'hindi', title: 'Hindi' },

@@ -1,7 +1,7 @@
 import ModuleTabsList from './moduletabslist'
 import { Tab } from '@headlessui/react'
 import ModuleForm from './moduleForm'
-import PrimaryButton from '@/components/custom/Buttons/PrimaryButton';
+import PrimaryButton from 'components/custom/Buttons/PrimaryButton';
 
 const MainModuleCreate = ({ listofModule, IsAssessment, handleModuleName, ModuleFieldValue, moduleVideoInput }) => {
 

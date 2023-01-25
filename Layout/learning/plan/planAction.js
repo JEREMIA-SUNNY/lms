@@ -1,8 +1,8 @@
-import GoBackButton from '@/components/goBackBtn'
-import IconButton from '@/components/custom/Buttons/IconButton'
+import GoBackButton from 'components/goBackBtn'
+import IconButton from 'components/custom/Buttons/IconButton'
 import EditPanBtn from '../component/editPlanBtn'
 import { useState } from 'react'
-import DeleteAlert from '@/components/DeleteAlert'
+import DeleteAlert from 'components/DeleteAlert'
 import { useRouter } from 'next/router'
 
 const PlanAction = () => {
