@@ -4,6 +4,7 @@ import { Fragment, useState } from 'react';
 import countrylist from 'assets/mokedata/country.json'
 import AutoComplete from "components/AutoComplete";
 import CustoMultipleSelect from "components/CustomMultilpleSelect";
+import PrimaryButton from 'components/custom/Buttons/PrimaryButton';
 
 const FilterRecruitment = () => {
     const [activeFilter, setActiveFilter] = useState([])
@@ -140,7 +141,7 @@ const FilterRecruitment = () => {
                                 </div>
                                 </div>
                             </div>
-                            <div className="grid gap-4 grid-cols-2">
+                            <div className="grid gap-4 grid-cols-2 mt-3">
                                 <CustoMultipleSelect selecteditem={skills}
                                     setSelected={setSkills}
                                     title='Skills'
@@ -156,9 +157,9 @@ const FilterRecruitment = () => {
                                         <span>Clear</span>
                                     </button>
                                     <Menu.Item>
-                                        <button type="button" className="h-10 mr-2 py-2 px-3 text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-300">
-                                            <span>Apply</span>
-                                        </button>
+                                    <PrimaryButton className='rounded-lg'>
+                                            Apply
+                                        </PrimaryButton>
                                     </Menu.Item>
                                 </div>
                             </div>

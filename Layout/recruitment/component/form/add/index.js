@@ -9,6 +9,7 @@ import PrimaryButton from "components/custom/Buttons/PrimaryButton";
 const MainAddJobForm = () => {
     const [skills, setSkills] = useState([])
     const [Technology, setTechnology] = useState([])
+    const [interviewPanel, setInterviewPanel] = useState([])
     const [responsibilities, setResponsibilities] = useState([{}])
 
     const handleInput = (e) => {
@@ -27,6 +28,8 @@ const MainAddJobForm = () => {
                             skills={skills}
                             setSkills={setSkills}
                             Technology={Technology}
+                            interviewPanel={interviewPanel}
+                            setInterviewPanel={setInterviewPanel}
                             setTechnology={setTechnology}
                             handleInput={handleInput}
                         />

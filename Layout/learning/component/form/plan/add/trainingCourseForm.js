@@ -1,7 +1,7 @@
 
 import { useMemo, useState } from 'react'
-import courses from '@/assets/mokedata/courses.json'
-import trainings from '@/assets/mokedata/trainings.json'
+import courses from 'assets/mokedata/courses.json'
+import trainings from 'assets/mokedata/trainings.json'
 import MultiSelect from 'components/MultiSelect'
 import CourseTrainingCard from './courseTrainingCard'
 

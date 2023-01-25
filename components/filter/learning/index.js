@@ -1,5 +1,6 @@
 
 import { Menu, Transition } from '@headlessui/react';
+import PrimaryButton from 'components/custom/Buttons/PrimaryButton';
 import { Fragment, useState } from 'react';
 import SelectInput from '../../SelectInput'
 import Skillform from './skills';
@@ -103,9 +104,9 @@ const Filter = () => {
                                         <span>Clear</span>
                                     </button>
                                     <Menu.Item>
-                                        <button type="button" className="h-10 mr-2 py-2 px-3 text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-300">
-                                            <span>Apply</span>
-                                        </button>
+                                        <PrimaryButton className='rounded-lg'>
+                                            Apply
+                                        </PrimaryButton>
                                     </Menu.Item>
                                 </div>
                             </div>

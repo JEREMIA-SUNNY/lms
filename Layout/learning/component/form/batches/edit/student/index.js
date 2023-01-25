@@ -1,5 +1,5 @@
 import { useState } from "react";
-import studentList from '@/assets/mokedata/student.json'
+import studentList from 'assets/mokedata/student.json'
 import StudentAddForm from "./studentAddForm";
 
 const MainAddStudentInBatch = () => {

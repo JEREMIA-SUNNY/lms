@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CustomLink from '../custom/Link'
 
-import navbarmenuList from '@/assets/Menu/navbar.json'
+import navbarmenuList from 'assets/Menu/navbar.json'
 import ProfilePopup from "./profilePopup";
 
 const Navbar = () => {

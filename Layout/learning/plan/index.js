@@ -1,6 +1,6 @@
 import PlanCard from "./card";
 import ModuleHeader from '../component/modileHeader'
-import learningPlans from '@/assets/mokedata/plan.json'
+import learningPlans from 'assets/mokedata/plan.json'
 import { useState } from "react";
 
 const PlanLayout = ( ) => {

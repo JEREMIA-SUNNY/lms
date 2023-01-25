@@ -1,6 +1,6 @@
 import Course from "./card";
 import ModuleHeader from '../component/modileHeader'
-import Courses from '@/assets/mokedata/courses.json'
+import Courses from 'assets/mokedata/courses.json'
 import { useState } from "react";
 
 const CourseLayout = ({ courses = Courses }) => {

@@ -1,6 +1,6 @@
 
 import { useMemo, useState } from 'react'
-import skilltype from '@/assets/mokedata/skill.json'
+import skilltype from 'assets/mokedata/skill.json'
 
 const Skillform = ({ handleInput, trainingInfo }) => {
     const [skill, setSkill] = useState([])

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import PlanAction from "./planAction";
-import Plans from '@/assets/mokedata/plan.json'
+import Plans from 'assets/mokedata/plan.json'
 import CourseTrainingCard from "./courseTrainingCard";
 import PlanInfoViewUsers from "./planInfoViewUsers";
 
