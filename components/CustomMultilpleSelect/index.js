@@ -32,12 +32,12 @@ const CustoMultipleSelect = ({ selecteditem, setSelected, title, name, placehold
                     </PrimaryButton>
                 </div>
             </div>
-            <div className="flex justify-start gap-3 mt-2 rounded-lg shadow-sm bg-gray-100">
+            <div className="flex flex-wrap gap-3 mt-2 rounded-lg shadow-sm bg-gray-100">
                 {
                     selecteditem?.map((item, i) => {
                         return (
                             <button
-                                className='m-1 border border-green-600 bg-gray-100 rounded-lg px-2 text-green-600 flex items-center'
+                                className='m-1 border border-green-600 bg-gray-100 rounded-lg px-2 text-green-600 flex justify-start items-center'
                                 onClick={() => { rmitem(item) }}
                                 key={i + item}>
                                 {item}

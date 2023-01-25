@@ -4,7 +4,7 @@ const ListChipWithMore = ({ list, row, title }) => {
     return (
         <div className="my-2 flex flex-wrap gap-2">
             <p className="text-sm">
-                {title}:
+                {title}
             </p>
             {
                 list.slice(0, row).map((item, i) => {

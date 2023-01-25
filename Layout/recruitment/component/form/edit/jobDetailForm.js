@@ -76,15 +76,22 @@ const JobDetailForm = (props) => {
                     </select>
                 </div>
                 <div>
-                    <label htmlFor="minExperience" className="block mb-2 text-sm font-semibold text-gray-900">Min Experience</label>
-                    <input onChange={handleInput} type="number" title="minExperience" id="minExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="Min Experience in year" required="" />
+                    <label htmlFor="designation" className="block mb-2 text-sm font-semibold text-gray-900">Designation</label>
+                    <select
+                        name="designation"
+                        id="designation"
+                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                        <option>Select ...</option>
+                        {
+                            designationlist?.map(item => {
+                                return (
+                                    <option value={item?.name}>{item?.name}</option>
+                                )
+                            })
+                        }
+                    </select>
                 </div>
-                <div>
-                    <label htmlFor="maxExperience" className="block mb-2 text-sm font-semibold text-gray-900">Max Experience</label>
-                    <input onChange={handleInput} type="number" title="maxExperience" id="maxExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="Max Experience in year" required="" />
-                </div>
+
                 <div>
                     <label htmlFor="country" className="block mb-2 text-sm font-semibold text-gray-900">Country</label>
                     <AutoComplete title={'country'} list={countrylist} keyname='country' selected={country} setSelected={setCountry} />
@@ -106,7 +113,7 @@ const JobDetailForm = (props) => {
                     </select>
                 </div>
                 <div>
-                    <label htmlFor="numOfOpening" className="block mb-2 text-sm font-semibold text-gray-900">Add no of openings</label>
+                    <label htmlFor="numOfOpening" className="block mb-2 text-sm font-semibold text-gray-900">No. of openings</label>
                     <input onChange={handleInput} type="number" title="numOfOpening" id="numOfOpening" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Count" required="" />
                 </div>
@@ -121,34 +128,25 @@ const JobDetailForm = (props) => {
                         <option value='lateral'>Lateral</option>
                     </select>
                 </div>
-                <div>
-                    <label htmlFor="designation" className="block mb-2 text-sm font-semibold text-gray-900">Add designation</label>
-                    <select
-                        name="designation"
-                        id="designation"
-                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                        <option>Select ...</option>
-                        {
-                            designationlist?.map(item => {
-                                return (
-                                    <option value={item?.name}>{item?.name}</option>
-                                )
-                            })
-                        }
-                    </select>
-                </div>
+
                 <div>
                     <label htmlFor="qualification" className="block mb-2 text-sm font-semibold text-gray-900">Qualification</label>
                     <input onChange={handleInput} type="number" title="qualification" id="qualification" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Qualification in year" required="" />
                 </div>
+                <div>
+                    <label htmlFor="minExperience" className="block mb-2 text-sm font-semibold text-gray-900">Min Experience</label>
+                    <input onChange={handleInput} type="number" title="minExperience" id="minExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                        placeholder="Min Experience in year" required="" />
+                </div>
+                <div>
+                    <label htmlFor="maxExperience" className="block mb-2 text-sm font-semibold text-gray-900">Max Experience</label>
+                    <input onChange={handleInput} type="number" title="maxExperience" id="maxExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                        placeholder="Max Experience in year" required="" />
+                </div>
             </div>
-            <div className="grid gap-4 grid-cols-2 mt-3">
-                <CustoMultipleSelect selecteditem={interviewPanel}
-                    setSelected={setInterviewPanel}
-                    title='Add interview panel'
-                    placeholder='select upto 2 people from dropdown who will take the interveiw'
-                    name='interviewPanel' />
+            <div className="grid gap-4 grid-cols-3 mt-3">
+
                 <CustoMultipleSelect selecteditem={skills}
                     setSelected={setSkills}
                     title='Skills'
@@ -157,6 +155,11 @@ const JobDetailForm = (props) => {
                     setSelected={setTechnology}
                     title='Technologies'
                     name='Technologies' />
+                <CustoMultipleSelect selecteditem={interviewPanel}
+                    setSelected={setInterviewPanel}
+                    title='Add interview panel'
+                    placeholder='select upto 2 people from dropdown who will take the interveiw'
+                    name='interviewPanel' />
             </div>
         </>
     )

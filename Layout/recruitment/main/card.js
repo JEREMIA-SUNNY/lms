@@ -28,9 +28,9 @@ const JobCard = ({ item }) => {
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-red-500">
                         <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
                     </svg>
-                    <p className="ml-1">{item?.Location}</p>
+                    <p className="ml-1 text-xs text-gray-500">{item?.Location}</p>
                 </div>
-                <button className={`w- h-8 ${item['status'] ? 'bg-[#409a00] text-white' : 'bg-gray-200 text-gray-500'} text-sm mx-2 px-2 py-1 rounded-b-lg`}>
+                <button className={`h-8 ${item['status'] ? 'bg-[#409a00] text-white' : 'bg-gray-200 text-gray-500'} text-sm mx-2 px-2 py-1 rounded-b-lg`}>
                     {item['status'] ? 'Open' : 'Closed'}
                 </button>
             </div>
@@ -72,13 +72,26 @@ const JobCard = ({ item }) => {
                         <p><span className="text-gray-700">Created on:</span> 30/11/2001</p>
                     </div>
                 </div>
-                <ListChipWithMore list={item?.Skills.split(',')} row={2} title='Skills' />
-                <ListChipWithMore list={item?.Technology.split(',')} row={2} title='Technology' />
-
-                <div className="flex justify-between items-center  border-dashed border-t-2 border-gray-200">
-                    <p className="text-sm">
-                        Assigned to:
+                <div className="flex justify-start items-center">
+                    <p className="mt-2 text-sm text-gray-500">
+                        Skills
                     </p>
+                    <ListChipWithMore list={item?.Skills.split(',')} row={2} />
+                </div>
+                <div className="flex justify-start items-start">
+                    <p className="mt-2 text-sm text-gray-500">
+                        Technology
+                    </p>
+                    <ListChipWithMore list={item?.Technology.split(',')} row={2} />
+                </div>
+
+                <div className="flex justify-between items-center border-dashed border-t-2 border-gray-200">
+                    <div className="text-sm flex justify-between items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-green-600 mr-1">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Naresh Kumar Gautam
+                    </div>
                     <div className="flex justify-between items-center gap-2 mt-2">
                         <div className="bg-gray-100 rounded p-1 text-xs flex justify-between items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-green-600">
@@ -86,7 +99,6 @@ const JobCard = ({ item }) => {
                             </svg>
                             <span className="ml-1"> (12) </span>
                         </div>
-
                         <div className="bg-gray-100 rounded p-1 text-xs flex justify-between items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-green-600">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
