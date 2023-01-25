@@ -19,7 +19,7 @@
         "Job Responsibilities": "• Design, develop, and maintain software applications. • Collaborate with cross-functional teams to deliver high-quality products. • Write clean, maintainable, and efficient code. • Participate in code reviews and ensure software meets industry standards. • Troubleshoot and debug issues in production."
     },
     {
-       "workMode":"part-time",
+       "workMode":"hybrid",
         "id": 2,
         "status":true,
         "Job title": "Data Analyst",
@@ -57,7 +57,7 @@
         "Job Responsibilities": "• Define and execute the product strategy.• Conduct market research and gather customer insights.• Collaborate with cross-functional teams to deliver high-quality products.• Develop and maintain a product roadmap.• Measure and report on product performance."
     },
     {
-       "workMode":"onsite",
+       "workMode":"hybrid",
         "id": 4,
         "status":false,
         "Job title": "Marketing Coordinator",

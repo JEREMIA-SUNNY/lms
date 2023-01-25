@@ -1,12 +1,6 @@
 
 const list = [
-    { name: 'Enter Level', title: 'Enter Level' },
-    { name: 'Mid Level', title: 'Mid Level' },
-    { name: 'Mid Level', title: 'Mid Level' },
-    { name: 'Principal', title: 'Principal' },
-    { name: 'Remote', title: 'Remote' },
-    { name: 'Onsite', title: 'Onsite' },
-    { name: 'Hybrid', title: 'Hybrid' },
+    { name: 'applicants', title: 'Applicants' },
     { name: 'Recent', title: 'Most Recent' },
 ]
 
