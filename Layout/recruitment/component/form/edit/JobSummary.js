@@ -1,6 +1,6 @@
 
 
-const ResponsibilitiesSummary = ({ handleInput }) => {
+const ResponsibilitiesJob = ({ handleInput }) => {
     return (
         <div className="gap-4">
             <div className="mt-2">
@@ -14,4 +14,4 @@ const ResponsibilitiesSummary = ({ handleInput }) => {
     )
 }
 
-export default ResponsibilitiesSummary;
+export default ResponsibilitiesJob;
