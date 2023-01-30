@@ -6,8 +6,8 @@ import TrainingLayout from "./learning/trainings";
 import TrainingDetailLayout from './learning/trainings/trainingsdetail'
 import PlanLayout from './learning/plan'
 import PlanDetailLayout from './learning/plan/Plandetail'
-import RecruitmentLayout from "./recruitment/main";
-import JobDetailLayout from './recruitment/main/Jobdetail'
+import RecruitmentJobsLayout from "./recruitment/Jobs";
+import RecruitmentJobsJobDetail from './recruitment/Jobs/Jobdetail'
 
 export {
     Authlayout,
@@ -18,6 +18,6 @@ export {
     TrainingDetailLayout,
     PlanLayout,
     PlanDetailLayout,
-    RecruitmentLayout,
-    JobDetailLayout
+    RecruitmentJobsLayout,
+    RecruitmentJobsJobDetail
 }
