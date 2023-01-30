@@ -42,10 +42,12 @@ const SkillsAndQualifications = (props) => {
                 </div>
                 <CustomMultipleSelect selecteditem={subjects}
                     setSelected={setSubjects}
-                    title='Subjects'
+                    title='Subject'
                     placeholder="English, Maths, etc"
                     name='subjects' />
 
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-4">
                 <CustomMultipleSelect selecteditem={skills}
                     setSelected={setSkills}
                     title='Skills'

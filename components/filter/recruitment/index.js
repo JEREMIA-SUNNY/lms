@@ -152,30 +152,28 @@ const FilterRecruitment = () => {
                                         <option value='Hybrid'>Hybrid</option>
                                     </select>
                                 </div>
-                                <div className='grid gap-4 grid-cols-2'>
-                                    <div>
-                                        <label htmlFor="HireType" className="block mb-2 text-sm font-semibold text-gray-900">Hire Type</label>
-                                        <select
-                                            name="HireType"
-                                            id="HireType"
-                                            onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                                            <option>Select ...</option>
-                                            <option value='Full time'>Full time</option>
-                                            <option value='Part time'>Part time</option>
-                                            <option value='Contract'>Contract</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="Status" className="block mb-2 text-sm font-semibold text-gray-900">Status</label>
-                                        <select
-                                            name="Status"
-                                            id="Status"
-                                            onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                                            <option>Select ...</option>
-                                            <option value='Open'>Open</option>
-                                            <option value='Close'>Close</option>
-                                        </select>
-                                    </div>
+                                <div>
+                                    <label htmlFor="HireType" className="block mb-2 text-sm font-semibold text-gray-900">Hire Type</label>
+                                    <select
+                                        name="HireType"
+                                        id="HireType"
+                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                                        <option>Select ...</option>
+                                        <option value='Full time'>Full time</option>
+                                        <option value='Part time'>Part time</option>
+                                        <option value='Contract'>Contract</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label htmlFor="Status" className="block mb-2 text-sm font-semibold text-gray-900">Status</label>
+                                    <select
+                                        name="Status"
+                                        id="Status"
+                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                                        <option>Select ...</option>
+                                        <option value='Open'>Open</option>
+                                        <option value='Close'>Close</option>
+                                    </select>
                                 </div>
                             </div>
                             <div className="grid gap-4 grid-cols-2 mt-3">

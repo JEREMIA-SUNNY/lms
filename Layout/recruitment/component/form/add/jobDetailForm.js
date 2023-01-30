@@ -120,7 +120,7 @@ const JobDetailForm = (props) => {
                     </select>
                 </div>
                 <div>
-                    <label htmlFor="numOfOpening" className="block mb-2 text-sm font-semibold text-gray-900">No. of openings</label>
+                    <label htmlFor="numOfOpening" className="block mb-2 text-sm font-semibold text-gray-900">No. of Positions</label>
                     <input onChange={handleInput} type="number" title="numOfOpening" id="numOfOpening" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Count" required="" />
                 </div>
@@ -167,7 +167,7 @@ const JobDetailForm = (props) => {
                     name='interviewPanel' />
                 <CustomMultipleSelect selecteditem={vendors}
                     setSelected={setVendors}
-                    title='Vendor'
+                    title='Assign to Vendor'
                     placeholder='Vendor'
                     name='Vendor' />
             </div>
