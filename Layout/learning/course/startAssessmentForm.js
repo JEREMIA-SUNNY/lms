@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import questions from '@/assets/mokedata/questionAndOption'
+import questions from 'assets/mokedata/questionAndOption'
 import PrimaryButton from "components/custom/Buttons/PrimaryButton";
 
 function Question({ index, question, options, onOptionSelected }) {

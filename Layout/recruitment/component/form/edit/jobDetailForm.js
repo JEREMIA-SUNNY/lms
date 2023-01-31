@@ -1,12 +1,14 @@
-import CustoMultipleSelect from "components/CustomMultilpleSelect";
+import CustomMultipleSelect from "components/CustomMultilpleSelect";
 import { useState } from "react";
 import countrylist from 'assets/mokedata/country.json'
 import AutoComplete from "components/AutoComplete";
+import designationlist from 'assets/mokedata/designation.json'
+import SwitchInput from "components/custom/switchInput";
 
 const JobDetailForm = (props) => {
-    const { skills, setSkills, Technology, setTechnology, handleInput } = props
+    const { interviewPanel, setInterviewPanel, handleInput, businessUnit, setBusinessUnit, vendors, setVendors } = props
     const [country, setCountry] = useState({})
-    console.log(Technology);
+
     return (
         <>
             <div className="mt-4 grid grid-cols-4 gap-4">
@@ -56,12 +58,14 @@ const JobDetailForm = (props) => {
                     <input onChange={handleInput} type="text" title="Department" id="Department" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Department" required="" />
                 </div>
-                <div>
-                    <label htmlFor="ServiceLine" className="block mb-2 text-sm font-semibold text-gray-900">Service Line</label>
-                    <input onChange={handleInput} type="text" title="ServiceLine" id="ServiceLine" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="Service Line" required="" />
+                <div className="mt-4">
+                    <label htmlFor="businessUnit" className="block mb-2 text-sm font-semibold text-gray-900">Business Unit (Yes/No)</label>
+                    <SwitchInput
+                        name='businessUnit'
+                        value={businessUnit}
+                        onChange={setBusinessUnit} />
                 </div>
-                <div>
+                {businessUnit ? <div>
                     <label htmlFor="BusinessUnit" className="block mb-2 text-sm font-semibold text-gray-900">Business Unit</label>
                     <select
                         name="BusinessUnit"
@@ -73,12 +77,28 @@ const JobDetailForm = (props) => {
                         <option value='Retail'>Retail</option>
                         <option value='Automotive'>Automotive</option>
                     </select>
-                </div>
+                </div> : <div>
+                    <label htmlFor="ServiceLine" className="block mb-2 text-sm font-semibold text-gray-900">Service Line</label>
+                    <input onChange={handleInput} type="text" title="ServiceLine" id="ServiceLine" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                        placeholder="Service Line" required="" />
+                </div>}
                 <div>
-                    <label htmlFor="Experience" className="block mb-2 text-sm font-semibold text-gray-900">Min Experience</label>
-                    <input onChange={handleInput} type="number" title="Experience" id="Experience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                        placeholder="Experience in year" required="" />
+                    <label htmlFor="designation" className="block mb-2 text-sm font-semibold text-gray-900">Designation</label>
+                    <select
+                        name="designation"
+                        id="designation"
+                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                        <option>Select ...</option>
+                        {
+                            designationlist?.map(item => {
+                                return (
+                                    <option value={item?.name}>{item?.name}</option>
+                                )
+                            })
+                        }
+                    </select>
                 </div>
+
                 <div>
                     <label htmlFor="country" className="block mb-2 text-sm font-semibold text-gray-900">Country</label>
                     <AutoComplete title={'country'} list={countrylist} keyname='country' selected={country} setSelected={setCountry} />
@@ -99,17 +119,57 @@ const JobDetailForm = (props) => {
                         }
                     </select>
                 </div>
+                <div>
+                    <label htmlFor="numOfOpening" className="block mb-2 text-sm font-semibold text-gray-900">No. of Positions</label>
+                    <input onChange={handleInput} type="number" title="numOfOpening" id="numOfOpening" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                        placeholder="Count" required="" />
+                </div>
+                <div>
+                    <label htmlFor="hiringsource" className="block mb-2 text-sm font-semibold text-gray-900">Hiring Source</label>
+                    <select
+                        name="hiringsource"
+                        id="hiringsource"
+                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                        <option>Select ...</option>
+                        <option value='campus'>Campus</option>
+                        <option value='lateral'>Lateral</option>
+                    </select>
+                </div>
 
+
+                <div>
+                    <label htmlFor="minExperience" className="block mb-2 text-sm font-semibold text-gray-900">Min Experience</label>
+                    <input onChange={handleInput} type="number" title="minExperience" id="minExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                        placeholder="Min Experience in year" required="" />
+                </div>
+                <div>
+                    <label htmlFor="maxExperience" className="block mb-2 text-sm font-semibold text-gray-900">Max Experience</label>
+                    <input onChange={handleInput} type="number" title="maxExperience" id="maxExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                        placeholder="Max Experience in year" required="" />
+                </div>
+                <div>
+                    <label htmlFor="Recruitmentlead" className="block mb-2 text-sm font-semibold text-gray-900">Recruitment lead </label>
+                    <select
+                        name="Recruitmentlead"
+                        id="Recruitmentlead"
+                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                        <option>Select ...</option>
+                        <option value='campus'>Campus</option>
+                        <option value='lateral'>Lateral</option>
+                    </select>
+                </div>
             </div>
-            <div className="grid gap-4 grid-cols-2">
-                <CustoMultipleSelect selecteditem={skills}
-                    setSelected={setSkills}
-                    title='Skills'
-                    name='skill' />
-                <CustoMultipleSelect selecteditem={Technology}
-                    setSelected={setTechnology}
-                    title='Technologies'
-                    name='Technologies' />
+            <div className="grid gap-4 grid-cols-2 mt-3">
+                <CustomMultipleSelect selecteditem={interviewPanel}
+                    setSelected={setInterviewPanel}
+                    title='Add interview panel'
+                    placeholder='select upto 2 people from dropdown who will take the interveiw'
+                    name='interviewPanel' />
+                <CustomMultipleSelect selecteditem={vendors}
+                    setSelected={setVendors}
+                    title='Assign to Vendor'
+                    placeholder='Vendor'
+                    name='Vendor' />
             </div>
         </>
     )

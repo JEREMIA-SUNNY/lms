@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Manager"
+    },
+    {
+        "id": 2,
+        "name": "Associate"
+    },
+    {
+        "id": 3,
+        "name": "Senior Engineer"
+    },
+    {
+        "id": 4,
+        "name": "Lead"
+    },
+    {
+        "id": 5,
+        "name": "Director"
+    }
+]

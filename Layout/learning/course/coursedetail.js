@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import DetailHeader from './detailHeader'
 import CourseModule from './courseModule'
 import CourseAction from "./courseAction";
-import courses from '@/assets/mokedata/courses.json'
+import courses from 'assets/mokedata/courses.json'
 import IconButton from "components/custom/Buttons/IconButton";
 
 const CourseDetailLayout = () => {

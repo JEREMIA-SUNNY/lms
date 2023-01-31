@@ -1,6 +1,6 @@
 import JobCard from "./card";
 import ModuleHeader from '../component/modileHeader'
-import jobs from '@/assets/mokedata/jobs.json'
+import jobs from 'assets/mokedata/jobs.json'
 import { useState } from "react";
 
 const RecruitmentLayout = ( ) => {

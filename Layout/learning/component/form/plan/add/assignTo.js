@@ -1,6 +1,6 @@
 
 import { useMemo, useState } from 'react'
-import assignTo from '@/assets/mokedata/assignTo.json'
+import assignTo from 'assets/mokedata/assignTo.json'
 import MultiSelect from 'components/MultiSelect'
 
 const AssignTo = ({ handleInput, planPayload }) => {
