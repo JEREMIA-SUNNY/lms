@@ -8,6 +8,9 @@ import PlanLayout from './learning/plan'
 import PlanDetailLayout from './learning/plan/Plandetail'
 import RecruitmentJobsLayout from "./recruitment/Jobs";
 import RecruitmentJobsJobDetail from './recruitment/Jobs/Jobdetail'
+import RecruitmentJobsApplicationLayout from "./recruitment/application"
+import RecruitmentJobsShortlistLayout from "./recruitment/shortlist"
+import RecruitmentJobsRecommendations from './recruitment/recommendations'
 
 export {
     Authlayout,
@@ -19,5 +22,8 @@ export {
     PlanLayout,
     PlanDetailLayout,
     RecruitmentJobsLayout,
-    RecruitmentJobsJobDetail
+    RecruitmentJobsJobDetail,
+    RecruitmentJobsApplicationLayout,
+    RecruitmentJobsShortlistLayout,
+    RecruitmentJobsRecommendations
 }
