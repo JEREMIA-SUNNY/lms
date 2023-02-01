@@ -21,7 +21,7 @@ const CourseAction = () => {
     return (
         <div className="mt-4 flex items-center justify-between">
             <GoBackButton title={'Course Details'} />
-            <div className="flex ustify-start text-[#419a00]">
+            <div className="flex justify-start items-center text-[#419a00]">
                 <EditCourseBtn />
                 <DeleteAlert
                     isOpen={isOpen}
