@@ -14,7 +14,8 @@ const MainAddJobForm = () => {
     const [vendors, setVendors] = useState([])
     const [interviewPanel, setInterviewPanel] = useState([])
     const [responsibilities, setResponsibilities] = useState([{}])
-    const [businessUnit, setBusinessUnit] = useState(true)
+    const [businessUnitOrServiceLine, setBusinessUnitOrServiceLine] = useState('Business Unit')
+
     const handleInput = (e) => {
         // const { name, value } = e.target
     }
@@ -30,8 +31,8 @@ const MainAddJobForm = () => {
                         <JobDetailForm
                             interviewPanel={interviewPanel}
                             setInterviewPanel={setInterviewPanel}
-                            businessUnit={businessUnit}
-                            setBusinessUnit={setBusinessUnit}
+                            businessUnitOrServiceLine={businessUnitOrServiceLine}
+                            setBusinessUnitOrServiceLine={setBusinessUnitOrServiceLine}
                             vendors={vendors}
                             setVendors={setVendors}
                             handleInput={handleInput}

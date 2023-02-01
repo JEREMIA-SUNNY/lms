@@ -187,7 +187,7 @@ const FilterRecruitment = () => {
                                     name='Technologies' />
                             </div>
                             <div className='flex justify-end'>
-                                <div className='mt-2 flex justify-start items-center'>
+                                <div className='mt-6 flex justify-start items-center'>
                                     <button onClick={() => { setActiveFilter([]) }} type="button" className="h-10 mr-2 py-2 px-3 text-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-600">
                                         <span>Clear</span>
                                     </button>

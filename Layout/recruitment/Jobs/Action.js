@@ -1,12 +1,41 @@
-import GoBackButton from 'components/goBackBtn'
+// import GoBackButton from 'components/goBackBtn'
 import IconButton from 'components/custom/Buttons/IconButton'
-import EditCourseBtn from '../component/editcoursebtn'
+import EditJobBtn from '../component/jobs/editJobBtn'
 import { useState } from 'react'
 import DeleteAlert from 'components/DeleteAlert'
 import { useRouter } from 'next/router'
+import CustomLink from 'components/custom/Link'
 
-const CourseAction = () => {
-    const router = useRouter()
+const menus = [
+    {
+        title: 'Application',
+        path: '/app/recruitment/jobs/application',
+    },
+    {
+        title: 'Recommendations',
+        path: '/app/recruitment/jobs/recommendations',
+    },
+    {
+        title: 'Shortlist',
+        path: '/app/recruitment/jobs/shortlist',
+    },
+    {
+        title: 'Interviews (L1)',
+        path: '/app/recruitment/jobs/interviews-l1',
+    },
+    {
+        title: 'Interviews (L2)',
+        path: '/app/recruitment/jobs/interviews-l2',
+    },
+    {
+        title: 'Offers',
+        path: '/app/recruitment/jobs/offers',
+    }
+]
+
+const JobAction = () => {
+    const route = useRouter()
+    const { query: { id } } = route
     const [isOpen, setIsOpen] = useState(false)
 
     const onCloseDelete = () => {
@@ -15,18 +44,30 @@ const CourseAction = () => {
 
     const confirmDelete = () => {
         setIsOpen(!isOpen)
-        router.push('/app/learning/courses')
+        // router.push('/app/recruitment')
     }
-
+    
     return (
         <div className="mt-4 flex items-center justify-between">
-            <GoBackButton title={'Course Details'} />
-            <div className="flex justify-start items-center text-[#419a00]">
-                <EditCourseBtn />
+            {/* <GoBackButton title={'Job Details'} /> */}
+            <ul className="flex justify-between">
+                <li>
+                    <CustomLink title='Job Details' href={`/app/recruitment/jobs/detail/${id}`} />
+                </li>
+                {menus?.map((item) => {
+                    return (
+                        <li key={item?.title}>
+                            <CustomLink title={item?.title} href={item?.path} />
+                        </li>
+                    )
+                })}
+            </ul>
+            <div className="h-10 flex justify-start items-center text-[#419a00]">
+                <EditJobBtn />
                 <DeleteAlert
                     isOpen={isOpen}
-                    title='Delete Course ?'
-                    des='You are about to delete this course permanentaly'
+                    title='Delete Job ?'
+                    des='You are about to delete this Job permanentaly'
                     button={
                         <IconButton className='bg-white text-[#419a00]' onClick={() => { setIsOpen(true) }}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -37,14 +78,12 @@ const CourseAction = () => {
                     onClose={onCloseDelete}
                     confirm={confirmDelete}
                 />
-
                 <IconButton className='bg-white text-[#419a00]'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                     </svg>
                 </IconButton>
                 <IconButton className='bg-white text-[#419a00]'>
-
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
                     </svg>
@@ -59,4 +98,4 @@ const CourseAction = () => {
     )
 }
 
-export default CourseAction
+export default JobAction

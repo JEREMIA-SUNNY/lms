@@ -32,7 +32,7 @@
     {
         "id": 7,
         "title": "Recruitment",
-        "link": "/app/recruitment",
+        "link": "/app/recruitment/jobs",
         "submenu": []
     },
     {

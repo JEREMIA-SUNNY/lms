@@ -1,4 +1,4 @@
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import JobAction from "./Action";
 
 const aJob = {
@@ -12,14 +12,12 @@ const aJob = {
     "Business Unit": "Finance",
     "Hire Type": "Full-time",
     "Level": "Entry-level",
-    "Skills": "SQL, Excel, R, Python",
-    "Technology": "Tableau, Power BI, Alteryx",
-    "Experience": "1-3 years",
+    "Experience": "1-3 years"
 }
 
 const JobDetailLayout = () => {
-    // const route = useRouter()
-    // const { query } = route
+    const route = useRouter()
+    const { query } = route
 
     return (
         <>
@@ -41,17 +39,33 @@ const JobDetailLayout = () => {
                             )
                         })}
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-2">
                         <div className="capitalize">
-                            <span className="font-semibold">Job Summary: </span>
+                            <p className="font-semibold">Skills: </p>
                         </div>
                         <div>
-                            <span className="text-gray-700"> We are seeking a data analyst to join our team to support our data-driven decision making.</span>
+                            <p className="text-gray-700"> SQL, Excel, R, Python.</p>
                         </div>
                     </div>
-                    <div>
+                    <div className="mt-2">
                         <div className="capitalize">
-                            <span className="font-semibold">Job Summary</span>
+                            <p className="font-semibold">Technology: </p>
+                        </div>
+                        <div>
+                            <p className="text-gray-700"> Tableau, Power BI, Alteryx.</p>
+                        </div>
+                    </div>
+                    <div className="mt-2">
+                        <div className="capitalize">
+                            <p className="font-semibold">Job Summary: </p>
+                        </div>
+                        <div>
+                            <p className="text-gray-700"> We are seeking a data analyst to join our team to support our data-driven decision making.</p>
+                        </div>
+                    </div>
+                    <div className="mt-2">
+                        <div className="capitalize">
+                            <p className="font-semibold">Job Responsibilities</p>
                         </div>
                         <div>
                             <div className="text-gray-700">

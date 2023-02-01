@@ -1,5 +1,5 @@
 import JobCard from "./card";
-import ModuleHeader from '../component/modileHeader'
+import ModuleHeader from '../component/jobs/ModuleHeader'
 import jobs from 'assets/mokedata/jobs.json'
 import { useState } from "react";
 
