@@ -1,13 +1,16 @@
 import PrimaryButton from "components/custom/Buttons/PrimaryButton";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 
-const CustoMultipleSelect = ({ selecteditem, setSelected, title, name, placeholder='item ex:Adobe Creative Suite, JavaScript, SQL, Excel Product, analysis, etc' }) => {
+const CustomMultipleSelect = ({ limit = 8, selecteditem, setSelected, title, name, placeholder = 'item ex:Adobe Creative Suite, JavaScript, SQL, Excel Product, analysis, etc' }) => {
     const [item, setNewItem] = useState('')
+    const inputref = useRef(null)
 
     const handleInput = (e) => {
         const { value } = e.target
-        setNewItem(value?.trim())
+        if (value?.trim() !== '') {
+            setNewItem(value?.trim())
+        }
     }
 
     const rmitem = (item) => {
@@ -15,7 +18,10 @@ const CustoMultipleSelect = ({ selecteditem, setSelected, title, name, placehold
     }
 
     const additem = () => {
-        setSelected([...selecteditem, item]);
+        if (!selecteditem.includes(item) && selecteditem?.length < limit) {
+            setSelected([...selecteditem, item]);
+            inputref.current.value = ''
+        }
     }
 
     return (
@@ -23,7 +29,10 @@ const CustoMultipleSelect = ({ selecteditem, setSelected, title, name, placehold
             <div className="gap-2 flex justify-between">
                 <div className="w-[86%]">
                     <label htmlFor={title} className="block mb-2 text-sm font-semibold text-gray-900">{title}</label>
-                    <input onChange={handleInput} type="text" title="item" id="item" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    <input onChange={handleInput}
+                        ref={inputref}
+                        type="text"
+                        title="item" id="item" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder={placeholder} required="" />
                 </div>
                 <div className="flex items-end">
@@ -49,8 +58,11 @@ const CustoMultipleSelect = ({ selecteditem, setSelected, title, name, placehold
                     })
                 }
             </div>
+            {selecteditem?.length > 0 ? <div className="flex justify-end">
+                <p className="text-xs text-gray-300">{selecteditem?.length}/{limit}</p>
+            </div> : ''}
         </div>
     )
 }
 
-export default CustoMultipleSelect;
+export default CustomMultipleSelect;
