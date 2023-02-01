@@ -1,8 +1,8 @@
-import { JobDetailLayout } from 'Layout'
+import { RecruitmentJobsJobDetail } from 'Layout'
 
 const JobDetail = () => {
     return (
-        <JobDetailLayout />
+        <RecruitmentJobsJobDetail />
     )
 }
 export default JobDetail;
