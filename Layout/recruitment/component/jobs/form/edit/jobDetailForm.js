@@ -3,10 +3,10 @@ import { useState } from "react";
 import countrylist from 'assets/mokedata/country.json'
 import AutoComplete from "components/AutoComplete";
 import designationlist from 'assets/mokedata/designation.json'
-import SwitchInput from "components/custom/switchInput";
+import ChipSelectOption from "components/ChipSelectOption";
 
 const JobDetailForm = (props) => {
-    const { interviewPanel, setInterviewPanel, handleInput, businessUnit, setBusinessUnit, vendors, setVendors } = props
+    const { interviewPanel, setInterviewPanel, handleInput, businessUnitOrServiceLine, setBusinessUnitOrServiceLine, vendors, setVendors } = props
     const [country, setCountry] = useState({})
 
     return (
@@ -58,14 +58,15 @@ const JobDetailForm = (props) => {
                     <input onChange={handleInput} type="text" title="Department" id="Department" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Department" required="" />
                 </div>
-                <div className="mt-4">
-                    <label htmlFor="businessUnit" className="block mb-2 text-sm font-semibold text-gray-900">Business Unit (Yes/No)</label>
-                    <SwitchInput
-                        name='businessUnit'
-                        value={businessUnit}
-                        onChange={setBusinessUnit} />
+                <div>
+                    <label htmlFor="businessUnit" className="block mb-2 text-sm font-semibold text-gray-900">Tag to</label>
+                    <ChipSelectOption
+                        list={['Business Unit', "Service Line"]}
+                        setSelected={setBusinessUnitOrServiceLine}
+                        selected={businessUnitOrServiceLine}
+                    />
                 </div>
-                {businessUnit ? <div>
+                {businessUnitOrServiceLine === 'Business Unit'? <div>
                     <label htmlFor="BusinessUnit" className="block mb-2 text-sm font-semibold text-gray-900">Business Unit</label>
                     <select
                         name="BusinessUnit"
