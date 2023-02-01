@@ -1,4 +1,4 @@
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import JobAction from "./Action";
 
 const aJob = {
@@ -18,8 +18,8 @@ const aJob = {
 }
 
 const JobDetailLayout = () => {
-    // const route = useRouter()
-    // const { query } = route
+    const route = useRouter()
+    const { query } = route
 
     return (
         <>

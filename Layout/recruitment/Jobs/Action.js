@@ -1,12 +1,41 @@
-import GoBackButton from 'components/goBackBtn'
+// import GoBackButton from 'components/goBackBtn'
 import IconButton from 'components/custom/Buttons/IconButton'
 import EditJobBtn from '../component/jobs/editJobBtn'
 import { useState } from 'react'
 import DeleteAlert from 'components/DeleteAlert'
 import { useRouter } from 'next/router'
+import CustomLink from 'components/custom/Link'
+
+const menus = [
+    {
+        title: 'Application',
+        path: '/app/recruitment/jobs/application',
+    },
+    {
+        title: 'Recommendations',
+        path: '/app/recruitment/jobs/recommendations',
+    },
+    {
+        title: 'Shortlist',
+        path: '/app/recruitment/jobs/shortlist',
+    },
+    {
+        title: 'Interviews (L1)',
+        path: '/app/recruitment/jobs/interviews-l1',
+    },
+    {
+        title: 'Interviews (L2)',
+        path: '/app/recruitment/jobs/interviews-l2',
+    },
+    {
+        title: 'Offers',
+        path: '/app/recruitment/jobs/offers',
+    }
+]
 
 const JobAction = () => {
-    const router = useRouter()
+    const route = useRouter()
+    const { query: { id } } = route
     const [isOpen, setIsOpen] = useState(false)
 
     const onCloseDelete = () => {
@@ -15,12 +44,24 @@ const JobAction = () => {
 
     const confirmDelete = () => {
         setIsOpen(!isOpen)
-        router.push('/app/recruitment')
+        // router.push('/app/recruitment')
     }
 
     return (
         <div className="mt-4 flex items-center justify-between">
-            <GoBackButton title={'Job Details'} />
+            {/* <GoBackButton title={'Job Details'} /> */}
+            <ul className="flex justify-between">
+                <li>
+                    <CustomLink title='Job Details' href={`/app/recruitment/jobs/detail/${id}`} />
+                </li>
+                {menus?.map((item) => {
+                    return (
+                        <li key={item?.title}>
+                            <CustomLink title={item?.title} href={item?.path} />
+                        </li>
+                    )
+                })}
+            </ul>
             <div className="h-10 flex justify-start items-center text-[#419a00]">
                 <EditJobBtn />
                 <DeleteAlert
