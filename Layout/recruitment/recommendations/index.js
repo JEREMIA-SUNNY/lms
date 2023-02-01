@@ -1,9 +1,35 @@
 
+import CandidateInfoCard from "../component/candidateInfoCard"
 
-const Recommendations = ()=>{
+const appliedUser = [
+    {
+        designation: 'Frontend Developer',
+        name: 'John Smith'
+    },
+    {
+        designation: 'Frontend Developer',
+        name: 'Naresh Gautam'
+    },
+    {
+        designation: 'Backend Developer',
+        name: 'Rohit Kumar'
+    },
+    {
+        designation: 'Backend Developer',
+        name: 'Sunil Kumar'
+    }
+
+]
+
+const Recommendations = () => {
     return (
-        <div>
-               Recommendations 
+        <div className="mt-4 grid gap-4 grid-cols-4">
+            {appliedUser?.map((item,i) => {
+                return (
+                    <CandidateInfoCard key={i}  item={item}/>
+                )
+            })
+            }
         </div>
     )
 }

@@ -46,7 +46,7 @@ const JobAction = () => {
         setIsOpen(!isOpen)
         // router.push('/app/recruitment')
     }
-
+    
     return (
         <div className="mt-4 flex items-center justify-between">
             {/* <GoBackButton title={'Job Details'} /> */}
