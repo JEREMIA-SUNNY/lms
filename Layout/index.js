@@ -6,11 +6,8 @@ import TrainingLayout from "./learning/trainings";
 import TrainingDetailLayout from './learning/trainings/trainingsdetail'
 import PlanLayout from './learning/plan'
 import PlanDetailLayout from './learning/plan/Plandetail'
-import RecruitmentJobsLayout from "./recruitment/Jobs";
-import RecruitmentJobsJobDetail from './recruitment/Jobs/Jobdetail'
-import RecruitmentJobsApplicationLayout from "./recruitment/application"
-import RecruitmentJobsShortlistLayout from "./recruitment/shortlist"
-import RecruitmentJobsRecommendations from './recruitment/recommendations'
+import RecruitmentJobsLayout from "./recruitment/Jobs/joblist";
+import RecruitmentJobsJobDetail from "./recruitment/Jobs/Jobdetail"
 
 export {
     Authlayout,
@@ -22,8 +19,5 @@ export {
     PlanLayout,
     PlanDetailLayout,
     RecruitmentJobsLayout,
-    RecruitmentJobsJobDetail,
-    RecruitmentJobsApplicationLayout,
-    RecruitmentJobsShortlistLayout,
-    RecruitmentJobsRecommendations
+    RecruitmentJobsJobDetail
 }

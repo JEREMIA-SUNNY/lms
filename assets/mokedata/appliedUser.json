@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Jane Doe",
+    "email": "jane.doe@email.com",
+    "phone": "555-555-5555",
+    "position_applied": "Software Engineer",
+    "resume": "https://drive.google.com/resume_jane_doe.pdf",
+    "cover_letter": "I am writing to express my interest in the Frontend Engineer ( React.js or Next.js ) position at your company. With over three years of experience in the field, I am confident in my ability to make a positive contribution to your team. Throughout my career, I have had the opportunity to work on a variety of successful projects. One of my most notable accomplishments was the development of an NFT administration management system, which streamlines the process of creating and managing non-fungible tokens. I also have experience creating web applications from start to finish, including the design and implementation of user interfaces. In addition to my technical skills, I am a strong team player and have excellent communication skills. I believe that these qualities, along with my passion for frontend engineering, make me a strong fit for this position. I am excited about the opportunity to join your team and make a positive impact on your company. Thank you for considering my application.",
+    "status": "received",
+    "date_applied": "2022-12-01T12:00:00Z"
+  },
+  {
+    "name": "John Smith",
+    "email": "john.smith@email.com",
+    "phone": "555-555-5556",
+    "position_applied": "Data Scientist",
+    "resume": "https://drive.google.com/resume_john_smith.pdf",
+    "cover_letter": "I am writing to express my interest in the Frontend Engineer ( React.js or Next.js ) position at your company. With over three years of experience in the field, I am confident in my ability to make a positive contribution to your team. Throughout my career, I have had the opportunity to work on a variety of successful projects. One of my most notable accomplishments was the development of an NFT administration management system, which streamlines the process of creating and managing non-fungible tokens. I also have experience creating web applications from start to finish, including the design and implementation of user interfaces. In addition to my technical skills, I am a strong team player and have excellent communication skills. I believe that these qualities, along with my passion for frontend engineering, make me a strong fit for this position. I am excited about the opportunity to join your team and make a positive impact on your company. Thank you for considering my application.",
+    "status": "reviewing",
+    "date_applied": "2022-12-02T12:00:00Z"
+  },
+  {
+    "name": "Alex Brown",
+    "email": "alex.brown@email.com",
+    "phone": "555-555-5557",
+    "position_applied": "Product Manager",
+    "resume": "https://drive.google.com/resume_alex_brown.pdf",
+    "cover_letter": "I am writing to express my interest in the Frontend Engineer ( React.js or Next.js ) position at your company. With over three years of experience in the field, I am confident in my ability to make a positive contribution to your team. Throughout my career, I have had the opportunity to work on a variety of successful projects. One of my most notable accomplishments was the development of an NFT administration management system, which streamlines the process of creating and managing non-fungible tokens. I also have experience creating web applications from start to finish, including the design and implementation of user interfaces. In addition to my technical skills, I am a strong team player and have excellent communication skills. I believe that these qualities, along with my passion for frontend engineering, make me a strong fit for this position. I am excited about the opportunity to join your team and make a positive impact on your company. Thank you for considering my application.",
+    "status": "interviewing",
+    "date_applied": "2022-12-03T12:00:00Z"
+  },
+  {
+    "name": "Sunil",
+    "email": "sunil.smith@email.com",
+    "phone": "555-555-5556",
+    "position_applied": "Data Scientist",
+    "resume": "https://drive.google.com/resume_john_smith.pdf",
+    "cover_letter": "I am writing to express my interest in the Frontend Engineer ( React.js or Next.js ) position at your company. With over three years of experience in the field, I am confident in my ability to make a positive contribution to your team. Throughout my career, I have had the opportunity to work on a variety of successful projects. One of my most notable accomplishments was the development of an NFT administration management system, which streamlines the process of creating and managing non-fungible tokens. I also have experience creating web applications from start to finish, including the design and implementation of user interfaces. In addition to my technical skills, I am a strong team player and have excellent communication skills. I believe that these qualities, along with my passion for frontend engineering, make me a strong fit for this position. I am excited about the opportunity to join your team and make a positive impact on your company. Thank you for considering my application.",
+    "status": "reviewing",
+    "date_applied": "2022-12-02T12:00:00Z"
+  },
+  {
+    "name": "Naresh Gautam",
+    "email": "naresh@email.com",
+    "phone": "555-555-5557",
+    "position_applied": "Product Manager",
+    "resume": "https://drive.google.com/resume_alex_brown.pdf",
+    "cover_letter": "I am writing to express my interest in the Frontend Engineer ( React.js or Next.js ) position at your company. With over three years of experience in the field, I am confident in my ability to make a positive contribution to your team. Throughout my career, I have had the opportunity to work on a variety of successful projects. One of my most notable accomplishments was the development of an NFT administration management system, which streamlines the process of creating and managing non-fungible tokens. I also have experience creating web applications from start to finish, including the design and implementation of user interfaces. In addition to my technical skills, I am a strong team player and have excellent communication skills. I believe that these qualities, along with my passion for frontend engineering, make me a strong fit for this position. I am excited about the opportunity to join your team and make a positive impact on your company. Thank you for considering my application.",
+    "status": "offering",
+    "date_applied": "2022-12-03T12:00:00Z"
+  }
+]
