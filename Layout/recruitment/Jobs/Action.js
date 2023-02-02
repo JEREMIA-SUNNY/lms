@@ -4,36 +4,18 @@ import EditJobBtn from '../component/jobs/editJobBtn'
 import { useState } from 'react'
 import DeleteAlert from 'components/DeleteAlert'
 import { useRouter } from 'next/router'
-import CustomLink from 'components/custom/Link'
 
-const menus = [
-    {
-        title: 'Application',
-        path: '/app/recruitment/jobs/application',
-    },
-    {
-        title: 'Recommendations',
-        path: '/app/recruitment/jobs/recommendations',
-    },
-    {
-        title: 'Shortlist',
-        path: '/app/recruitment/jobs/shortlist',
-    },
-    {
-        title: 'Interviews (L1)',
-        path: '/app/recruitment/jobs/interviews-l1',
-    },
-    {
-        title: 'Interviews (L2)',
-        path: '/app/recruitment/jobs/interviews-l2',
-    },
-    {
-        title: 'Offers',
-        path: '/app/recruitment/jobs/offers',
-    }
+const tablist = [
+    { title: 'Job Details' },
+    { title: 'Applications' },
+    { title: 'Recommendations' },
+    { title: 'Shortlist' },
+    { title: 'Interviews (L1)' },
+    { title: 'Interviews (L2)' },
+    { title: 'Offers' }
 ]
 
-const JobAction = () => {
+const JobAction = ({ selectedTab, setSelectedTab }) => {
     const route = useRouter()
     const { query: { id } } = route
     const [isOpen, setIsOpen] = useState(false)
@@ -46,18 +28,19 @@ const JobAction = () => {
         setIsOpen(!isOpen)
         // router.push('/app/recruitment')
     }
-    
+
     return (
         <div className="mt-4 flex items-center justify-between">
             {/* <GoBackButton title={'Job Details'} /> */}
-            <ul className="flex justify-between">
-                <li>
-                    <CustomLink title='Job Details' href={`/app/recruitment/jobs/detail/${id}`} />
-                </li>
-                {menus?.map((item) => {
+            <ul className="flex flex-wrap gap-2">
+                {tablist?.map((item) => {
                     return (
                         <li key={item?.title}>
-                            <CustomLink title={item?.title} href={item?.path} />
+                            <IconButton
+                                className={`${selectedTab === item?.title ? 'bg-white text-green-600 rounded-md' : 'text-gray-900'}`}
+                                onClick={() => { setSelectedTab(item?.title) }}>
+                                {item?.title}
+                            </IconButton>
                         </li>
                     )
                 })}

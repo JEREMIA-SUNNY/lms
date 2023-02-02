@@ -22,7 +22,7 @@ const JobCard = ({ item }) => {
     const { id } = item
 
     return (
-        <Link className="h-full rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/recruitment/jobs/detail/${id}`}>
+        <Link className="h-full rounded-lg shadow-xl bg-white  w-full transition ease-in-out delay-0 hover:-translate-2 hover:shadow-lg hover:scale-110 duration-300 " href={`/app/recruitment/detail/${id}`}>
             <div className="relative flex justify-between">
                 <div className="text-xs flex justify-center items-center ml-4 my-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-red-500">

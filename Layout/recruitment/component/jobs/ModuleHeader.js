@@ -3,18 +3,32 @@ import FilterRecruitment from "components/filter/recruitment";
 import AddJobBtn from "./AddJobBtn";
 import Sortby from "./Sort";
 import jobs from 'assets/mokedata/jobs.json'
-import CustomLink from "components/custom/Link";
+import IconButton from "components/custom/Buttons/IconButton";
 
-const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
+const tablist = [
+    { title: 'Jobs' },
+    { title: 'Candidates' },
+    { title: 'Interviews' },
+    { title: 'Offers' }
+]
+
+const ModuleHeader = ({ title, searchFor, setSeachFor, selectedTab, setSelectedTab }) => {
 
     return (
         <div className="mt-4 w-full grid grid-cols-3 gap-5">
-            <div className="flex items-center justify-start">
-                <CustomLink href={'/app/recruitment/jobs'} title={'Jobs'} />
-                <CustomLink href={'/app/recruitment/candidates'} title={'Candidates'} />
-                <CustomLink href={'/app/recruitment/interviews'} title={'Interviews'} />
-                <CustomLink href={'/app/recruitment/offers'} title={'Offers'} />
-            </div>
+             <ul className="flex flex-wrap gap-2">
+                {tablist?.map((item) => {
+                    return (
+                        <li key={item?.title}>
+                            <IconButton
+                                className={`${selectedTab === item?.title ? 'bg-white text-green-600 rounded-md' : 'text-gray-900'}`}
+                                onClick={() => { setSelectedTab(item?.title) }}>
+                                {item?.title}
+                            </IconButton>
+                        </li>
+                    )
+                })}
+            </ul>
             <AutoComplete title={title} list={jobs} keyname='Job title' selected={searchFor} setSelected={setSeachFor} />
             <div className="flex items-center justify-end">
                 <AddJobBtn />
