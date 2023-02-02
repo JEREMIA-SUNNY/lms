@@ -45,7 +45,7 @@ const CandidateInfoCard = ({ item }) => {
                 </div>
                 <div className="flex flex-col items-start ">
                     <p className="text-xs">
-                        Phone
+                        Email
                     </p>
                     <a href={`mailto:${item?.email}`} className="text-xs text-gray-500">{item?.email}</a>
                 </div>
@@ -66,13 +66,9 @@ const CandidateInfoCard = ({ item }) => {
                         title={`${item?.name} | Cover letter`}
                         TitleIcon={<span className='text-green-600 text-xs p-0 m-0 flex items-center'>Read more</span>} />
                 </div>
-
             </div>
-            <div className="my-2">
+            {/* <div className="my-2">
                 <hr />
-            </div>
-            <div>
-
             </div>
             <div className="mt-4 grid gap grid-cols-3">
                 <button type="button" className={`bg-gray-100 h-8 justify-center  mx-1 focus:ring-0 focus:outline-none font-medium rounded-md text-sm p-2.5 text-center inline-flex items-center`}>
@@ -84,7 +80,7 @@ const CandidateInfoCard = ({ item }) => {
                 <a target="_blank" href={item?.resume} type="button" className={`border border-green-600 rounded-md text-sm p-2 h-8 text-green-600 flex justify-center  mx-1 focus:ring-0 focus:outline-none font-medium text-center items-center`}>
                     Resume
                 </a>
-            </div>
+            </div> */}
         </div>
     )
 }

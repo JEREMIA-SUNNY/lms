@@ -24,7 +24,7 @@ const RecruitmentLayout = () => {
                 searchFor={searchFor}
                 setSeachFor={setSeachFor}
                 title='Job' />
-        {tablist.find(tab => tab.title === selectedTab).component}
+            {tablist.find(tab => tab.title === selectedTab).component}
         </>
     )
 }
