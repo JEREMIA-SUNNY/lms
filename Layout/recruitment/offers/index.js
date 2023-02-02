@@ -2,7 +2,7 @@
 import CandidateInfoCard from "../component/candidateInfoCard"
 import appliedUser from "assets/mokedata/appliedUser.json"
 
-const InterviewsLayout = () => {
+const OffersLayout = () => {
     return (
         <div className="mt-4 grid gap-4 grid-cols-3">
             {appliedUser?.map((item,i) => {
@@ -15,4 +15,4 @@ const InterviewsLayout = () => {
     )
 }
 
-export default InterviewsLayout
+export default OffersLayout

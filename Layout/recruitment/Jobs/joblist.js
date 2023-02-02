@@ -1,21 +1,30 @@
-import JobCard from "./Jobcard";
 import ModuleHeader from '../component/jobs/ModuleHeader'
-import jobs from 'assets/mokedata/jobs.json'
 import { useState } from "react";
+import JobListUiLayout from "./joblistUI";
+import CandidatesLayout from '../candidates';
+import InterviewsLayout from '../interview';
+import OffersLayout from '../offers';
 
-const RecruitmentLayout = ( ) => {
+const tablist = [
+    { title: 'Jobs', component: <JobListUiLayout /> },
+    { title: 'Candidates', component: <CandidatesLayout /> },
+    { title: 'Interviews', component: <InterviewsLayout /> },
+    { title: 'Offers', component: <OffersLayout /> }
+]
+
+const RecruitmentLayout = () => {
     const [searchFor, setSeachFor] = useState({})
-    
+    const [selectedTab, setSelectedTab] = useState('Jobs')
+
     return (
         <>
-            <ModuleHeader searchFor={searchFor} setSeachFor={setSeachFor} title='Job' />
-            <section className="my-4 w-full grid grid-cols-3 gap-5">
-                {jobs?.map((item) => {
-                    return (
-                        <JobCard item={item} key={item?.id} />
-                    )
-                })}
-            </section>
+            <ModuleHeader
+                selectedTab={selectedTab}
+                setSelectedTab={setSelectedTab}
+                searchFor={searchFor}
+                setSeachFor={setSeachFor}
+                title='Job' />
+        {tablist.find(tab => tab.title === selectedTab).component}
         </>
     )
 }
