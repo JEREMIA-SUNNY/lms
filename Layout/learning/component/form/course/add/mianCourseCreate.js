@@ -13,7 +13,6 @@ const MainCourseCreate = () => {
     const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(true)
     const [IsCoursePaid, setIsCoursePaid] = useState(false)
-    // const [thumbnail, setThumbnail] = useState('')
 
     // over here it controls the module tabs
     useMemo(() => {
