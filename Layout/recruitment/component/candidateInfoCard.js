@@ -66,7 +66,6 @@ const CandidateInfoCard = ({ item }) => {
                         title={`${item?.name} | Cover letter`}
                         TitleIcon={<span className='text-green-600 text-xs p-0 m-0 flex items-center'>Read more</span>} />
                 </div>
-
             </div>
             {/* <div className="my-2">
                 <hr />
