@@ -16,14 +16,14 @@ const ModuleHeader = ({ title, searchFor, setSeachFor, selectedTab, setSelectedT
 
     return (
         <div className="mt-4 w-full grid grid-cols-3 gap-5">
-             <ul className="flex flex-wrap gap-2">
+            <ul className="flex flex-wrap gap-2">
                 {tablist?.map((item) => {
                     return (
                         <li key={item?.title}>
                             <IconButton
-                                className={`${selectedTab === item?.title ? 'bg-white text-green-600 rounded-md' : 'text-gray-900'}`}
-                                onClick={() => { setSelectedTab(item?.title) }}>
-                                {item?.title}
+                                onClick={() => { setSelectedTab(item?.title) }}
+                                className={`${selectedTab === item?.title ? 'text-[#419a00] font-bold text-[12px]' : ''} h-10 px-2 text-[15px]`}>
+                                {selectedTab === item?.title ? `[ ${item?.title} ]` : item?.title}
                             </IconButton>
                         </li>
                     )
