@@ -12,18 +12,6 @@
         "submenu": []
     },
     {
-        "id": 3,
-        "title": "Projects",
-        "link": "/app/Projects",
-        "submenu": []
-    },
-    {
-        "id": 5,
-        "title": "Demands",
-        "link": "/app/demands",
-        "submenu": []
-    },
-    {
         "id": 6,
         "title": "Learning",
         "link": "/app/learning/courses",
