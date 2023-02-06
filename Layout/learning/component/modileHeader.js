@@ -24,9 +24,9 @@ const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
     return (
         <div className="mt-4 w-full grid grid-cols-3 gap-5">
             <div className="flex items-center justify-start">
-                <CustomLink href={'/app/learning/courses'} title={'Courses'} />
-                <CustomLink href={'/app/learning/trainings'} title={'Trainings'} />
-                <CustomLink href={'/app/learning/plan'} title={'Learning Plan'} />
+                <CustomLink href={'/app/learning/courses'} title={'Courses (100)'} />
+                <CustomLink href={'/app/learning/trainings'} title={'Trainings (120)'} />
+                <CustomLink href={'/app/learning/plan'} title={'Learning Plan (99)'} />
             </div>
             <AutoComplete title={title} list={people} keyname='name' selected={searchFor} setSelected={setSeachFor} />
             <div className="flex items-center justify-end">

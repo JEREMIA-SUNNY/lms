@@ -6,10 +6,10 @@ import jobs from 'assets/mokedata/jobs.json'
 import IconButton from "components/custom/Buttons/IconButton";
 
 const tablist = [
-    { title: 'Jobs' },
-    { title: 'Candidates' },
-    { title: 'Interviews' },
-    { title: 'Offers' }
+    { title: 'Jobs (102)' },
+    { title: 'Candidates (99)' },
+    { title: 'Interviews (10)' },
+    { title: 'Offers (98)' }
 ]
 
 const ModuleHeader = ({ title, searchFor, setSeachFor, selectedTab, setSelectedTab }) => {
