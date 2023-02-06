@@ -9,11 +9,11 @@ const Navbar = () => {
 
     return (
         <div className="w-full h-14 z-50 fixed top-0 right-0 bg-[#e6e6e6]">
-            <div className="rounded-lg py-3 m-5 shadow-lg bg-white flex items-center justify-between">
+            <div className="rounded-lg m-5 shadow-lg bg-white flex items-center justify-between">
                 <Link href='/app/home' className="relative">
                     <Image
-                        width={90}
-                        height={90}
+                        width={80}
+                        height={80}
                         src={'/logo/login-logo.png'}
                         alt="Sample image"
                     />
