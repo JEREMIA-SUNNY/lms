@@ -1,4 +1,4 @@
-import Modal from 'components/Modal';
+// import Modal from 'components/Modal';
 import { formatDate } from 'utils/datetime'
 
 const CandidateInfoCard = ({ item }) => {
@@ -50,7 +50,7 @@ const CandidateInfoCard = ({ item }) => {
                     <a href={`mailto:${item?.email}`} className="text-xs text-gray-500">{item?.email}</a>
                 </div>
             </div>
-            <div className="flex flex-col items-start mt-2">
+            {/* <div className="flex flex-col items-start mt-2">
                 <p className="text-xs">
                     Cover letter
                 </p>
@@ -66,7 +66,7 @@ const CandidateInfoCard = ({ item }) => {
                         title={`${item?.name} | Cover letter`}
                         TitleIcon={<span className='text-green-600 text-xs p-0 m-0 flex items-center'>Read more</span>} />
                 </div>
-            </div>
+            </div> */}
             {/* <div className="my-2">
                 <hr />
             </div>
