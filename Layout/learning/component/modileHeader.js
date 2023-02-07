@@ -22,17 +22,19 @@ const people = [
 const ModuleHeader = ({ title, searchFor, setSeachFor }) => {
 
     return (
-        <div className="mt-4 w-full grid grid-cols-3 gap-5">
+        <div className="mt-4 w-full flex justify-between gap-5">
             <div className="flex items-center justify-start">
                 <CustomLink href={'/app/learning/courses'} title={'Courses (100)'} />
                 <CustomLink href={'/app/learning/trainings'} title={'Trainings (120)'} />
                 <CustomLink href={'/app/learning/plan'} title={'Learning Plan (99)'} />
             </div>
-            <AutoComplete title={title} list={people} keyname='name' selected={searchFor} setSelected={setSeachFor} />
+            <div className="w-80">
+                <AutoComplete title={title} list={people} keyname='name' selected={searchFor} setSelected={setSeachFor} />
+            </div>
             <div className="flex items-center justify-end">
                 {title === 'Course' ? <AddCourseBtn title={'Add Course'} /> : ''}
                 {title === 'LearningPlan' ? <AddPlanBtn title={'Create New plan'} /> : ''}
-                {title === 'Training' ? <AddTrainingBtn title={'Create Training'} />:''}
+                {title === 'Training' ? <AddTrainingBtn title={'Create Training'} /> : ''}
                 <FilterLearing />
                 <Sortby />
             </div>

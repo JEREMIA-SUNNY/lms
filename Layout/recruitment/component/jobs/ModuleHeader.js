@@ -15,7 +15,7 @@ const tablist = [
 const ModuleHeader = ({ title, searchFor, setSeachFor, selectedTab, setSelectedTab }) => {
 
     return (
-        <div className="mt-4 w-full grid grid-cols-3 gap-5">
+        <div className="mt-4 w-full flex justify-between">
             <ul className="flex flex-wrap gap-2">
                 {tablist?.map((item) => {
                     return (
@@ -29,7 +29,9 @@ const ModuleHeader = ({ title, searchFor, setSeachFor, selectedTab, setSelectedT
                     )
                 })}
             </ul>
-            <AutoComplete title={title} list={jobs} keyname='Job title' selected={searchFor} setSelected={setSeachFor} />
+            <div className="w-80">
+                <AutoComplete title={title} list={jobs} keyname='Job title' selected={searchFor} setSelected={setSeachFor} />
+            </div>
             <div className="flex items-center justify-end">
                 <AddJobBtn />
                 <FilterRecruitment />
