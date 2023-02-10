@@ -1,4 +1,4 @@
-// import Modal from 'components/Modal';
+import ListChipWithMore from 'components/ListChipWithMore';
 import { formatDate } from 'utils/datetime'
 
 const CandidateInfoCard = ({ item }) => {
@@ -44,52 +44,32 @@ const CandidateInfoCard = ({ item }) => {
                     </div>
                     <div className="flex flex-col items-start ">
                         <p className="text-xs">
-                            Phone
+                            Qualification
                         </p>
                         <p className="capitalize text-gray-500 text-xs">
-                            {item?.phone}
+                            B Tech
                         </p>
                     </div>
                     <div className="flex flex-col items-start ">
                         <p className="text-xs">
-                            Email
+                            Experience
                         </p>
-                        <a href={`mailto:${item?.email}`} className="text-xs text-gray-500">{item?.email}</a>
+                        <a href={`mailto:${item?.Experience}`} className="text-xs text-gray-500">{item?.Experience}</a>
                     </div>
                 </div>
-            </div>
-
-            {/* <div className="flex flex-col items-start mt-2">
-                <p className="text-xs">
-                    Cover letter
-                </p>
-                <div className='w-full flex justify-start'>
-                    <div className='w-[80%] flex justify-start items-center '>
-                        <p className="text-xs text-gray-500 truncate ">{item?.cover_letter}</p>
-                    </div>
-                    <Modal
-                        classTitleIcon="p-0 ml-0"
-                        ui={<div className="mt-2 w-full h-[80vh]">
-                            <p className='py-6'> {item?.cover_letter}</p>
-                        </div>}
-                        title={`${item?.name} | Cover letter`}
-                        TitleIcon={<span className='text-green-600 text-xs p-0 m-0 flex items-center'>Read more</span>} />
+                <div className="mt-2 flex justify-start items-center">
+                    <p className="text-xs text-gray-500">
+                        Skills
+                    </p>
+                    <ListChipWithMore list={item?.Skills.split(',')} row={1} />
                 </div>
-            </div> */}
-            {/* <div className="my-2">
-                <hr />
+                <div className="flex justify-start items-start">
+                    <p className="text-xs text-gray-500">
+                        Technology
+                    </p>
+                    <ListChipWithMore list={item?.Technology.split(',')} row={1} />
+                </div>
             </div>
-            <div className="mt-4 grid gap grid-cols-3">
-                <button type="button" className={`bg-gray-100 h-8 justify-center  mx-1 focus:ring-0 focus:outline-none font-medium rounded-md text-sm p-2.5 text-center inline-flex items-center`}>
-                    Decline
-                </button>
-                <button type="button" className={`bg-green-600 rounded-md text-sm p-2 h-8 text-white flex justify-center  mx-1 focus:ring-0 focus:outline-none font-medium text-center items-center`}>
-                    Accept
-                </button>
-                <a target="_blank" href={item?.resume} type="button" className={`border border-green-600 rounded-md text-sm p-2 h-8 text-green-600 flex justify-center  mx-1 focus:ring-0 focus:outline-none font-medium text-center items-center`}>
-                    Resume
-                </a>
-            </div> */}
         </div>
     )
 }

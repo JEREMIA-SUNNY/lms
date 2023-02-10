@@ -1,13 +1,13 @@
 
-import CandidateInfoCard from "../component/candidateInfoCard"
 import appliedUser from "assets/mokedata/appliedUser.json"
+import CandidateModalInfo from "../component/candidateModalinfo"
 
 const Shortlist = () => {
     return (
         <div className="mt-4 grid gap-4 grid-cols-3">
             {appliedUser?.map((item,i) => {
                 return (
-                    <CandidateInfoCard key={i}  item={item}/>
+                    <CandidateModalInfo key={i}  item={item}/>
                 )
             })
             }
