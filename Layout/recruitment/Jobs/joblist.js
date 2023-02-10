@@ -6,15 +6,15 @@ import InterviewsLayout from '../interview';
 import OffersLayout from '../offers';
 
 const tablist = [
-    { title: 'Jobs (102)', component: <JobListUiLayout /> },
-    { title: 'Candidates (99)', component: <CandidatesLayout /> },
-    { title: 'Interviews (10)', component: <InterviewsLayout /> },
-    { title: 'Offers (98)', component: <OffersLayout /> }
+    { title: 'Jobs', component: <JobListUiLayout /> },
+    { title: 'Candidates', component: <CandidatesLayout /> },
+    { title: 'Interviews', component: <InterviewsLayout /> },
+    { title: 'Offers', component: <OffersLayout /> }
 ]
 
 const RecruitmentLayout = () => {
     const [searchFor, setSeachFor] = useState({})
-    const [selectedTab, setSelectedTab] = useState('Jobs (102)')
+    const [selectedTab, setSelectedTab] = useState('Jobs')
 
     return (
         <>
