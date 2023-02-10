@@ -16,7 +16,7 @@ const ModuleHeader = ({ title, searchFor, setSeachFor, selectedTab, setSelectedT
 
     return (
         <div className="mt-4 w-full flex justify-between">
-            <ul className="flex flex-wrap gap-2">
+            <ul className="flex flex-wrap w-96">
                 {tablist?.map((item) => {
                     const { title, count } = item
                     return (
@@ -30,10 +30,10 @@ const ModuleHeader = ({ title, searchFor, setSeachFor, selectedTab, setSelectedT
                     )
                 })}
             </ul>
-            <div className="w-80">
+            <div className="w-72">
                 <AutoComplete title={title} list={jobs} keyname='Job title' selected={searchFor} setSelected={setSeachFor} />
             </div>
-            <div className="flex items-center justify-end">
+            <div className="flex items-center justify-end w-96">
                 <AddJobBtn />
                 <FilterRecruitment />
                 <Sortby />
