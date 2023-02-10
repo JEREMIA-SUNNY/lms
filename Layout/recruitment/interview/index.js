@@ -1,6 +1,6 @@
 
 import appliedUser from "assets/mokedata/appliedUser.json"
-import CandidateModalInfo from "../component/candidateModalinfo"
+import CandidateModalInfo from "../component/candidatesUI/candidateModalinfo"
 
 const InterviewsLayout = () => {
     return (
