@@ -69,7 +69,7 @@ const data = {
 const CandidateSkillQualification = () => {
     return (
         <div className="w-full h-full">
-            <h1 className="font-semibold"> Total Experience {data?.totalExperience}</h1>
+            <h1 className="font-semibold my-2"> Total Experience {data?.totalExperience}</h1>
             <div className="grid gap-2 grid-cols-2 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00]">
                 {
                     data?.academicQualification?.map((info, i) => {
