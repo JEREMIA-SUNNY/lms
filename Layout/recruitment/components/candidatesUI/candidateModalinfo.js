@@ -3,6 +3,7 @@
 
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import CandidateDetailTabs from './candidateDetailTabs'
 import CandidateInfoCard from './candidateInfoCard'
 
 const CandidateModalInfo = ({ title, ui, width = 'w-[1160px]', moduleHeight = 'h-[80vh]', item }) => {
@@ -47,7 +48,20 @@ const CandidateModalInfo = ({ title, ui, width = 'w-[1160px]', moduleHeight = 'h
                                 leaveTo="opacity-0 scale-95"
                             >
                                 <Dialog.Panel className={`${width} transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all`}>
-                                   
+                                    <div className='flex justify-between items-center'>
+                                        <h3 className="mb-4 text-lg font-medium leading-6 text-gray-900">
+                                            Candidate Details
+                                        </h3>
+                                        <button onClick={closeModal} type="button" className="text-gray-700 border border-gray-300 focus:ring-1 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                            <span className="sr-only">Icon close</span>
+                                        </button>
+                                    </div>
+                                    <div className={`${moduleHeight}`}>
+                                        <CandidateDetailTabs />
+                                    </div>
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>

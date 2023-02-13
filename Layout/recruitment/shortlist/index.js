@@ -1,6 +1,6 @@
 
 import appliedUser from "assets/mokedata/appliedUser.json"
-import CandidateModalInfo from "../component/candidatesUI/candidateModalinfo"
+import CandidateModalInfo from "../components/candidatesUI/candidateModalinfo"
 
 const Shortlist = () => {
     return (

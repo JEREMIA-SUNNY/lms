@@ -27,44 +27,44 @@ const CandidateInfoCard = ({ item }) => {
             <div className="w-full px-4 pb-4">
                 <div className="grid grid-cols-2 gap-2 mt-2">
                     <div className="flex flex-col items-start ">
-                        <p className="text-xs">
+                        <p className="text-sm">
                             Possiton
                         </p>
-                        <p className="capitalize text-gray-500 text-xs">
+                        <p className="capitalize text-gray-500 text-sm">
                             {item?.position_applied}
                         </p>
                     </div>
                     <div className="flex flex-col items-start ">
-                        <p className="text-xs">
+                        <p className="text-sm">
                             Applied On
                         </p>
-                        <p className="capitalize text-gray-500 text-xs">
+                        <p className="capitalize text-gray-500 text-sm">
                             {formatDate(new Date(item?.date_applied), 'dd/mm/yyyy')}
                         </p>
                     </div>
                     <div className="flex flex-col items-start ">
-                        <p className="text-xs">
+                        <p className="text-sm">
                             Qualification
                         </p>
-                        <p className="capitalize text-gray-500 text-xs">
+                        <p className="capitalize text-gray-500 text-sm">
                             B Tech
                         </p>
                     </div>
                     <div className="flex flex-col items-start ">
-                        <p className="text-xs">
+                        <p className="text-sm">
                             Experience
                         </p>
-                        <a href={`mailto:${item?.Experience}`} className="text-xs text-gray-500">{item?.Experience}</a>
+                        <a href={`mailto:${item?.Experience}`} className="text-sm text-gray-500">{item?.Experience}</a>
                     </div>
                 </div>
                 <div className="mt-2 flex justify-start items-center">
-                    <p className="text-xs text-gray-500">
+                    <p className="text-sm text-gray-500">
                         Skills
                     </p>
                     <ListChipWithMore list={item?.Skills.split(',')} row={1} />
                 </div>
                 <div className="flex justify-start items-start">
-                    <p className="text-xs text-gray-500">
+                    <p className="text-sm text-gray-500">
                         Technology
                     </p>
                     <ListChipWithMore list={item?.Technology.split(',')} row={1} />

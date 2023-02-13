@@ -1,6 +1,6 @@
 // import GoBackButton from 'components/goBackBtn'
 import IconButton from 'components/custom/Buttons/IconButton'
-import EditJobBtn from '../component/jobs/editJobBtn'
+import EditJobBtn from '../components/jobs/editJobBtn'
 import { useState } from 'react'
 import DeleteAlert from 'components/DeleteAlert'
 import { useRouter } from 'next/router'

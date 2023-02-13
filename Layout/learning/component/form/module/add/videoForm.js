@@ -34,7 +34,7 @@ const VideoForm = () => {
         </IconButton>
       </div>
       <div className="flex flex-col">
-        {formData.map((item) => (
+        {formData.map((item) => ( 
           <div className="mt-2 rounded bg-gray-50 p-2">
             <div className="flex justify-between">
               <h6 className="block mb-2 text-sm text-gray-900 font-semibold">Video {item?.id}</h6>
