@@ -52,6 +52,10 @@ const CandidateProfileUI = ({ candidate }) => {
                     <div className='w-1/2 '> <h1 className="font-semibold">Open to Travel:</h1></div>
                     <span className="text-gray-700">{candidate.openToTravel ? 'Yes' : 'No'}</span>
                 </div>
+                <div className='flex justify-start'>
+                    <div className='w-1/2 '> <h1 className="font-semibold">Resume:</h1></div>
+                    <a target='_blank' href='/sample.pdf' className='text-green-600'>Resume</a>
+                </div>
             </div>
             <div className='mt-2'>
                 <h1 className="font-semibold mr-2">Additional Info:</h1>
