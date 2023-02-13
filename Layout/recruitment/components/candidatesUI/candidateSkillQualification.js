@@ -70,7 +70,7 @@ const CandidateSkillQualification = () => {
     return (
         <div className="w-full h-full">
             <h1 className="font-semibold"> Total Experience {data?.totalExperience}</h1>
-            <div className="grid gap-4 grid-cols-2 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00]">
+            <div className="grid gap-2 grid-cols-2 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00]">
                 {
                     data?.academicQualification?.map((info, i) => {
                         return (
@@ -93,7 +93,7 @@ const CandidateSkillQualification = () => {
                 }
             </div>
             <h1 className="font-semibold my-2"> Previous Experience</h1>
-            <div className="grid gap-4 grid-cols-2 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00]">
+            <div className="grid gap-2 grid-cols-2 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00]">
                 {
                     data?.previousExperience?.map((info, i) => {
                         return (
@@ -115,45 +115,43 @@ const CandidateSkillQualification = () => {
                     })
                 }
             </div>
-            <div className="bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00] my-2">
-                <h1 className="font-semibold"> Skills</h1>
-                <div className="grid gap-4 grid-cols-2">
-                    {
-                        data?.skills?.map((info, i) => {
-                            return (
-                                <div key={i}>
-                                    <div className="flex">
-                                        <h1 className="font-semibold mr-2">Skill:</h1>
-                                        <p>{info.skill}</p>
-                                    </div>
-                                    <div className="flex">
-                                        <h1 className="font-semibold mr-2">Proficiency:</h1>
-                                        <p>{info.proficiency}</p>
-                                    </div>
+            <h1 className="font-semibold mt-2"> Skills</h1>
+            <div className="grid gap-2 grid-cols-3 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00] my-2">
+                {
+                    data?.skills?.map((info, i) => {
+                        return (
+                            <div key={i}>
+                                <div className="flex">
+                                    <h1 className="font-semibold mr-2">Skill:</h1>
+                                    <p>{info.skill}</p>
                                 </div>
-                            )
-                        })
-                    }
-                </div>
-                <h1 className="font-semibold my-2"> Technology</h1>
-                <div className="grid gap-4 grid-cols-2">
-                    {
-                        data?.technologies?.map((info, i) => {
-                            return (
-                                <div key={i}>
-                                    <div className="flex">
-                                        <h1 className="font-semibold mr-2">Technology:</h1>
-                                        <p>{info.technology}</p>
-                                    </div>
-                                    <div className="flex">
-                                        <h1 className="font-semibold mr-2">Proficiency:</h1>
-                                        <p>{info.proficiency}</p>
-                                    </div>
+                                <div className="flex">
+                                    <h1 className="font-semibold mr-2">Proficiency:</h1>
+                                    <p>{info.proficiency}</p>
                                 </div>
-                            )
-                        })
-                    }
-                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <h1 className="font-semibold mt-2"> Technology</h1>
+            <div className="grid gap-2 grid-cols-3 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00] my-2">
+                {
+                    data?.technologies?.map((info, i) => {
+                        return (
+                            <div key={i}>
+                                <div className="flex">
+                                    <h1 className="font-semibold mr-2">Technology:</h1>
+                                    <p>{info.technology}</p>
+                                </div>
+                                <div className="flex">
+                                    <h1 className="font-semibold mr-2">Proficiency:</h1>
+                                    <p>{info.proficiency}</p>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
             </div>
 
         </div>
