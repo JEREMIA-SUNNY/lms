@@ -42,12 +42,12 @@ const CandidateDetailTabs = () => {
             </div>
             <Tab.Panels>
                 <Tab.Panel className='focus:outline-none'>
-                    <div className="w-full h-[74vh] overflow-scroll">
+                    <div className="w-full h-[70vh] overflow-scroll">
                         <CandidateProfileUI candidate={mockData} />
                     </div>
                 </Tab.Panel>
                 <Tab.Panel className='focus:outline-none'>
-                    <div className="w-full h-[74vh] overflow-scroll py-4">
+                    <div className="w-full h-[70vh] overflow-scroll py-4">
                         <CandidateSkillQualification />
                     </div>
                 </Tab.Panel>

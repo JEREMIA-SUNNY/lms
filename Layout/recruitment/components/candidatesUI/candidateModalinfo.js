@@ -2,6 +2,7 @@
 
 
 import { Dialog, Transition } from '@headlessui/react'
+import PrimaryButton from 'components/custom/Buttons/PrimaryButton'
 import { Fragment, useState } from 'react'
 import CandidateDetailTabs from './candidateDetailTabs'
 import CandidateInfoCard from './candidateInfoCard'
@@ -61,6 +62,14 @@ const CandidateModalInfo = ({ title, ui, width = 'w-[1160px]', moduleHeight = 'h
                                     </div>
                                     <div className={`${moduleHeight}`}>
                                         <CandidateDetailTabs />
+                                        <div className='flex justify-end fixed bottom-0 right-5'>
+                                            <PrimaryButton className='rounded-lg mr-2'>
+                                                Reject
+                                            </PrimaryButton>
+                                            <PrimaryButton className='rounded-lg'>
+                                                Shortlist
+                                            </PrimaryButton>
+                                        </div>
                                     </div>
                                 </Dialog.Panel>
                             </Transition.Child>
