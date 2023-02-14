@@ -1,5 +1,4 @@
 
-
 const data = {
     "totalExperience": "5 years",
     "academicQualification": [
@@ -68,92 +67,147 @@ const data = {
 
 const CandidateSkillQualification = () => {
     return (
-        <div className="w-full h-full">
-            <h1 className="font-semibold my-2"> Total Experience {data?.totalExperience}</h1>
-            <div className="grid gap-2 grid-cols-2 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00]">
-                {
-                    data?.academicQualification?.map((info, i) => {
-                        return (
-                            <div key={i}>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Degree:</h1>
-                                    <p>{info.degree}</p>
-                                </div>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Institution:</h1>
-                                    <p>{info.institution}</p>
-                                </div>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Year:</h1>
-                                    <p>{info.year}</p>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <h1 className="font-semibold my-2"> Previous Experience</h1>
-            <div className="grid gap-2 grid-cols-2 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00]">
-                {
-                    data?.previousExperience?.map((info, i) => {
-                        return (
-                            <div key={i}>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Position:</h1>
-                                    <p>{info.position}</p>
-                                </div>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Company:</h1>
-                                    <p>{info.company}</p>
-                                </div>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Duration:</h1>
-                                    <p>{info.duration}</p>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <h1 className="font-semibold mt-2"> Skills</h1>
-            <div className="grid gap-2 grid-cols-3 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00] my-2">
-                {
-                    data?.skills?.map((info, i) => {
-                        return (
-                            <div key={i}>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Skill:</h1>
-                                    <p>{info.skill}</p>
-                                </div>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Proficiency:</h1>
-                                    <p>{info.proficiency}</p>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <h1 className="font-semibold mt-2"> Technology</h1>
-            <div className="grid gap-2 grid-cols-3 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00] my-2">
-                {
-                    data?.technologies?.map((info, i) => {
-                        return (
-                            <div key={i}>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Technology:</h1>
-                                    <p>{info.technology}</p>
-                                </div>
-                                <div className="flex">
-                                    <h1 className="font-semibold mr-2">Proficiency:</h1>
-                                    <p>{info.proficiency}</p>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+        <div className="w-full h-full grid gap-2 grid-cols-2">
+            <div>
+                <h1 className="font-semibold my-2"> Total Experience ({data?.totalExperience})</h1>
+                <table className="w-full text-sm text-left text-gray-500">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr scope="col" className="bg-gray-100 border-b">
+                            <th className="border py-2 px-2">
+                                Degree
+                            </th>
+                            <th className="border py-2 px-2">
+                                Institution
+                            </th>
+                            <th className="border py-2 px-2">
+                                Year
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data?.academicQualification?.map((item, i) => {
+                                return (
+                                    <tr key={i} className="bg-white border-b">
+                                        <td className="border py-2 px-2">
+                                            {item?.degree}
+                                        </td>
+                                        <td className="border py-2 px-2">
+                                            {item?.institution}
+                                        </td>
+                                        <td className="border py-2 px-2">
+                                            {item?.year}
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                        }
 
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h1 className="font-semibold my-2">Previous Experience</h1>
+                <table className="w-full text-sm text-left text-gray-500">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr scope="col" className="bg-gray-100 border-b">
+                            <th className="border py-2 px-2">
+                                Position
+                            </th>
+                            <th className="border py-2 px-2">
+                                Company
+                            </th>
+                            <th className="border py-2 px-2">
+                                Duration
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data?.previousExperience?.map((item, i) => {
+                                return (
+                                    <tr key={i} className="bg-white border-b">
+                                        <td className="border py-2 px-2">
+                                            {item?.position}
+                                        </td>
+                                        <td className="border py-2 px-2">
+                                            {item?.company}
+                                        </td>
+                                        <td className="border py-2 px-2">
+                                            {item?.duration}
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h1 className="font-semibold my-2">Skills</h1>
+                <table className="w-full text-sm text-left text-gray-500">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr scope="col" className="bg-gray-100 border-b">
+                            <th className="border py-2 px-2">
+                                skill
+                            </th>
+                            <th className="border py-2 px-2">
+                                proficiency
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data?.skills?.map((item, i) => {
+                                return (
+                                    <tr key={i} className="bg-white border-b">
+                                        <td className="border py-2 px-2">
+                                            {item?.skill}
+                                        </td>
+                                        <td className="border py-2 px-2">
+                                            {item?.proficiency}
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h1 className="font-semibold my-2">Technologies</h1>
+                <table className="w-full text-sm text-left text-gray-500">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr scope="col" className="bg-gray-100 border-b">
+                            <th className="border py-2 px-2">
+                                technology
+                            </th>
+                            <th className="border py-2 px-2">
+                                proficiency
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data?.technologies?.map((item, i) => {
+                                return (
+                                    <tr key={i} className="bg-white border-b">
+                                        <td className="border py-2 px-2">
+                                            {item?.technology}
+                                        </td>
+                                        <td className="border py-2 px-2">
+                                            {item?.proficiency}
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                        }
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }
