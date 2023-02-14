@@ -69,7 +69,7 @@ const CandidateSkillQualification = () => {
     return (
         <div className="w-full h-full grid gap-2 grid-cols-2">
             <div>
-                <h1 className="font-semibold my-2"> Total Experience ({data?.totalExperience})</h1>
+                <h1 className="font-semibold my-2"> Education background </h1>
                 <table className="w-full text-sm text-left text-gray-500">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr scope="col" className="bg-gray-100 border-b">
@@ -107,7 +107,7 @@ const CandidateSkillQualification = () => {
                 </table>
             </div>
             <div>
-                <h1 className="font-semibold my-2">Previous Experience</h1>
+                <h1 className="font-semibold my-2">Total Experience ({data?.totalExperience}) </h1>
                 <table className="w-full text-sm text-left text-gray-500">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr scope="col" className="bg-gray-100 border-b">
@@ -145,7 +145,7 @@ const CandidateSkillQualification = () => {
                 </table>
             </div>
             <div>
-                <h1 className="font-semibold my-2">Skills</h1>
+                <h1 className="font-semibold my-2">Skills Proficiency</h1>
                 <table className="w-full text-sm text-left text-gray-500">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr scope="col" className="bg-gray-100 border-b">
@@ -177,7 +177,7 @@ const CandidateSkillQualification = () => {
                 </table>
             </div>
             <div>
-                <h1 className="font-semibold my-2">Technologies</h1>
+                <h1 className="font-semibold my-2">Technology Proficiency</h1>
                 <table className="w-full text-sm text-left text-gray-500">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr scope="col" className="bg-gray-100 border-b">
