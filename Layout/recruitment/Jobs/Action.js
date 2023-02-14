@@ -40,7 +40,7 @@ const JobAction = ({ selectedTab, setSelectedTab }) => {
                             <IconButton
                                 onClick={() => { setSelectedTab(item?.title) }}
                                 className={`${selectedTab === item?.title ? 'text-[#419a00] font-bold text-[12px]' : ''} h-10 px-2 text-[15px]`}>
-                                {selectedTab === item?.title ? `[ ${item?.title} ]` : item?.title}
+                                {selectedTab === item?.title ? `[ ${item?.title} (200) ]` : item?.title}
                             </IconButton>
                         </li>
                     )

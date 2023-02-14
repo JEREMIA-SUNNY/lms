@@ -27,12 +27,22 @@ const mockData = {
 const CandidateDetailTabs = () => {
     return (
         <Tab.Group>
-            <div className="w-96">
-                <Tablist list={['Profile', 'Skills and Qualifications']} />
+            <div className="flex justify-between items-center">
+                <div className="w-96">
+                    <Tablist list={['Profile & Preferences', 'Skills & Qualifications']} />
+                </div>
+                <div className='text-green-600 flex justify-start items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-1">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
+                    </svg>
+                    <a target='_blank' href='/sample.pdf'>
+                        Resume
+                    </a>
+                </div>
             </div>
             <Tab.Panels>
                 <Tab.Panel className='focus:outline-none'>
-                    <div className="w-full h-[74vh] overflow-scroll my-2 py-4 bg-[#F5F5F5] p-4 shadow rounded-lg border border-[#419a00]">
+                    <div className="w-full h-[74vh] overflow-scroll">
                         <CandidateProfileUI candidate={mockData} />
                     </div>
                 </Tab.Panel>

@@ -6,10 +6,7 @@ const CandidateInfoCard = ({ item }) => {
         <div className="shadow-lg rounded-lg bg-white">
             <div className="relative flex justify-between">
                 <div className="flex justify-start items-center p-3">
-                    <div className="inline-flex overflow-hidden relative justify-center items-center border-2 border-gray-100 w-10 h-10 bg-gray-100 rounded-full">
-                        <span className="font-medium text-gray-600">{item.name[0]}</span>
-                    </div>
-                    <div className="ml-2 h-10">
+                    <div className="ml-2 h-10 text-left">
                         <p className=" text-sm text-gray-900 font-medium title-font truncate">{item?.name}</p>
                         <div className="text-xs flex justify-start items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 text-red-500">
