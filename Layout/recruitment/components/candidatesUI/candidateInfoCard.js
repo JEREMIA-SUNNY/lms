@@ -5,7 +5,7 @@ const CandidateInfoCard = ({ item }) => {
     return (
         <div className="shadow-lg rounded-lg bg-white">
             <div className="relative flex justify-between">
-                <div className="flex justify-start items-center p-3">
+                <div className="flex justify-start items-center px-3 pt-3">
                     <div className="ml-2 h-10 text-left">
                         <p className=" text-sm text-gray-900 font-medium title-font truncate">{item?.name}</p>
                         <div className="text-xs flex justify-start items-center">
@@ -21,7 +21,7 @@ const CandidateInfoCard = ({ item }) => {
                 </button>
             </div>
 
-            <div className="w-full px-4 pb-4">
+            <div className="w-full px-4">
                 <div className="grid grid-cols-2 gap-2 mt-2">
                     <div className="flex flex-col items-start ">
                         <p className="text-sm">
