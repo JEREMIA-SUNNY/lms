@@ -7,7 +7,7 @@ const CandidateProfileUI = ({ candidate }) => {
             <div className='bg-[#F5F5F5] p-4 shadow rounded-lg mt-2'>
                 <div className="grid gap-1 grid-cols-2">
                     <div className='flex justify-start'>
-                        <div className='w-1/2 '> <p className="font-semibold">Full Name:</p></div>
+                        <div className='w-1/2'> <p className="font-semibold">Full Name:</p></div>
                         <p className="text-gray-700">{candidate.fullName}</p>
                     </div>
                     <div className='flex justify-start'>
@@ -37,11 +37,11 @@ const CandidateProfileUI = ({ candidate }) => {
 
                 </div>
                 <div className='mt-2'>
-                    <p className="font-semibold mr-2">Additional Info:</p>
-                    <p className="text-gray-700">{candidate.additionalInfo}</p>
+                    <p className="font-semibold mr-2">Profile Summary:</p>
+                    <ShowMoreLess />
                 </div>
                 <div className='mt-2'>
-                    <p className="font-semibold mr-2">Profile Summary:</p>
+                    <p className="font-semibold mr-2">Additional Info:</p>
                     <ShowMoreLess />
                 </div>
             </div>
