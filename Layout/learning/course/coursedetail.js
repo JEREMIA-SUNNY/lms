@@ -24,7 +24,7 @@ const CourseDetailLayout = () => {
                         <div>
                             <p>This is a paid course. Please complete the payment to unlock the course.</p>
                             <div className="mt-2 flex justify-center">
-                                <IconButton className='rounded bg-green-600 text-white'>
+                                <IconButton className='rounded bg-primary text-white'>
                                     Pay  $ {course?.price}  Now
                                 </IconButton>
                             </div>

@@ -7,7 +7,7 @@ const ChipSelectOption = (props) => {
             {
                 list?.map((item) => {
                     return (
-                        <IconButton className={`rounded ${selected === item ? 'text-white bg-green-600' : 'border border-green-600'}`} onClick={() => { setSelected(item) }} >
+                        <IconButton className={`rounded ${selected === item ? 'text-white bg-primary' : 'border border-primary'}`} onClick={() => { setSelected(item) }} >
                             {item}
                         </IconButton>
                     )

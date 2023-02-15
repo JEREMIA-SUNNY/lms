@@ -27,7 +27,7 @@ const VideoForm = () => {
     <div className='w-full'>
       <div className='flex justify-between mt-4'>
         <h4>Videos </h4>
-        <IconButton className='text-white bg-green-600' onClick={handleAdd}>
+        <IconButton className='text-white bg-primary' onClick={handleAdd}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
           </svg>

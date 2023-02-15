@@ -49,7 +49,7 @@ const MultiSelect = ({ title, list, keyname, selected, setSelected, selectedList
                                     <Combobox.Option
                                         key={item?.id || item[keyname]}
                                         className={({ active }) =>
-                                            `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'text-green-600' : 'text-gray-900'
+                                            `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'text-primary' : 'text-gray-900'
                                             }`
                                         }
                                         value={item}
@@ -57,8 +57,8 @@ const MultiSelect = ({ title, list, keyname, selected, setSelected, selectedList
                                         {({ selected, active }) => (
                                             <div className='flex items-center'>
                                                 {selectedList.includes(item[keyname]) ?
-                                                    <button onClick={() => removeSelected(item)} className='text-center inline-flex items-center border border-green-500 bg-green-100 py-1 px-2 rounded-lg text-green-600'>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mr-2 w-5 h-5 text-green-600">
+                                                    <button onClick={() => removeSelected(item)} className='text-center inline-flex items-center border border-primary bg-primary py-1 px-2 rounded-lg text-primary'>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mr-2 w-5 h-5 text-primary">
                                                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                                                         </svg>
                                                         {item[keyname]}
