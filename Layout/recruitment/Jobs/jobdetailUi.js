@@ -17,14 +17,14 @@ const JobDetailUILayout = () => {
 
     return (
         <>
-            <section className="my-4 w-full bg-white p-4 shadow rounded-lg border border-[#419a00]">
+            <section className="text-sm my-4 w-full bg-white p-4 shadow rounded-lg border border-[#419a00]">
                 <div className="rounded-lg shadow bg-[#F5F5F5] p-4">
                     <div className={`grid grid-cols-${3} gap-${2}`}>
                         {Object.keys(aJob).map((el, i) => {
                             return (
                                 <div key={i} className='flex'>
                                     <div className="w-1/2 capitalize">
-                                        <span className="font-semibold">{el}</span>
+                                        <span className="font-medium">{el}</span>
                                     </div>
                                     <div>
                                         <span className="text-gray-700">: {aJob[el]}</span>
@@ -35,7 +35,7 @@ const JobDetailUILayout = () => {
                     </div>
                     <div className="mt-2">
                         <div className="capitalize">
-                            <p className="font-semibold">Skills: </p>
+                            <p className="font-medium">Skills: </p>
                         </div>
                         <div>
                             <p className="text-gray-700"> SQL, Excel, R, Python.</p>
@@ -43,7 +43,7 @@ const JobDetailUILayout = () => {
                     </div>
                     <div className="mt-2">
                         <div className="capitalize">
-                            <p className="font-semibold">Technology: </p>
+                            <p className="font-medium">Technology: </p>
                         </div>
                         <div>
                             <p className="text-gray-700"> Tableau, Power BI, Alteryx.</p>
@@ -51,7 +51,7 @@ const JobDetailUILayout = () => {
                     </div>
                     <div className="mt-2">
                         <div className="capitalize">
-                            <p className="font-semibold">Job Summary: </p>
+                            <p className="font-medium">Job Summary: </p>
                         </div>
                         <div>
                             <p className="text-gray-700"> We are seeking a data analyst to join our team to support our data-driven decision making.</p>
@@ -59,7 +59,7 @@ const JobDetailUILayout = () => {
                     </div>
                     <div className="mt-2">
                         <div className="capitalize">
-                            <p className="font-semibold">Job Responsibilities</p>
+                            <p className="font-medium">Job Responsibilities</p>
                         </div>
                         <div>
                             <div className="text-gray-700">

@@ -31,13 +31,17 @@ const CandidateDetailTabs = () => {
                 <div className="w-96">
                     <Tablist list={['Profile & Preferences', 'Skills & Qualifications']} />
                 </div>
-                <div className='text-green-600 flex justify-start items-center'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-1">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
-                    </svg>
-                    <a target='_blank' href='/sample.pdf'>
-                        Resume
-                    </a>
+                <div className="flex justify-start items-center">
+                    <p className="mr-2">Vendor: <span className="text-sm text-gray-900">{mockData?.vendorName}</span></p>
+                    <p className="mr-2">Source: <span className="text-sm text-gray-900">{mockData?.source}</span></p>
+                    <div className='text-green-600 flex justify-start items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-1">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
+                        </svg>
+                        <a target='_blank' href='/sample.pdf'>
+                            Resume
+                        </a>
+                    </div>
                 </div>
             </div>
             <Tab.Panels>
