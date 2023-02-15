@@ -15,16 +15,16 @@ const AddAssessment = (props) => {
     return (
         <div className="w-full">
             <div className="mt-4 flex justify-between items-center">
-                <h6 className="block mb-2  text-gray-900 font-semibold">Create Assesment</h6>
+                <h6 className="block mb-2 text-textSecondary font-semibold">Create Assesment</h6>
                 <div className="flex justify-start items-center">
-                    <button onClick={rmSection} type="button" className="mr-2 text-gray-700 border border-gray-300 focus:ring-1 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
+                    <button onClick={rmSection} type="button" className="mr-2 text-textSecondary border border-gray-300 focus:ring-1 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
                         </svg>
 
                         <span className="sr-only">Icon remove</span>
                     </button>
-                    <button onClick={addSection} type="button" className="mr-2 text-gray-700 border border-gray-300 focus:ring-1 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
+                    <button onClick={addSection} type="button" className="mr-2 text-textSecondary border border-gray-300 focus:ring-1 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                         </svg>

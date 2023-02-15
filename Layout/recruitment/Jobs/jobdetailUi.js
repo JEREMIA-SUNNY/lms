@@ -27,7 +27,7 @@ const JobDetailUILayout = () => {
                                         <span className="font-medium">{el}</span>
                                     </div>
                                     <div>
-                                        <span className="text-gray-700">: {aJob[el]}</span>
+                                        <span className="text-textSecondary">: {aJob[el]}</span>
                                     </div>
                                 </div>
                             )
@@ -38,7 +38,7 @@ const JobDetailUILayout = () => {
                             <p className="font-medium">Skills: </p>
                         </div>
                         <div>
-                            <p className="text-gray-700"> SQL, Excel, R, Python.</p>
+                            <p className="text-textSecondary"> SQL, Excel, R, Python.</p>
                         </div>
                     </div>
                     <div className="mt-2">
@@ -46,7 +46,7 @@ const JobDetailUILayout = () => {
                             <p className="font-medium">Technology: </p>
                         </div>
                         <div>
-                            <p className="text-gray-700"> Tableau, Power BI, Alteryx.</p>
+                            <p className="text-textSecondary"> Tableau, Power BI, Alteryx.</p>
                         </div>
                     </div>
                     <div className="mt-2">
@@ -54,7 +54,7 @@ const JobDetailUILayout = () => {
                             <p className="font-medium">Job Summary: </p>
                         </div>
                         <div>
-                            <p className="text-gray-700"> We are seeking a data analyst to join our team to support our data-driven decision making.</p>
+                            <p className="text-textSecondary"> We are seeking a data analyst to join our team to support our data-driven decision making.</p>
                         </div>
                     </div>
                     <div className="mt-2">
@@ -62,7 +62,7 @@ const JobDetailUILayout = () => {
                             <p className="font-medium">Job Responsibilities</p>
                         </div>
                         <div>
-                            <div className="text-gray-700">
+                            <div className="text-textSecondary">
                                 <p>• Collect, clean, and process large datasets.</p>
                                 <p>• Create and maintain data visualizations and dashboards.</p>
                                 <p>• Perform statistical analysis and provide insights.</p>

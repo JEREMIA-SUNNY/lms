@@ -23,7 +23,7 @@ const ModuleHeader = ({ title, searchFor, setSeachFor, selectedTab, setSelectedT
                         <li key={item?.title}>
                             <IconButton
                                 onClick={() => { setSelectedTab(title) }}
-                                className={`${selectedTab === title ? 'text-[#419a00] font-bold text-[12px]' : ''} h-10 px-2 text-[15px]`}>
+                                className={`${selectedTab === title ? 'text-[#419a00] font-medium text-sm' : ''} h-10 px-2 text-sm`}>
                                 {selectedTab === title ? `[ ${title} ${count !== undefined ? `(${count})` : ''} ]` : title}
                             </IconButton>
                         </li>

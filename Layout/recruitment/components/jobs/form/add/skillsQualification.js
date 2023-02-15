@@ -8,11 +8,11 @@ const SkillsAndQualifications = (props) => {
         <div>
             <div className="mt-4 grid grid-cols-2 gap-4">
                 <div>
-                    <label htmlFor="qualification" className="block mb-2 text-sm font-semibold text-gray-900">Qualification</label>
+                    <label htmlFor="qualification" className="block mb-2 text-sm font-semibold text-textSecondary">Qualification</label>
                     <select
                         name="qualification"
                         id="qualification"
-                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                         <option>Select ...</option>
                         <option value="Bachelor of Computer Science (BCS)">Bachelor of Computer Science (BCS)/</option>
                         <option value="Bachelor of Technology (B.Tech)">Bachelor of Technology (B.Tech)/</option>
@@ -28,11 +28,11 @@ const SkillsAndQualifications = (props) => {
                 </div>
 
                 <div>
-                    <label htmlFor="stream" className="block mb-2 text-sm font-semibold text-gray-900">Stream</label>
+                    <label htmlFor="stream" className="block mb-2 text-sm font-semibold text-textSecondary">Stream</label>
                     <select
                         name="stream"
                         id="stream"
-                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                         <option>Select ...</option>
                         <option value="Science Stream">Science Stream/</option>
                         <option value="Commerce Stream">Commerce Stream/</option>

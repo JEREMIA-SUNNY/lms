@@ -6,7 +6,7 @@ const ShowMoreLess = () => {
   return (
     <div>
       <p className={!showmore ? "truncate" : ''}>
-        <span className="text-sm text-gray-700">
+        <span className="text-sm text-textSecondary">
           In this article, we'll demonstrate how to create a "Read More Read Less"
           button using HTML and CSS. When you want to hide more details while still
           giving readers a sense of what the article or post is about, the read

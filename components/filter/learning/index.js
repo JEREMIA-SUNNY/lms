@@ -79,22 +79,22 @@ const Filter = () => {
                             </>
                             <div className="w-full grid grid-cols-4 gap-4">
                                 <div>
-                                    <label htmlFor="domain" className="block mb-2 text-sm font-semibold text-gray-900">Domain</label>
+                                    <label htmlFor="domain" className="block mb-2 text-sm font-semibold text-textSecondary">Domain</label>
                                     <SelectInput name='domain' id='domain' dropdowns={domains} />
                                 </div>
                                 <Skillform
                                     filters={filters}
                                     handleInput={handleInput} />
                                 <div>
-                                    <label htmlFor="Level" className="block mb-2 text-sm font-semibold text-gray-900">Level</label>
+                                    <label htmlFor="Level" className="block mb-2 text-sm font-semibold text-textSecondary">Level</label>
                                     <SelectInput name='Level' id='Level' dropdowns={level} />
                                 </div>
                                 <div>
-                                    <label htmlFor="language" className="block mb-2 text-sm font-semibold text-gray-900">Language</label>
+                                    <label htmlFor="language" className="block mb-2 text-sm font-semibold text-textSecondary">Language</label>
                                     <SelectInput name='language' id='language' dropdowns={language} />
                                 </div>
                                 <div>
-                                    <label htmlFor="Paidorfree" className="block mb-2 text-sm font-semibold text-gray-900">Paid or free</label>
+                                    <label htmlFor="Paidorfree" className="block mb-2 text-sm font-semibold text-textSecondary">Paid or free</label>
                                     <SelectInput name='Paidorfree' id='Paidorfree' dropdowns={freePaid} />
                                 </div>
                             </div>

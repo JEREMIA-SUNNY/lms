@@ -71,7 +71,7 @@ const CandidateSkillQualification = () => {
             <div>
                 <h1 className=" font-medium my-2"> Education background </h1>
                 <table className="w-full text-sm text-left text-gray-500">
-                    <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                    <thead className="text-xs text-textSecondary uppercase bg-gray-50">
                         <tr scope="col" className="bg-gray-100 border-b">
                             <th className="border py-2 px-2">
                                 Degree
@@ -109,7 +109,7 @@ const CandidateSkillQualification = () => {
             <div>
                 <h1 className=" font-medium my-2">Total Experience :{data?.totalExperience} </h1>
                 <table className="w-full text-sm text-left text-gray-500">
-                    <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                    <thead className="text-xs text-textSecondary uppercase bg-gray-50">
                         <tr scope="col" className="bg-gray-100 border-b">
                             <th className="border py-2 px-2">
                                 Position
@@ -147,7 +147,7 @@ const CandidateSkillQualification = () => {
             <div>
                 <h1 className=" font-medium my-2">Skills Proficiency</h1>
                 <table className="w-full text-sm text-left text-gray-500">
-                    <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                    <thead className="text-xs text-textSecondary uppercase bg-gray-50">
                         <tr scope="col" className="bg-gray-100 border-b">
                             <th className="border py-2 px-2">
                                 skill
@@ -179,7 +179,7 @@ const CandidateSkillQualification = () => {
             <div>
                 <h1 className=" font-medium my-2">Technology Proficiency</h1>
                 <table className="w-full text-sm text-left text-gray-500">
-                    <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                    <thead className="text-xs text-textSecondary uppercase bg-gray-50">
                         <tr scope="col" className="bg-gray-100 border-b">
                             <th className="border py-2 px-2">
                                 technology

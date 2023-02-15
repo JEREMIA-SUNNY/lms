@@ -8,23 +8,23 @@ const CandidateProfileUI = ({ candidate }) => {
                 <div className="grid gap-1 grid-cols-3 text-sm">
                     <div className='flex justify-start'>
                         <div><p className="font-medium mr-2">Full Name:</p></div>
-                        <p className="text-gray-700">{candidate.fullName}</p>
+                        <p className="text-textSecondary">{candidate.fullName}</p>
                     </div>
                     <div className='flex justify-start'>
                         <div> <p className="font-medium mr-2">Gender:</p></div>
-                        <p className="text-gray-700">{candidate.gender}</p>
+                        <p className="text-textSecondary">{candidate.gender}</p>
                     </div>
                     <div className='flex justify-start'>
                         <div> <p className="font-medium mr-2">Current Location:</p></div>
-                        <p className="text-gray-700">{candidate.currentLocation}</p>
+                        <p className="text-textSecondary">{candidate.currentLocation}</p>
                     </div>
                     <div className='flex justify-start'>
                         <div> <p className="font-medium mr-2">Email:</p></div>
-                        <p className="text-gray-700">{candidate.email}</p>
+                        <p className="text-textSecondary">{candidate.email}</p>
                     </div>
                     <div className='flex justify-start'>
                         <div> <p className="font-medium mr-2">Phone:</p></div>
-                        <p className="text-gray-700">{candidate.phone}</p>
+                        <p className="text-textSecondary">{candidate.phone}</p>
                     </div>
                 </div>
                 <div className="font-medium text-sm mr-2">
@@ -41,23 +41,23 @@ const CandidateProfileUI = ({ candidate }) => {
             <div className='bg-[#F5F5F5] grid grid-cols-4 gap-1 p-4 text-sm shadow rounded-lg mt-4'>
                 <div className='flex justify-start'>
                     <div> <p className="font-medium mr-2">Work Location:</p></div>
-                    <p className="text-gray-700">{candidate.workLocation}</p>
+                    <p className="text-textSecondary">{candidate.workLocation}</p>
                 </div>
                 <div className='flex justify-start'>
                     <div> <p className="font-medium mr-2">Work Mode:</p></div>
-                    <p className="text-gray-700">{candidate.workMode}</p>
+                    <p className="text-textSecondary">{candidate.workMode}</p>
                 </div>
                 <div className='flex justify-start'>
                     <div> <p className="font-medium mr-2">Work Type:</p></div>
-                    <p className="text-gray-700">{candidate.workType}</p>
+                    <p className="text-textSecondary">{candidate.workType}</p>
                 </div>
                 <div className='flex justify-start'>
                     <div> <p className="font-medium mr-2">Open to Shifts:</p></div>
-                    <p className="text-gray-700">{candidate.openToShifts ? 'Yes' : 'No'}</p>
+                    <p className="text-textSecondary">{candidate.openToShifts ? 'Yes' : 'No'}</p>
                 </div>
                 <div className='flex justify-start'>
                     <div> <p className="font-medium mr-2">Open to Travel:</p></div>
-                    <p className="text-gray-700">{candidate.openToTravel ? 'Yes' : 'No'}</p>
+                    <p className="text-textSecondary">{candidate.openToTravel ? 'Yes' : 'No'}</p>
                 </div>
             </div>
         </>

@@ -28,11 +28,11 @@ const CustomMultipleSelect = ({ limit = 8, selecteditem, setSelected, title, nam
         <div className="w-full">
             <div className="gap-2 flex justify-between">
                 <div className="w-[86%]">
-                    <label htmlFor={title} className="block mb-2 text-sm font-semibold text-gray-900">{title}</label>
+                    <label htmlFor={title} className="block mb-2 text-sm font-semibold text-textSecondary">{title}</label>
                     <input onChange={handleInput}
                         ref={inputref}
                         type="text"
-                        title="item" id="item" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                        title="item" id="item" className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder={placeholder} required="" />
                 </div>
                 <div className="flex items-end">

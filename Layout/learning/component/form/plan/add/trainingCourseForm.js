@@ -38,18 +38,18 @@ const TrainingCourseForm = () => {
         <>
             <div className='flex w-full gap-4'>
                 <div className='w-1/2 mt-1 ml-2'>
-                    <label htmlFor="users" className="block mb-2 text-sm font-semibold text-gray-900"> Select component</label>
+                    <label htmlFor="users" className="block mb-2 text-sm font-semibold text-textSecondary"> Select component</label>
                     <select value={type} onChange={(e) => {
                         setType(e.target.value)
                         setSeachFor({})
 
-                    }} name={'type'} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                    }} name={'type'} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                         <option value='Course'>Course</option>
                         <option value='Training'>Training</option>
                     </select>
                 </div>
                 <div className='w-1/2'>
-                    <label htmlFor="users" className="block mb-2 text-sm font-semibold text-gray-900">Select {type}</label>
+                    <label htmlFor="users" className="block mb-2 text-sm font-semibold text-textSecondary">Select {type}</label>
                     <MultiSelect
                         selected={searchFor} setSelected={setSeachFor}
                         title={type}

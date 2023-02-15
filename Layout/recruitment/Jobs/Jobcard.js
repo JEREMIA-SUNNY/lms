@@ -42,34 +42,34 @@ const JobCard = ({ item }) => {
                         </svg>
                     </div>
                     <div>
-                        <p className=" text-xl text-gray-900 font-medium title-font truncate">{item['Job title']}</p>
+                        <p className=" text-xl text-textSecondary font-medium title-font truncate">{item['Job title']}</p>
                         <p className="capitalize text-gray-500 text-xs">workMode: {item?.workMode}</p>
                     </div>
                 </div>
                 <div className="grid grid-cols-2 text-sm text-gray-500 capitalize pb-2">
                     <div className="mr-2">
-                        <p className="truncate"><span className="text-gray-700">Department:</span> {item?.Department}</p>
+                        <p className="truncate"><span className="text-textSecondary">Department:</span> {item?.Department}</p>
                     </div>
                     <div className="mr-2">
-                        <p className="truncate"><span className="text-gray-700">Business Unit:</span> {item['Business Unit']}</p>
+                        <p className="truncate"><span className="text-textSecondary">Business Unit:</span> {item['Business Unit']}</p>
                     </div>
                     <div className="mr-2">
-                        <p> <span className="text-gray-700">Level:</span> {item?.Level}</p>
+                        <p> <span className="text-textSecondary">Level:</span> {item?.Level}</p>
                     </div>
                     <div className="mr-2">
-                        <p><span className="text-gray-700">Hire Type:</span> {item['Hire Type']}</p>
+                        <p><span className="text-textSecondary">Hire Type:</span> {item['Hire Type']}</p>
                     </div>
                     <div className="mr-2 text-sm">
-                        <p><span className="text-gray-700">Min Experience: </span> {item?.Experience}</p>
+                        <p><span className="text-textSecondary">Min Experience: </span> {item?.Experience}</p>
                     </div>
                     <div className="mr-2 text-sm">
-                        <p><span className="text-gray-700">Job Code: </span> {item['Job code']}</p>
+                        <p><span className="text-textSecondary">Job Code: </span> {item['Job code']}</p>
                     </div>
                     <div className="mr-2 text-sm">
-                        <p><span className="text-gray-700">Requestor: </span> Naresh Gautam</p>
+                        <p><span className="text-textSecondary">Requestor: </span> Naresh Gautam</p>
                     </div>
                     <div className="mr-2 text-sm">
-                        <p><span className="text-gray-700">Created on:</span> 30/11/2001</p>
+                        <p><span className="text-textSecondary">Created on:</span> 30/11/2001</p>
                     </div>
                 </div>
                 <div className="flex justify-start items-center">
@@ -86,7 +86,7 @@ const JobCard = ({ item }) => {
                 </div>
 
                 <div className="flex justify-between items-center border-dashed border-t-2 border-gray-200">
-                    <div className="text-sm flex justify-between items-center text-gray-700">
+                    <div className="text-sm flex justify-between items-center text-textSecondary">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-green-600 mr-1">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
