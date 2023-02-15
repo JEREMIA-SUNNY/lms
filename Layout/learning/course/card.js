@@ -31,7 +31,7 @@ const Course = ({ item }) => {
                         <span></span>
                     </button>
                 </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mt-4 truncate">{name}</h2>
+                <h2 className="text-lg text-textSecondary font-medium title-font mt-4 truncate">{name}</h2>
                 <h3 className="text-md text-gray-400 title-font truncate">{auther}</h3>
 
                 <div className="flex justify-start items-center">

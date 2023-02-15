@@ -9,17 +9,17 @@ const DetailHeaderSection = ({ des, item, cols, gap = "4" }) => {
                         return (
                             <div key={i} className='flex'>
                                 <div className="w-1/2 capitalize">
-                                    <span className="font-semibold">{el}</span>
+                                    <span className="font-medium">{el}</span>
                                 </div>
                                 <div>
-                                    <span className="text-gray-700">: {item[el]}</span>
+                                    <span className="text-textSecondary">: {item[el]}</span>
                                 </div>
                             </div>
                         )
                     })}
                 </div>
                 <div>
-                    <span className="font-semibold">Description </span>  <span className="text-gray-700">: {des}</span>
+                    <span className="font-semibold">Description </span>  <span className="text-textSecondary">: {des}</span>
                 </div>
             </div>
         </>

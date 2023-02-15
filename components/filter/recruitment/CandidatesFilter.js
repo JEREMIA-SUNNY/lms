@@ -54,11 +54,11 @@ const CandidatesFilter = () => {
                             </>
                             <div className="w-full grid grid-cols-4 gap-4">
                                 <div>
-                                    <label htmlFor="location" className="block mb-2 text-sm font-semibold text-gray-900">Location</label>
+                                    <label htmlFor="location" className="block mb-2 text-sm font-semibold text-textSecondary">Location</label>
                                     <select
                                         name="location"
                                         id="location"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                                         <option>Select ...</option>
                                         {
                                             country?.location?.map((location) => {
@@ -70,16 +70,16 @@ const CandidatesFilter = () => {
                                     </select>
                                 </div>
                                 <div>
-                                    <label htmlFor="Department" className="block mb-2 text-sm font-semibold text-gray-900">Department</label>
-                                    <input onChange={handleInput} type="text" title="Department" id="Department" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    <label htmlFor="Department" className="block mb-2 text-sm font-semibold text-textSecondary">Department</label>
+                                    <input onChange={handleInput} type="text" title="Department" id="Department" className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                         placeholder="Department" required="" />
                                 </div>
                                 <div>
-                                    <label htmlFor="ServiceLine" className="block mb-2 text-sm font-semibold text-gray-900">Service Line</label>
+                                    <label htmlFor="ServiceLine" className="block mb-2 text-sm font-semibold text-textSecondary">Service Line</label>
                                     <select
                                         name="ServiceLine"
                                         id="ServiceLine"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                                         <option>Select ...</option>
                                         <option value='Service Line'>Service Line</option>
                                         <option value='Service Line'>Service Line</option>
@@ -88,11 +88,11 @@ const CandidatesFilter = () => {
                                     </select>
                                 </div>
                                 <div>
-                                    <label htmlFor="BusinessUnit" className="block mb-2 text-sm font-semibold text-gray-900">Business Unit</label>
+                                    <label htmlFor="BusinessUnit" className="block mb-2 text-sm font-semibold text-textSecondary">Business Unit</label>
                                     <select
                                         name="BusinessUnit"
                                         id="BusinessUnit"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                                         <option>Select ...</option>
                                         <option value='Manufacturing'>Manufacturing</option>
                                         <option value='Banking'>Banking</option>
@@ -101,11 +101,11 @@ const CandidatesFilter = () => {
                                     </select>
                                 </div>
                                 <div>
-                                    <label htmlFor="qualification" className="block mb-2 text-sm font-semibold text-gray-900">Qualification</label>
+                                    <label htmlFor="qualification" className="block mb-2 text-sm font-semibold text-textSecondary">Qualification</label>
                                     <select
                                         name="qualification"
                                         id="qualification"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                                         <option>Select ...</option>
                                         <option value="Bachelor of Computer Science (BCS)">Bachelor of Computer Science (BCS)/</option>
                                         <option value="Bachelor of Technology (B.Tech)">Bachelor of Technology (B.Tech)/</option>
@@ -120,26 +120,26 @@ const CandidatesFilter = () => {
                                     </select>
                                 </div>
                                 <div>
-                                    <label htmlFor="HiringSource" className="block mb-2 text-sm font-semibold text-gray-900">Hiring Source</label>
-                                    <input onChange={handleInput} type="text" title="HiringSource" id="HiringSource" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    <label htmlFor="HiringSource" className="block mb-2 text-sm font-semibold text-textSecondary">Hiring Source</label>
+                                    <input onChange={handleInput} type="text" title="HiringSource" id="HiringSource" className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                         placeholder="Hiring Source" required="" />
                                 </div>
                                 <div>
-                                    <label htmlFor="minExperience" className="block mb-2 text-sm font-semibold text-gray-900">Min Experience</label>
-                                    <input onChange={handleInput} type="number" title="minExperience" id="minExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    <label htmlFor="minExperience" className="block mb-2 text-sm font-semibold text-textSecondary">Min Experience</label>
+                                    <input onChange={handleInput} type="number" title="minExperience" id="minExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                         placeholder="Experience in year" required="" />
                                 </div>
                                 <div>
-                                    <label htmlFor="maxExperience" className="block mb-2 text-sm font-semibold text-gray-900">Max Experience</label>
-                                    <input onChange={handleInput} type="number" title="maxExperience" id="maxExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    <label htmlFor="maxExperience" className="block mb-2 text-sm font-semibold text-textSecondary">Max Experience</label>
+                                    <input onChange={handleInput} type="number" title="maxExperience" id="maxExperience" className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                         placeholder="Experience in year" required="" />
                                 </div>
                                 <div>
-                                    <label htmlFor="WorkMode" className="block mb-2 text-sm font-semibold text-gray-900">Work Mode</label>
+                                    <label htmlFor="WorkMode" className="block mb-2 text-sm font-semibold text-textSecondary">Work Mode</label>
                                     <select
                                         name="WorkMode"
                                         id="WorkMode"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                                         <option>Select ...</option>
                                         <option value='Remote'>Remote</option>
                                         <option value='Onsite'>Onsite</option>
@@ -147,11 +147,11 @@ const CandidatesFilter = () => {
                                     </select>
                                 </div>
                                 <div>
-                                    <label htmlFor="HireType" className="block mb-2 text-sm font-semibold text-gray-900">Hire Type</label>
+                                    <label htmlFor="HireType" className="block mb-2 text-sm font-semibold text-textSecondary">Hire Type</label>
                                     <select
                                         name="HireType"
                                         id="HireType"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                                         <option>Select ...</option>
                                         <option value='Full time'>Full time</option>
                                         <option value='Part time'>Part time</option>
@@ -159,11 +159,11 @@ const CandidatesFilter = () => {
                                     </select>
                                 </div>
                                 <div>
-                                    <label htmlFor="Status" className="block mb-2 text-sm font-semibold text-gray-900">Status</label>
+                                    <label htmlFor="Status" className="block mb-2 text-sm font-semibold text-textSecondary">Status</label>
                                     <select
                                         name="Status"
                                         id="Status"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                                         <option>Select ...</option>
                                         <option value='Open'>Open</option>
                                         <option value='Close'>Close</option>

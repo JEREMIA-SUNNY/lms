@@ -1,6 +1,6 @@
 // import GoBackButton from 'components/goBackBtn'
 import IconButton from 'components/custom/Buttons/IconButton'
-import EditJobBtn from '../component/jobs/editJobBtn'
+import EditJobBtn from '../components/jobs/editJobBtn'
 import { useState } from 'react'
 import DeleteAlert from 'components/DeleteAlert'
 import { useRouter } from 'next/router'
@@ -40,7 +40,7 @@ const JobAction = ({ selectedTab, setSelectedTab }) => {
                             <IconButton
                                 onClick={() => { setSelectedTab(item?.title) }}
                                 className={`${selectedTab === item?.title ? 'text-[#419a00] font-bold text-[12px]' : ''} h-10 px-2 text-[15px]`}>
-                                {selectedTab === item?.title ? `[ ${item?.title} ]` : item?.title}
+                                {selectedTab === item?.title ? `[ ${item?.title} (200) ]` : item?.title}
                             </IconButton>
                         </li>
                     )

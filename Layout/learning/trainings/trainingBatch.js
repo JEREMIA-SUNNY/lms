@@ -14,7 +14,7 @@ const TrainingBatch = ({ id }) => {
                 >
                     <div className="w-full ml-8">
                         <div className="w-full flex justify-between items-center">
-                            <h4>Batch {id}</h4>
+                            <h4 className=" font-medium ">Batch {id}</h4>
                             <div className="flex justify-start items-center">
                                 <IconWithChip className='w-24 h-8 bg-white shadow text-[#419a00] rounded-full text-sm py-1 px-2 mr-1'>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mr-2">

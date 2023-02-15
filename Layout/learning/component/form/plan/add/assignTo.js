@@ -41,8 +41,8 @@ const AssignTo = ({ handleInput, planPayload }) => {
     return (
         <>
             <div className='w-1/2'>
-                <label htmlFor="assignToCat" className="block mb-2 text-sm font-semibold text-gray-900">Assign To Category</label>
-                <select onChange={handleInput} name='assignToCat' className="outline-gray-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
+                <label htmlFor="assignToCat" className="block mb-2 text-sm font-semibold text-textSecondary">Assign To Category</label>
+                <select onChange={handleInput} name='assignToCat' className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
                     {assignTo?.assignTo?.map((item, i) => {
                         return (
                             <option key={i} value={item?.type}>{item?.type}</option>
@@ -53,7 +53,7 @@ const AssignTo = ({ handleInput, planPayload }) => {
             <div className='w-1/2'>
                 <div className='w-full flex justify-start items-center gap-4'>
                     <div className='w-3/4'>
-                        <label htmlFor="users" className="block mb-2 text-sm font-semibold text-gray-900">Select {planPayload.assignToCat}</label>
+                        <label htmlFor="users" className="block mb-2 text-sm font-semibold text-textSecondary">Select {planPayload.assignToCat}</label>
                         <MultiSelect
                             removeSelected={removeSelected}
                             selected={searchFor} setSelected={setSeachFor}

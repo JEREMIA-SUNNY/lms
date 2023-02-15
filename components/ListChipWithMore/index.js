@@ -9,13 +9,13 @@ const ListChipWithMore = ({ list, row, title }) => {
             {
                 list.slice(0, row).map((item, i) => {
                     return (
-                        <div key={i} className='bg-green-50 rounded-md text-xs px-2 py-1 text-green-600'>
+                        <div key={i} className='bg-primary/10 rounded-md text-xs px-2 py-1 text-primary'>
                             {item}
                         </div>
                     )
                 })
             }
-            <div className='bg-green-50 rounded-md text-xs px-2 py-1 text-green-600'>
+            <div className='bg-primary/10 rounded-md text-xs px-2 py-1 text-primary'>
                 + {list?.length - row}
             </div>
 

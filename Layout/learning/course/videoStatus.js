@@ -18,8 +18,8 @@ const VideoStatus = ({ item }) => {
                     />}
                     ui={<ReactPlayer width={'100%'} height={'100%'} url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />}
                 />
-                <h2 className="text-lg text-gray-900 font-medium title-font">Lorem ipsum</h2>
-                <p className="leading-relaxed text-sm text-gray-500 leading-4">
+                <h2 className="text-lg text-textSecondary font-medium title-font">Lorem ipsum</h2>
+                <p className="leading-relaxed text-sm text-gray-500">
                     In publishing and graphic design, Lorem ipsum
                     In publishing and graphic design, Lorem ipsum
                 </p>

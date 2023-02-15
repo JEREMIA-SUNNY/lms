@@ -10,7 +10,7 @@ const TrainingDetailLayout = () => {
     return (
         <>
         <TrainingAction />
-            <section className="my-4 w-full bg-white p-4 shadow rounded-lg border border-[#419a00]">
+            <section className="my-4 w-full bg-white p-4 text-sm shadow rounded-lg border border-[#419a00]">
                 <DetailHeader id={query?.id} />
                 {
                     [1, 2, 3, 4, 5, 6].map((item) => {

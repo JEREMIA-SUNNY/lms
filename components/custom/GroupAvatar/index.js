@@ -21,7 +21,7 @@ const GroupAvatar = ({ rows, total, className }) => {
                         )
                     })
                 }
-                <div className={`${className}  z-[4] flex items-center justify-center text-[10px] font-medium text-green-800 bg-green-200 border-2 border-white rounded-full`}>+{total - rows}</div>
+                <div className={`${className}  z-[4] flex items-center justify-center text-[10px] font-medium text-green-800 bg-primary border-2 border-white rounded-full`}>+{total - rows}</div>
             </div>
         </>
     )

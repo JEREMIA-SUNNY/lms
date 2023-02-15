@@ -1,4 +1,4 @@
-import ModuleHeader from '../component/jobs/ModuleHeader'
+import ModuleHeader from '../components/jobs/ModuleHeader'
 import { useState } from "react";
 import JobListUiLayout from "./joblistUI";
 import CandidatesLayout from '../candidates';

@@ -5,7 +5,7 @@ const AppLayout = ({ children }) => {
         <>
             <Navbar />
             <div style={{ height: '6.8rem' }} />
-            <main className='container px-5 z-0 py-24 mx-auto relative'>
+            <main className='container px-5 z-0 mx-auto relative'>
                 {children}
             </main>
         </>
