@@ -66,7 +66,7 @@ const Filter = () => {
                                     <p className='mx-2 text-gray-600 font-bold'>Filters: </p>
                                     {activeFilter?.map((item, i) => {
                                         return (
-                                            <button key={i} type="button" className="mr-2 flex justify-start items-center py-2 px-3 text-xs font-bold text-[#419a00] border border-[#419a00] rounded-lg focus:ring-4 focus:outline-none focus:ring-green-300">
+                                            <button key={i} type="button" className="mr-2 flex justify-start items-center py-2 px-3 text-xs font-bold text-[#419a00] rounded-lg focus:ring-4 focus:outline-none focus:ring-green-300">
                                                 <span>{item}</span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
