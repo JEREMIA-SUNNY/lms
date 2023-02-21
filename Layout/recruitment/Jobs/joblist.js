@@ -2,14 +2,14 @@ import ModuleHeader from '../components/jobs/ModuleHeader'
 import { useState } from "react";
 import JobListUiLayout from "./joblistUI";
 import CandidatesLayout from '../candidates';
-import InterviewsLayout from '../interview';
-import OffersLayout from '../offers';
+// import InterviewsLayout from '../interview';
+// import OffersLayout from '../offers';
 
 const tablist = [
     { title: 'Jobs', component: <JobListUiLayout /> },
     { title: 'Candidates', component: <CandidatesLayout /> },
-    { title: 'Interviews', component: <InterviewsLayout /> },
-    { title: 'Offers', component: <OffersLayout /> }
+    { title: 'Interviews', component: '' },
+    { title: 'Offers', component: '' }
 ]
 
 const RecruitmentLayout = () => {

@@ -2,6 +2,7 @@ import ListChipWithMore from 'components/ListChipWithMore';
 import { formatDate } from 'utils/datetime'
 
 const CandidateInfoCard = ({ item }) => {
+    console.log(item)
     return (
         <div className="shadow-lg rounded-lg bg-white">
             <div className="relative flex justify-between">
@@ -16,29 +17,49 @@ const CandidateInfoCard = ({ item }) => {
                         </div>
                     </div>
                 </div>
-                <button className={`h-6 ${item['status'] ? 'bg-[#409a00] text-white' : 'bg-gray-200 text-gray-500'} text-xs mx-2 px-2 py-1 rounded-b-lg`}>
+                {!item?.landingPage && <div className={`h-6 ${item['status'] ? 'bg-[#409a00] text-white' : 'bg-gray-200 text-gray-500'} text-xs mx-2 px-2 py-1 rounded-b-lg`}>
                     Applied
-                </button>
+                </div>}
             </div>
 
             <div className="w-full px-4">
                 <div className="grid grid-cols-2 gap-2 mt-2">
-                    <div className="flex flex-col items-start ">
+
+                    {item?.source ? <div className="flex flex-col items-start ">
                         <p className="text-sm">
-                            Possiton
+                            Source
                         </p>
                         <p className="capitalize text-gray-500 text-sm">
-                            {item?.position_applied}
+                            {item?.source}
                         </p>
-                    </div>
-                    <div className="flex flex-col items-start ">
+                    </div> :
+                        <div className="flex flex-col items-start ">
+                            <p className="text-sm">
+                                Position
+                            </p>
+                            <p className="capitalize text-gray-500 text-sm">
+                                {item?.position_applied}
+                            </p>
+                        </div>
+                    }
+                    {item?.vendor ? <div className="flex flex-col items-start ">
                         <p className="text-sm">
-                            Applied On
+                            Vendor
                         </p>
                         <p className="capitalize text-gray-500 text-sm">
-                            {formatDate(new Date(item?.date_applied), 'dd/mm/yyyy')}
+                            {item?.vendor}
                         </p>
-                    </div>
+                    </div> :
+                        <div className="flex flex-col items-start ">
+                            <p className="text-sm">
+                                Applied On
+                            </p>
+                            <p className="capitalize text-gray-500 text-sm">
+                                {formatDate(new Date(item?.date_applied), 'dd/mm/yyyy')}
+                            </p>
+                        </div>
+
+                    }
                     <div className="flex flex-col items-start ">
                         <p className="text-sm">
                             Qualification
@@ -49,9 +70,19 @@ const CandidateInfoCard = ({ item }) => {
                     </div>
                     <div className="flex flex-col items-start ">
                         <p className="text-sm">
-                            Experience
+                            Total Experience
                         </p>
-                        <a href={`mailto:${item?.Experience}`} className="text-sm text-gray-500">{item?.Experience}</a>
+                        <p className="capitalize text-gray-500 text-sm">
+                           2 Years
+                        </p>
+                    </div>
+                    <div className="flex flex-col items-start ">
+                        <p className="text-sm">
+                            Gender
+                        </p>
+                        <p className="capitalize text-gray-500 text-sm">
+                            Male
+                        </p>
                     </div>
                 </div>
                 <div className="mt-2 flex justify-start items-center">
