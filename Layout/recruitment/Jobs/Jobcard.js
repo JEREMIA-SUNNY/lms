@@ -78,7 +78,7 @@ const JobCard = ({ item }) => {
                     </p>
                     <ListChipWithMore list={item?.Skills.split(',')} row={1} />
                 </div>
-                <div className="flex justify-start items-start">
+                <div className="flex justify-start items-center my-1">
                     <p className="text-sm text-gray-500">
                         Technology
                     </p>
