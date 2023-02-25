@@ -11,8 +11,8 @@ const MainTrainingCreate = () => {
     const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: true })
     const [listofSection, setListOfSection] = useState([])
     const [IsAssessment, setIsAssessment] = useState(false)
-    const [IsTrainingPaid, setIsTrainingPaid] = useState(false)
-    const [IsBatchePaid, setIsBatchePaid] = useState(false)
+    const [IsTrainingPaid, setIsTrainingPaid] = useState('No')
+    const [IsBatchePaid, setIsBatchePaid] = useState('No')
     const [batchInfo, setbatchInfo] = useState({})
     const [batchSession, setBatchSession] = useState([])
 

@@ -1,4 +1,4 @@
-import SwitchInput from "components/custom/switchInput";
+import FilterButtonTab from "components/FilterButtonTab";
 import SelectInput from "components/SelectInput"
 
 const language = [
@@ -27,9 +27,14 @@ const BatchesForm = (props) => {
                 </div>
                 <div>
                     <label htmlFor="batchType" className="block mb-2 text-sm font-semibold text-textSecondary">Batch type ( Paid/ Free )</label>
-                    <SwitchInput value={IsBatchePaid} name='IsBatchePaid' onChange={setIsBatchePaid} />
+                    <FilterButtonTab
+                        tabs={['Yes', 'No',]}
+                        setSelectedtab={setIsBatchePaid}
+                        selectedTab={IsBatchePaid}
+                    />
+                    
                 </div>
-                {IsBatchePaid ? <div>
+                {IsBatchePaid === 'Yes' ? <div>
                     <label htmlFor="Price" className="block mb-2 text-sm font-semibold text-textSecondary">Price</label>
                     <input
                         onChange={(e) => {

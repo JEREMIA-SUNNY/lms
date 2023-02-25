@@ -2,7 +2,7 @@
 
 const ListChipWithMore = ({ list, row, title }) => {
     return (
-        <div className="mb-2 flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2">
             <p className="text-sm">
                 {title}
             </p>

@@ -56,23 +56,6 @@ const OptionAndAnswer = ({ sIndex, handleAllQuestionInfo }) => {
                         placeholder="Weightage (%)" required="" />
                 </div>
             </div>
-            {/* <div>
-                <select onChange={(e) => { handleAllQuestionInfo(e, sIndex) }}
-                    name='answer'
-                    className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                    <option>Select ans....</option>
-                    {options?.map((item, i) => {
-                        return (
-                            <option key={i}>{item}</option>
-                        )
-                    })}
-                </select>
-            </div> */}
-            {/* <div>
-                <button onClick={save} type="button" className="mr-2 py-2 px-3 text-white bg-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-300">
-                    <span>Save</span>
-                </button>
-            </div> */}
         </div>
     )
 }

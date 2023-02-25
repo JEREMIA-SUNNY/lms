@@ -11,7 +11,7 @@ const PlanDetailLayout = () => {
     return (
         <>
             <PlanAction />
-            <section className="my-4 w-full bg-white p-4 shadow rounded-lg border border-[#419a00]">
+            <section className="my-4 w-full bg-white p-4 shadow rounded-lg">
                 <div className="bg-gray-100 shadow p-2 rounded-lg font-semibld">
                     <div className="grid grid-cols-4">
                         <div className='flex'>
