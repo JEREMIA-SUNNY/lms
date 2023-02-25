@@ -1,7 +1,7 @@
 
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
-// import CustoMultipleSelect from "components/CustomMultilpleSelect";
+import CustoMultipleSelect from "components/CustomMultilpleSelect";
 import PrimaryButton from 'components/custom/Buttons/PrimaryButton';
 import FilterButtonTab from 'components/FilterButtonTab';
 
@@ -151,6 +151,16 @@ const CandidatesFilter = () => {
                                     />
                                 </div>
                                
+                            </div>
+                            <div className="grid gap-4 grid-cols-2 mt-3">
+                                <CustoMultipleSelect selecteditem={skills}
+                                    setSelected={setSkills}
+                                    title='Skills'
+                                    name='skill' />
+                                <CustoMultipleSelect selecteditem={Technology}
+                                    setSelected={setTechnology}
+                                    title='Technologies'
+                                    name='Technologies' />
                             </div>
                             <div className='flex justify-end'>
                                 <div className='mt-6 flex justify-start items-center'>

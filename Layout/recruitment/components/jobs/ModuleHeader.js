@@ -1,5 +1,6 @@
 import AutoComplete from "components/AutoComplete";
 import FilterRecruitment from "components/filter/recruitment";
+import CandidatesFilter from 'components/filter/recruitment/CandidatesFilter'
 import AddJobBtn from "./AddJobBtn";
 import Sortby from "./Sort";
 import jobs from 'assets/mokedata/jobs.json'
@@ -35,7 +36,8 @@ const ModuleHeader = ({ title, searchFor, setSeachFor, selectedTab, setSelectedT
             </div>
             <div className="flex items-center justify-end w-96">
                 <AddJobBtn />
-                <FilterRecruitment />
+                {selectedTab === 'Jobs' ? <FilterRecruitment /> : <CandidatesFilter /> }
+
                 <Sortby />
             </div>
         </div>
