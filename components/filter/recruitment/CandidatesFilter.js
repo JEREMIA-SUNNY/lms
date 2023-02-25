@@ -3,13 +3,19 @@ import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 // import CustoMultipleSelect from "components/CustomMultilpleSelect";
 import PrimaryButton from 'components/custom/Buttons/PrimaryButton';
+import FilterButtonTab from 'components/FilterButtonTab';
 
 const CandidatesFilter = () => {
     const [activeFilter, setActiveFilter] = useState([])
     const [filters, setFilters] = useState({})
     const [country, setCountry] = useState({})
-    // const [skills, setSkills] = useState([])
-    // const [Technology, setTechnology] = useState([])
+    const [skills, setSkills] = useState([])
+    const [Technology, setTechnology] = useState([])
+    const [hireType, setHireType] = useState('')
+    const [Worklocation, setWorkLocation] = useState('')
+    const [workmode, setWorkMode] = useState('')
+    const [worktype, setWorktype] = useState('')
+    const [status, setStatus] = useState('')
 
     const handleInput = (e) => {
         const { name, value } = e.target
@@ -69,37 +75,7 @@ const CandidatesFilter = () => {
                                         }
                                     </select>
                                 </div>
-                                <div>
-                                    <label htmlFor="Department" className="block mb-2 text-sm font-semibold text-textSecondary">Department</label>
-                                    <input onChange={handleInput} type="text" title="Department" id="Department" className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                        placeholder="Department" required="" />
-                                </div>
-                                <div>
-                                    <label htmlFor="ServiceLine" className="block mb-2 text-sm font-semibold text-textSecondary">Service Line</label>
-                                    <select
-                                        name="ServiceLine"
-                                        id="ServiceLine"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                                        <option>Select ...</option>
-                                        <option value='Service Line'>Service Line</option>
-                                        <option value='Service Line'>Service Line</option>
-                                        <option value='Service Line'>Service Line</option>
-                                        <option value='Service Line'>Service Line</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label htmlFor="BusinessUnit" className="block mb-2 text-sm font-semibold text-textSecondary">Business Unit</label>
-                                    <select
-                                        name="BusinessUnit"
-                                        id="BusinessUnit"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                                        <option>Select ...</option>
-                                        <option value='Manufacturing'>Manufacturing</option>
-                                        <option value='Banking'>Banking</option>
-                                        <option value='Retail'>Retail</option>
-                                        <option value='Automotive'>Automotive</option>
-                                    </select>
-                                </div>
+
                                 <div>
                                     <label htmlFor="qualification" className="block mb-2 text-sm font-semibold text-textSecondary">Qualification</label>
                                     <select
@@ -135,51 +111,47 @@ const CandidatesFilter = () => {
                                         placeholder="Experience in year" required="" />
                                 </div>
                                 <div>
-                                    <label htmlFor="WorkMode" className="block mb-2 text-sm font-semibold text-textSecondary">Work Mode</label>
-                                    <select
-                                        name="WorkMode"
-                                        id="WorkMode"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                                        <option>Select ...</option>
-                                        <option value='Remote'>Remote</option>
-                                        <option value='Onsite'>Onsite</option>
-                                        <option value='Hybrid'>Hybrid</option>
-                                    </select>
+                                    <label htmlFor="Worklocation" className="block mb-2 text-sm font-semibold text-textSecondary">Work location</label>
+                                    <FilterButtonTab
+                                        tabs={['Remote', 'Office',]}
+                                    setSelectedtab={setWorkLocation}
+                                    selectedTab={Worklocation}
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="Workmode" className="block mb-2 text-sm font-semibold text-textSecondary">Work Mode</label>
+                                    <FilterButtonTab
+                                        tabs={['Full-time', 'Part-time', 'Hybrid']}
+                                    setSelectedtab={setWorkMode}
+                                    selectedTab={workmode}
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="Worktype" className="block mb-2 text-sm font-semibold text-textSecondary">Work Type</label>
+                                    <FilterButtonTab
+                                        tabs={['Permanent', 'Contract']}
+                                    setSelectedtab={setWorktype}
+                                    selectedTab={worktype}
+                                    />
                                 </div>
                                 <div>
                                     <label htmlFor="HireType" className="block mb-2 text-sm font-semibold text-textSecondary">Hire Type</label>
-                                    <select
-                                        name="HireType"
-                                        id="HireType"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                                        <option>Select ...</option>
-                                        <option value='Full time'>Full time</option>
-                                        <option value='Part time'>Part time</option>
-                                        <option value='Contract'>Contract</option>
-                                    </select>
+                                    <FilterButtonTab
+                                        tabs={['Full-time', 'Part-time', 'Contract']}
+                                        setSelectedtab={setHireType}
+                                        selectedTab={hireType}
+                                    />
                                 </div>
                                 <div>
                                     <label htmlFor="Status" className="block mb-2 text-sm font-semibold text-textSecondary">Status</label>
-                                    <select
-                                        name="Status"
-                                        id="Status"
-                                        onChange={handleInput} className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5">
-                                        <option>Select ...</option>
-                                        <option value='Open'>Open</option>
-                                        <option value='Close'>Close</option>
-                                    </select>
+                                    <FilterButtonTab
+                                        tabs={['Open', 'Close']}
+                                        selectedTab={status}
+                                        setSelectedtab={setStatus}
+                                    />
                                 </div>
+                               
                             </div>
-                            {/* <div className="grid gap-4 grid-cols-2 mt-3">
-                                <CustoMultipleSelect selecteditem={skills}
-                                    setSelected={setSkills}
-                                    title='Skills'
-                                    name='skill' />
-                                <CustoMultipleSelect selecteditem={Technology}
-                                    setSelected={setTechnology}
-                                    title='Technologies'
-                                    name='Technologies' />
-                            </div> */}
                             <div className='flex justify-end'>
                                 <div className='mt-6 flex justify-start items-center'>
                                     <button onClick={() => { setActiveFilter([]) }} type="button" className="h-10 mr-2 py-2 px-3 text-[#419a00] border border-[#419a00] rounded-lg focus:ring-1 focus:outline-none focus:ring-green-600">
