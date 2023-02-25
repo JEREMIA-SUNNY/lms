@@ -22,7 +22,7 @@ const TrainingAction = () => {
     return (
         <div className="mt-4 flex items-center justify-between">
             <GoBackButton title={'Training Details'} />
-            <div className="flex ustify-start text-[#419a00]">
+            <div className="flex justify-start text-[#419a00]">
                 <EditTrainingBtn />
                 <DeleteAlert
                     isOpen={isOpen}
