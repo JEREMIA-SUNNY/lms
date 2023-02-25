@@ -8,11 +8,11 @@ import MainAssessment from '../../module/add/assessment'
 const tablist = ['Course Details', 'Module Details', 'Assessment Details']
 
 const MainCourseCreate = () => {
-    const [courseInfo, setCourseInfo] = useState({ section: 1, module: 1, IsAssessment: true })
+    const [courseInfo, setCourseInfo] = useState({ section: 1, module: 1, IsAssessment: 'Yes' })
     const [listofModule, setListOfModule] = useState([{ questions: [] }])
     const [listofSection, setListOfSection] = useState([])
-    const [IsAssessment, setIsAssessment] = useState(true)
-    const [IsCoursePaid, setIsCoursePaid] = useState(false)
+    const [IsAssessment, setIsAssessment] = useState('Yes')
+    const [IsCoursePaid, setIsCoursePaid] = useState('No')
 
     // over here it controls the module tabs
     useMemo(() => {
@@ -92,7 +92,7 @@ const MainCourseCreate = () => {
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
-                <Tablist list={IsAssessment ? tablist : ['Course Details', 'Module Details']} />
+                <Tablist list={IsAssessment === 'Yes' ? tablist : ['Course Details', 'Module Details']} />
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
                         <CreateCourseFrom
@@ -111,7 +111,7 @@ const MainCourseCreate = () => {
                             IsAssessment={IsAssessment}
                             listofModule={listofModule} />
                     </Tab.Panel>
-                    {IsAssessment ? <Tab.Panel className='h-full'>
+                    {IsAssessment === 'Yes' ? <Tab.Panel className='h-full'>
                         <MainAssessment
                             listofModule={listofModule}
                             courseInfo={courseInfo}

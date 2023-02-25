@@ -8,9 +8,9 @@ import Batches from '../../batches/add'
 const tablist = ['Training Details', 'Batches', 'Assessment Details']
 
 const MainTrainingCreate = () => {
-    const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: true })
+    const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: 'No' })
     const [listofSection, setListOfSection] = useState([])
-    const [IsAssessment, setIsAssessment] = useState(false)
+    const [IsAssessment, setIsAssessment] = useState('No')
     const [IsTrainingPaid, setIsTrainingPaid] = useState('No')
     const [IsBatchePaid, setIsBatchePaid] = useState('No')
     const [batchInfo, setbatchInfo] = useState({})
@@ -50,7 +50,7 @@ const MainTrainingCreate = () => {
     return (
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
-                <Tablist trainingInfo={trainingInfo} list={IsAssessment ? tablist : ['Training Details', 'Batches']} />
+                <Tablist trainingInfo={trainingInfo} list={IsAssessment === 'Yes' ? tablist : ['Training Details', 'Batches']} />
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
                         <CreateTrainingFrom
@@ -70,7 +70,7 @@ const MainTrainingCreate = () => {
                             setBatchSession={setBatchSession}
                             handlebatchInfo={handlebatchInfo} />
                     </Tab.Panel>
-                    {IsAssessment ? <Tab.Panel className='h-full'>
+                    {IsAssessment === 'Yes' ? <Tab.Panel className='h-full'>
                         <MainAssessment
                             trainingInfo={trainingInfo}
                             handleInput={handleTrainingInput}

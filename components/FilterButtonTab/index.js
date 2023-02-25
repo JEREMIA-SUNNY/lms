@@ -1,7 +1,7 @@
 
 
 
-const FilterButtonTab = ({ tabs, setSelectedtab, selectedTab, className = 'py-2 border px-2' }) => {
+const FilterButtonTab = ({ tabs, setSelectedtab, selectedTab, className = 'py-2.5 border px-2' }) => {
 
     return (
         <div className="rounded-md flex justify-start">

@@ -4,6 +4,7 @@ import countrylist from 'assets/mokedata/country.json'
 import AutoComplete from "components/AutoComplete";
 import designationlist from 'assets/mokedata/designation.json'
 import ChipSelectOption from "components/ChipSelectOption";
+import FilterButtonTab from "components/FilterButtonTab";
 
 const JobDetailForm = (props) => {
     const { interviewPanel, setInterviewPanel, handleInput, businessUnitOrServiceLine, setBusinessUnitOrServiceLine, vendors, setVendors } = props
@@ -60,10 +61,10 @@ const JobDetailForm = (props) => {
                 </div>
                 <div>
                     <label htmlFor="businessUnit" className="block mb-2 text-sm font-semibold text-textSecondary">Tag to</label>
-                    <ChipSelectOption
-                        list={['Business Unit', "Service Line"]}
-                        setSelected={setBusinessUnitOrServiceLine}
-                        selected={businessUnitOrServiceLine}
+                    <FilterButtonTab
+                        tabs={['Business Unit', "Service Line"]}
+                        setSelectedtab={setBusinessUnitOrServiceLine}
+                        selectedTab={businessUnitOrServiceLine}
                     />
                 </div>
                 {businessUnitOrServiceLine === 'Business Unit'? <div>

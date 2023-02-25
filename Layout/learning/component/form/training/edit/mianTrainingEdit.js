@@ -8,11 +8,11 @@ import EditOrAddBatchComponents from '../../batches/EditOrAddBatchComponents'
 const tablist = ['Training Details', 'Batches', 'Assessment Details']
 
 const MainTrainingEdit = () => {
-    const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: true })
+    const [trainingInfo, setTrainingInfo] = useState({ section: 1, module: 1, IsAssessment: 'Yes' })
     const [listofSection, setListOfSection] = useState([])
-    const [IsAssessment, setIsAssessment] = useState(false)
-    const [IsTrainingPaid, setIsTrainingPaid] = useState(false)
-    const [IsBatchePaid, setIsBatchePaid] = useState(false)
+    const [IsAssessment, setIsAssessment] = useState('No')
+    const [IsTrainingPaid, setIsTrainingPaid] = useState('Yes')
+    const [IsBatchePaid, setIsBatchePaid] = useState('No')
     const [batchInfo, setbatchInfo] = useState({})
     const [batchSession, setBatchSession] = useState([])
 
@@ -51,7 +51,7 @@ const MainTrainingEdit = () => {
         <div className="w-full overflow-scroll h-full">
             <Tab.Group>
                 <div className='w-full mb-2'>
-                <Tablist trainingInfo={trainingInfo} list={IsAssessment ? tablist : ['Training Details', 'Batches']} />
+                <Tablist trainingInfo={trainingInfo} list={IsAssessment === 'Yes' ? tablist : ['Training Details', 'Batches']} />
                 </div>
                 <Tab.Panels className='h-[90%]'>
                     <Tab.Panel className='h-full'>
@@ -73,7 +73,7 @@ const MainTrainingEdit = () => {
                             setBatchSession={setBatchSession}
                             handlebatchInfo={handlebatchInfo} />
                     </Tab.Panel>
-                    {IsAssessment ? <Tab.Panel className='h-full'>
+                    {IsAssessment === 'Yes' ? <Tab.Panel className='h-full'>
                         <MainAssessment
                             trainingInfo={trainingInfo}
                             handleInput={handleTrainingInput}

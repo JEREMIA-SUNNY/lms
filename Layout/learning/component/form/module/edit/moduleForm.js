@@ -25,7 +25,7 @@ const ModuleForm = (props) => {
                         </div>
                     </div>
                 </div>
-                {IsAssessment ? <div className="w-1/4">
+                {IsAssessment === 'Yes' ? <div className="w-1/4">
                     <div>
                         <label htmlFor="cutOfScore" className="block mb-2 text-sm font-semibold text-textSecondary">Cut-off Score (%)</label>
                         <div className="flex justify-between items-center">

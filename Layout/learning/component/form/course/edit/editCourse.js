@@ -14,7 +14,7 @@ const CreateCourseFrom = ({ handleInput, courseInfo, IsAssessment, setIsAssessme
                 handleInput={handleInput} />
             <div className='flex justify-end fixed bottom-0 right-5'>
             <PrimaryButton className='rounded-lg'>
-                    <span>Add course</span>
+                    <span>Edit course</span>
                 </PrimaryButton>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import FileUploader from "components/custom/fileUpload";
-import SwitchInput from "components/custom/switchInput";
+import FilterButtonTab from "components/FilterButtonTab";
 import SelectInput from "components/SelectInput";
 import Skillform from "./skills";
 
@@ -71,21 +71,21 @@ const CourseForm = (props) => {
                     }} type="number" defaultValue={courseInfo?.module} name="module" id="module" className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="1" required="" />
                 </div>
-                <div className="mt-4">
+                <div>
                     <label htmlFor="IsAssessment" className="block mb-2 text-sm font-semibold text-textSecondary">Assessment Required (Yes/No)</label>
-                    <SwitchInput
-                        name='IsAssessment'
-                        value={IsAssessment}
-                        onChange={setIsAssessment} />
+                    <FilterButtonTab
+                        tabs={['Yes', 'No',]}
+                        setSelectedtab={setIsAssessment}
+                        selectedTab={IsAssessment} />
                 </div>
-                <div className="mt-4">
+                <div>
                     <label htmlFor="IsCoursePaid" className="block mb-2 text-sm font-semibold text-textSecondary">Paid (Yes/No)</label>
-                    <SwitchInput
-                        name='courseType'
-                        value={IsCoursePaid}
-                        onChange={setIsCoursePaid} />
+                    <FilterButtonTab
+                        tabs={['Yes', 'No',]}
+                        setSelectedtab={setIsCoursePaid}
+                        selectedTab={IsCoursePaid} />
                 </div>
-                {IsCoursePaid ? <div>
+                {IsCoursePaid === 'Yes' ? <div>
                     <label htmlFor="Price" className="block mb-2 text-sm font-semibold text-textSecondary">Price</label>
                     <input onChange={handleInput} type="number" name="Price" id="Price" className="outline-gray-200 bg-gray-50 border border-gray-300 text-textSecondary sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                         placeholder="Price" required="" />
