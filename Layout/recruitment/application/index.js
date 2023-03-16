@@ -6,6 +6,7 @@ const Application = () => {
         <div className="mt-4 grid gap-4 grid-cols-3">
             {appliedUser?.map((item, i) => {
                 return (
+                    
                     <CandidateModalInfo key={i} item={item} />
                 )
             })}
